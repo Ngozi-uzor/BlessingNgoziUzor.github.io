@@ -11,6 +11,7 @@
             max-width: 800px; 
             line-height: 1.6;
             animation: fadeIn 1s ease-out;
+            padding: 20px;
         }
         
         h1, h2 { color: #333; }
@@ -55,141 +56,58 @@
             transform: translateY(-3px);
             box-shadow: 0 7px 14px rgba(50,50,93,0.1);
         }
-
         
-        /* ===== PARALLAX HEADER STYLES ===== */
-        .parallax-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #36d1dc 100%);
-            color: white;
-            padding: 60px 20px;
+        footer { 
+            margin-top: 50px; 
+            font-size: 0.9em; 
+            color: #777; 
             text-align: center;
-            position: relative;
-            overflow: hidden;
+        }
+        
+        /* Simple header */
+        .simple-header {
+            text-align: center;
+            padding: 40px 20px;
             margin-bottom: 40px;
+            border-bottom: 1px solid #eaeaea;
         }
-
-        .parallax-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="white" opacity="0.05"/></svg>');
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .profile-container {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-
-        .profile-photo {
+        
+        .profile-photo-simple {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            transition: transform 0.5s ease;
-        }
-
-        .profile-photo:hover {
-            transform: scale(1.05) rotate(5deg);
-        }
-
-        .profile-glow {
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(0.95); opacity: 0.7; }
-            50% { transform: scale(1.05); opacity: 0.3; }
-            100% { transform: scale(0.95); opacity: 0.7; }
-        }
-
-        .subtitle {
-            font-size: 1.3em;
-            margin: 10px 0 20px;
-            opacity: 0.9;
-        }
-
-        .floating-icons {
-            margin: 25px 0;
-        }
-
-        .floating-icons span {
-            display: inline-block;
-            font-size: 2em;
-            margin: 0 15px;
-            animation: float 3s ease-in-out infinite;
-            animation-delay: calc(var(--i) * 0.2s);
-        }
-
-        .floating-icons span:nth-child(1) { --i: 1; }
-        .floating-icons span:nth-child(2) { --i: 2; }
-        .floating-icons span:nth-child(3) { --i: 3; }
-        .floating-icons span:nth-child(4) { --i: 4; }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 12px 30px;
-            background: white;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border: 4px solid #f0f0f0;
+            margin-bottom: 20px;
         }
         
-        /* Name styling */
-        .header-name {
+        .main-title {
             font-size: 2.5em;
+            color: #2c3e50;
             margin: 10px 0;
-            color: white;
+        }
+        
+        .subtitle-simple {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin: 10px 0;
+        }
+        
+        .institution {
+            color: #667eea;
+            font-weight: bold;
+            margin: 10px 0 20px;
         }
     </style>
 </head>
 <body>
-    <!-- PARALLAX HEADER -->
-    <header class="parallax-header">
-        <div class="header-content">
-            <div class="profile-container">
-                <img src="Blessing Ngozi (3).JPG" alt="Blessing Ngozi Uzor" class="profile-photo">
-                <div class="profile-glow"></div>
-            </div>
-            
-            <h1 class="header-name">Blessing Ngozi Uzor</h1>
-            
-            <p class="subtitle">Master Student / Researcher in Mathematical Sciences</p>
-            <p>African Institute For Mathematical Sciences</p>
-            
-            <a href="#contact" class="cta-button">Get in Touch →</a>
-        </div>
+    <!-- SIMPLE HEADER -->
+    <header class="simple-header">
+        <img src="blessing-ngoz-uzor.jpg" alt="Blessing Ngozi Uzor" class="profile-photo-simple">
+        <h1 class="main-title">Blessing Ngozi Uzor</h1>
+        <p class="subtitle-simple">Master Student / Researcher in Mathematical Sciences</p>
+        <p class="institution">African Institute For Mathematical Sciences</p>
+        <a href="#contact" class="button">Get in Touch</a>
     </header>
 
     <div class="section">

@@ -21,45 +21,66 @@
 
 <body>
 
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">B.U.</a>
-            <button class="mobile-menu-btn" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#service">Leadership</a></li>
-                <li><a href="#contact" class="btn-nav">Contact</a></li>
-            </ul>
+
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#service">Leadership</a></li>
+                    <li><a href="#contact" class="btn-nav">Contact</a></li>
+                </ul>
+
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <header class="hero">
+        <div class="hero-bg-overlay"></div>
         <div class="container hero-content">
             <div class="hero-text">
-                <span class="greeting">Hello, I'm</span>
-                <h1 class="main-title">Blessing Ngozi Uzor</h1>
-                <h2 class="subtitle">Data Scientist & Educational Researcher</h2>
-                <p class="institution"><i class="fas fa-university"></i> African Institute For Mathematical Sciences</p>
-                <p class="hero-description">Using machine learning and statistical modeling to drive social impact and
-                    educational equity in Sub-Saharan Africa.</p>
-                <div class="hero-buttons">
+                <span class="greeting fade-up-item">Hello, I'm</span>
+                <h1 class="main-title fade-up-item">Blessing Ngozi Uzor</h1>
+                <div class="typewriter-container fade-up-item">
+                    <span class="typewriter-text" id="typewriter"></span><span class="cursor">|</span>
+                </div>
+                <p class="institution fade-up-item"><i class="fas fa-university"></i> African Institute For Mathematical
+                    Sciences</p>
+                <p class="hero-description fade-up-item">Leveraging <strong>machine learning</strong> and
+                    <strong>statistical modeling</strong> to drive social impact and educational equity in Sub-Saharan
+                    Africa.</p>
+                <div class="hero-buttons fade-up-item">
                     <a href="#projects" class="btn btn-primary">View Projects</a>
                     <a href="#contact" class="btn btn-outline">Get in Touch</a>
                 </div>
             </div>
-            <div class="hero-image-container">
-                <!-- User should ensure this image exists or use a placeholder -->
-                <img src="Blessing Ngozi (3).JPG" alt="Blessing Ngozi Uzor" class="profile-photo"
-                    onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Blessing+Uzor&background=0284c7&color=fff&size=400';">
-                <div class="blob blob-1"></div>
-                <div class="blob blob-2"></div>
+            <div class="hero-image-container fade-up-item">
+                <div class="img-wrapper">
+                    <!-- User should ensure this image exists or use a placeholder -->
+                    <img src="Blessing Ngozi (3).JPG" alt="Blessing Ngozi Uzor" class="profile-photo"
+                        onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Blessing+Uzor&background=0ea5e9&color=fff&size=400';">
+                </div>
+                <div class="decorative-circle"></div>
+                <div class="decorative-dots"></div>
             </div>
         </div>
     </header>
@@ -68,12 +89,13 @@
         <!-- About Me & Research Vision -->
         <section id="about" class="section">
             <div class="container">
-                <div class="section-header">
-                    <h2>About Me & Research Vision</h2>
+                <div class="section-header fade-up-item">
+                    <span class="section-subtitle">Biography</span>
+                    <h2>About Me & Vision</h2>
                     <div class="line"></div>
                 </div>
                 <div class="about-grid">
-                    <div class="about-text">
+                    <div class="about-text fade-up-item">
                         <p>I am a Master’s student in <strong>Mathematical Sciences (Data Science Major)</strong> at
                             AIMS, Cameroon, with a Bachelor’s in Science Education. My academic training combines strong
                             foundations in mathematics and computation with a growing focus on data-driven research in
@@ -81,18 +103,35 @@
                         <p class="mission-text">My research lies at the intersection of <em>machine learning,
                                 statistical modeling, educational data science, and social impact</em>. I am dedicated
                             to understanding learning outcomes, structural inequalities, and policy effectiveness.</p>
+
+                        <div class="stats-row">
+                            <div class="stat-item">
+                                <span class="stat-number">2+</span>
+                                <span class="stat-label">Years Research</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">1st</span>
+                                <span class="stat-label">Class Honors</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="vision-card">
-                        <h3><i class="fas fa-lightbulb"></i> Long-Term Research Vision</h3>
-                        <ul>
-                            <li><i class="fas fa-check-circle"></i> Develop interpretable ML models for marginalized
-                                regions.</li>
-                            <li><i class="fas fa-check-circle"></i> Apply causal inference to inform evidence-based
-                                policy.</li>
-                            <li><i class="fas fa-check-circle"></i> Bridge theory and practice for scalable innovations.
-                            </li>
-                            <li><i class="fas fa-check-circle"></i> Advance equity in African education.</li>
-                        </ul>
+                    <div class="vision-card fade-up-item">
+                        <div class="card-glass">
+                            <h3><i class="fas fa-lightbulb"></i> Long-Term Vision</h3>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Develop interpretable ML models for marginalized
+                                    regions.</li>
+                                <li><i class="fas fa-check-circle"></i> Apply causal inference to inform evidence-based
+                                    policy.</li>
+                                <li><i class="fas fa-check-circle"></i> Bridge theory and practice for scalable
+                                    innovations.</li>
+                                <li><i class="fas fa-check-circle"></i> Advance equity in African education.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

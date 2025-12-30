@@ -1,270 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blessing Ngozi Uzor | MSc Mathematical Sciences | Research in Educational Data Science, Machine Learning, and Social Impact">
+    <meta name="description"
+        content="Blessing Ngozi Uzor | MSc Mathematical Sciences | Research in Educational Data Science, Machine Learning, and Social Impact">
     <title>Blessing Ngozi Uzor - Academic Portfolio</title>
-    <style>
-        /* --- Global Styles --- */
-        body { 
-            font-family: 'Arial', sans-serif; 
-            margin: 0; 
-            line-height: 1.6;
-            padding: 0;
-            background-color: #fafafa;
-            color: #2c3e50;
-            scroll-behavior: smooth;
-        }
-
-        a { 
-            color: #0366d6; 
-            text-decoration: none; 
-            font-weight: bold; 
-        }
-        a:hover { text-decoration: underline; }
-
-        h1, h2, h3 { color: #2c3e50; margin-top: 0; }
-        h2 { border-bottom: 2px solid #0366d6; padding-bottom: 5px; }
-
-        /* --- Animations --- */
-        @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
-        .fade-in { animation: fadeIn 1s ease-out; }
-
-        /* --- Sticky Nav --- */
-        nav {
-            position: sticky;
-            top: 0;
-            background: #fff;
-            padding: 10px 20px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            z-index: 100;
-            text-align: center;
-        }
-        nav a { margin: 0 12px; font-weight: bold; }
-        nav a:hover { color: #764ba2; }
-
-        /* --- Header --- */
-        .header {
-            text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(135deg, #667eea 0%, #36d1dc 100%);
-            color: white;
-            border-radius: 0 0 15px 15px;
-            box-shadow: 0 10px 20px rgba(102,126,234,0.3);
-        }
-        .profile-photo {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid rgba(255,255,255,0.3);
-            margin-bottom: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        .main-title { font-size: 2.8em; margin: 10px 0; text-shadow: 1px 1px 3px rgba(0,0,0,0.2);}
-        .subtitle { font-size: 1.4em; margin: 10px 0 5px; opacity: 0.95;}
-        .institution { font-size: 1.1em; font-weight: bold; margin: 10px 0 20px; opacity: 0.9;}
-        .header p { max-width: 600px; margin: 10px auto; opacity: 0.9;}
-
-        /* --- Section Cards --- */
-        .section {
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 15px;
-            margin: 30px 20px;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-left: 5px solid #0366d6;
-        }
-        .section:hover { transform: translateY(-7px); box-shadow: 0 12px 20px rgba(0,0,0,0.12); }
-
-        /* --- Buttons --- */
-        .button {
-            display: inline-block;
-            padding: 12px 24px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            margin: 8px 5px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(50,50,93,0.11);
-        }
-        .button:hover { transform: translateY(-3px); box-shadow: 0 7px 14px rgba(50,50,93,0.2); }
-
-        /* --- Skills Tags --- */
-        .skill-tag {
-            display: inline-block;
-            background: #e3f2fd;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            margin: 5px;
-            color: #1565c0;
-            font-weight: 500;
-        }
-
-        /* --- Footer --- */
-        footer { 
-            margin-top: 60px; 
-            font-size: 0.9em; 
-            color: #777; 
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #eaeaea;
-        }
-
-        /* --- Responsive --- */
-        @media screen and (max-width: 600px){
-            .skill-tag { width: 100%; text-align: center; }
-        }
-    </style>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="fade-in">
+
+<body>
 
     <!-- Navigation -->
-    <nav>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#service">Leadership</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <!-- Header -->
-    <header class="header">
-        <img src="Blessing Ngozi (3).JPG" alt="Blessing Ngozi Uzor" class="profile-photo">
-        <h1 class="main-title">Blessing Ngozi Uzor</h1>
-        <p class="subtitle">Master Student | MSc Mathematical Sciences (Data Science Major)</p>
-        <p class="institution">African Institute For Mathematical Sciences</p>
-        <p>Research interests in machine learning, statistical modeling, and data-driven solutions for social impact.</p>
-    </header>
-
-    <!-- About Me & Research Vision -->
-    <section id="about" class="section">
-        <h2>About Me & Research Vision</h2>
-        <p>I am a Master’s student in Mathematical Sciences (Data Science Major) at AIMS, Cameroon, with a Bachelor’s in Science Education (Mathematics). My academic training combines strong foundations in mathematics, statistics, and computation with a growing focus on data-driven research in education and social systems.</p>
-        <p>My research lies at the intersection of machine learning, statistical modeling, educational data science, and social impact. I am particularly interested in understanding learning outcomes, structural inequalities, and policy effectiveness in under-resourced educational contexts.</p>
-
-        <div class="section" style="border-left:5px solid #764ba2;">
-            <p><strong>Long-Term Research Vision:</strong></p>
-            <ul>
-                <li>Develop interpretable ML models to improve educational outcomes in marginalized regions.</li>
-                <li>Apply causal inference and predictive modeling to inform evidence-based policy interventions.</li>
-                <li>Bridge theory and practice for scalable educational innovations.</li>
-                <li>Advance equity in African education through data-driven solutions.</li>
-                <li>Publish high-impact research linking statistical rigor to real-world educational improvements.</li>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">B.U.</a>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#service">Leadership</a></li>
+                <li><a href="#contact" class="btn-nav">Contact</a></li>
             </ul>
         </div>
-    </section>
+    </nav>
 
-    <!-- Education -->
-    <section id="education" class="section">
-        <h2>🎓 Education</h2>
-        <ul>
-            <li>
-                <strong>Master of Science in Mathematical Sciences (Data Science Major)</strong><br>
-                African Institute For Mathematical Sciences, Cameroon | Expected 2025<br>
-                <em>Thesis: "Predictive Modeling of Educational Outcomes in Sub-Saharan Africa Using Interpretable Machine Learning"</em>
-            </li>
-            <li>
-                <strong>Bachelor of Science Education, Mathematics</strong><br>
-                Delta State University, Nigeria | 2024<br>
-                <em>Graduated with First Class Honors | Faculty Award for Academic Excellence</em>
-            </li>
-        </ul>
-        <h3>Honors & Awards</h3>
-        <ul>
-            <li>AIMS Merit-Based Scholarship for Academic Excellence (2024) – awarded to top 5% of cohort for exceptional research promise.</li>
-            <li>Faculty Award for Outstanding Mathematics Student, Delta State University (2024) – recognized for excellence in research and teaching contributions.</li>
-            <li>Presenter, AIMS Research Symposium 2024 – showcased research on interpretable ML for educational impact.</li>
-        </ul>
-    </section>
-
-    <!-- Projects & Publications -->
-    <section id="projects" class="section">
-        <h2>📊 Projects & Publications</h2>
-        <h3>Research Projects</h3>
-        <ul>
-            <li>
-                <strong>Perceived Factors Influencing Students’ Academic Performance in Ethiope East, Delta State, Nigeria</strong> – Survey and quantitative analysis of secondary school students to identify factors affecting mathematics achievement. (2023)
-            </li>
-            <li>
-                <strong>Enhancing Effective Mathematics Education in Nigerian Higher Institutions</strong> – Mixed-methods research evaluating the relationship between teachers’ content knowledge and student outcomes at Delta State University. (2022)
-            </li>
-        </ul>
-        <h3>Selected Publications / Preprints</h3>
-        <ul>
-            <li>Uzor, B.N. (2024). <em>Analyzing Predictors of Student Success in Mathematics Using Statistical Models</em>. AIMS Research Symposium.</li>
-            <li>Uzor, B.N. (2023). <em>Educational Data Science Approaches to Improving Learning Outcomes in Nigeria</em>. Manuscript in preparation.</li>
-        </ul>
-        <a href="UZORBLESSINGNGOZICV.pdf" class="button" download>📄 Download Full CV</a>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="section">
-        <h2>🛠️ Skills & Technical Tools</h2>
-        <h3>Programming & Data Science</h3>
-        <div>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">R</span>
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">Machine Learning</span>
-            <span class="skill-tag">Causal Inference</span>
-            <span class="skill-tag">Bayesian Analysis</span>
-            <span class="skill-tag">Statistical Modeling</span>
-            <span class="skill-tag">Data Visualization</span>
-            <span class="skill-tag">Reproducible Research</span>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="greeting">Hello, I'm</span>
+                <h1 class="main-title">Blessing Ngozi Uzor</h1>
+                <h2 class="subtitle">Data Scientist & Educational Researcher</h2>
+                <p class="institution"><i class="fas fa-university"></i> African Institute For Mathematical Sciences</p>
+                <p class="hero-description">Using machine learning and statistical modeling to drive social impact and
+                    educational equity in Sub-Saharan Africa.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <!-- User should ensure this image exists or use a placeholder -->
+                <img src="Blessing Ngozi (3).JPG" alt="Blessing Ngozi Uzor" class="profile-photo"
+                    onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Blessing+Uzor&background=0284c7&color=fff&size=400';">
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+            </div>
         </div>
-        <h3>Research & Analysis</h3>
-        <div>
-            <span class="skill-tag">Regression Analysis</span>
-            <span class="skill-tag">Multilevel Modeling</span>
-            <span class="skill-tag">Predictive Modeling</span>
-            <span class="skill-tag">Data Wrangling</span>
-            <span class="skill-tag">Exploratory Data Analysis</span>
-            <span class="skill-tag">Research Design</span>
-        </div>
-        <h3>Languages & Communication</h3>
-        <div>
-            <span class="skill-tag">English (Fluent)</span>
-            <span class="skill-tag">French (Beginner)</span>
-            <span class="skill-tag">Urhobo (Native)</span>
-            <span class="skill-tag">LaTeX & Academic Writing</span>
-            <span class="skill-tag">Technical Presentation</span>
-        </div>
-    </section>
+    </header>
 
-    <!-- Service & Leadership -->
-    <section id="service" class="section">
-        <h2>🤝 Service & Leadership</h2>
-        <ul>
-            <li><strong>Peer Tutor</strong> (2024) – Mathematics and Statistics: Provide weekly tutoring sessions in advanced calculus and probability to Master's students.</li>
-            <li><strong>Department Committee Member</strong> – Participated in curriculum development and student mentorship activities.</li>
-        </ul>
-        <p><em>These experiences have strengthened my collaboration, communication, and leadership skills in academic settings.</em></p>
-    </section>
+    <main>
+        <!-- About Me & Research Vision -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About Me & Research Vision</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>I am a Master’s student in <strong>Mathematical Sciences (Data Science Major)</strong> at
+                            AIMS, Cameroon, with a Bachelor’s in Science Education. My academic training combines strong
+                            foundations in mathematics and computation with a growing focus on data-driven research in
+                            education and social systems.</p>
+                        <p class="mission-text">My research lies at the intersection of <em>machine learning,
+                                statistical modeling, educational data science, and social impact</em>. I am dedicated
+                            to understanding learning outcomes, structural inequalities, and policy effectiveness.</p>
+                    </div>
+                    <div class="vision-card">
+                        <h3><i class="fas fa-lightbulb"></i> Long-Term Research Vision</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Develop interpretable ML models for marginalized
+                                regions.</li>
+                            <li><i class="fas fa-check-circle"></i> Apply causal inference to inform evidence-based
+                                policy.</li>
+                            <li><i class="fas fa-check-circle"></i> Bridge theory and practice for scalable innovations.
+                            </li>
+                            <li><i class="fas fa-check-circle"></i> Advance equity in African education.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section">
-        <h2>📬 Contact</h2>
-        <p><strong>Email:</strong> <a href="mailto:blessing.uzor@aims-cameroon.org">blessing.uzor@aims-cameroon.org</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/uzor-blessing-ngozi-2a97b01a7/">linkedin.com/in/uzor-blessing-ngozi</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/Ngozi-uzor">github.com/Ngozi-uzor</a></p>
-        <div style="margin-top: 25px;">
-            <a href="mailto:blessing.uzor@aims-cameroon.org" class="button">Send Email</a>
-            <a href="#" class="button" style="background: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);">Schedule Meeting</a>
-        </div>
-    </section>
+        <!-- Education -->
+        <section id="education" class="section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Education & Honors</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="timeline">
+                    <!-- Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Expected 2025</div>
+                        <div class="timeline-content">
+                            <h3>MSc Mathematical Sciences (Data Science)</h3>
+                            <span class="uni">African Institute For Mathematical Sciences, Cameroon</span>
+                            <p><strong>Thesis:</strong> "Predictive Modeling of Educational Outcomes in Sub-Saharan
+                                Africa Using Interpretable Machine Learning"</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2024</div>
+                        <div class="timeline-content">
+                            <h3>BSc Education, Mathematics</h3>
+                            <span class="uni">Delta State University, Nigeria</span>
+                            <p>Graduated with <strong>First Class Honors</strong> | Faculty Award for Academic
+                                Excellence</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="honors-grid">
+                    <div class="honor-card">
+                        <div class="icon-box"><i class="fas fa-award"></i></div>
+                        <h4>AIMS Merit Scholarship</h4>
+                        <p>Awarded to top 5% of cohort for exceptional research promise (2024).</p>
+                    </div>
+                    <div class="honor-card">
+                        <div class="icon-box"><i class="fas fa-medal"></i></div>
+                        <h4>Faculty Award</h4>
+                        <p>For Outstanding Mathematics Student, Delta State University (2024).</p>
+                    </div>
+                    <div class="honor-card">
+                        <div class="icon-box"><i class="fas fa-microphone"></i></div>
+                        <h4>Research Presenter</h4>
+                        <p>Showcased research on interpretable ML at AIMS Research Symposium 2024.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Projects & Publications</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="card-content">
+                            <span class="tag">Research</span>
+                            <h3>Factors Influencing Academic Performance</h3>
+                            <p>Survey and quantitative analysis of secondary school students in Ethiope East, Delta
+                                State, Nigeria to identify factors affecting mathematics achievement.</p>
+                            <div class="card-meta">
+                                <span><i class="far fa-calendar"></i> 2023</span>
+                                <span><i class="fas fa-chart-bar"></i> Quantitative Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="card-content">
+                            <span class="tag">Mixed-Methods</span>
+                            <h3>Enhancing Mathematics Education</h3>
+                            <p>Evaluated the relationship between teachers’ content knowledge and student outcomes at
+                                Delta State University using mixed-methods research.</p>
+                            <div class="card-meta">
+                                <span><i class="far fa-calendar"></i> 2022</span>
+                                <span><i class="fas fa-user-graduate"></i> Education Research</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pub 1 -->
+                    <div class="project-card publication">
+                        <div class="card-content">
+                            <span class="tag pub-tag">Publication</span>
+                            <h3>Predictors of Student Success</h3>
+                            <p><em>Uzor, B.N. (2024).</em> Analyzing Predictors of Student Success in Mathematics Using
+                                Statistical Models. AIMS Research Symposium.</p>
+                        </div>
+                    </div>
+                    <!-- Pub 2 -->
+                    <div class="project-card publication">
+                        <div class="card-content">
+                            <span class="tag pub-tag">Preprint</span>
+                            <h3>Data Science for Learning Outcomes</h3>
+                            <p><em>Uzor, B.N. (2023).</em> Educational Data Science Approaches to Improving Learning
+                                Outcomes in Nigeria. Manuscript in preparation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-btn">
+                    <a href="UZORBLESSINGNGOZICV.pdf" class="btn btn-outline-dark" download><i
+                            class="fas fa-file-pdf"></i> Download Full CV</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Skills & Tools</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="skills-wrapper">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i> Programming & DS</h3>
+                        <div class="tags">
+                            <span>Python</span><span>R</span><span>SQL</span><span>Machine Learning</span>
+                            <span>Causal Inference</span><span>Bayesian Analysis</span>
+                            <span>Statistical Modeling</span><span>Data Viz</span>
+                            <span>Reproducible Research</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-search"></i> Research & Analysis</h3>
+                        <div class="tags">
+                            <span>Regression Analysis</span><span>Multilevel Modeling</span>
+                            <span>Predictive Modeling</span><span>Data Wrangling</span>
+                            <span>EDA</span><span>Research Design</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-globe"></i> Languages & Comms</h3>
+                        <div class="tags">
+                            <span>English (Fluent)</span><span>French (Beginner)</span>
+                            <span>Urhobo (Native)</span><span>LaTeX</span>
+                            <span>Technical Presentation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service -->
+        <section id="service" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Service & Leadership</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="service-list">
+                    <div class="service-item">
+                        <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <div class="details">
+                            <h3>Peer Tutor (2024)</h3>
+                            <p>Provide weekly tutoring sessions in advanced calculus and probability to Master's
+                                students at AIMS.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="icon"><i class="fas fa-users-cog"></i></div>
+                        <div class="details">
+                            <h3>Department Committee Member</h3>
+                            <p>Participated in curriculum development and student mentorship activities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="contact-card">
+                    <h2>Let's Connect</h2>
+                    <p>I am always open to discussing research collaborations, data science opportunities, or
+                        educational policy.</p>
+                    <div class="contact-links">
+                        <a href="mailto:blessing.uzor@aims-cameroon.org" class="contact-pill"><i
+                                class="fas fa-envelope"></i> Email Me</a>
+                        <a href="https://www.linkedin.com/in/uzor-blessing-ngozi-2a97b01a7/" class="contact-pill"><i
+                                class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://github.com/Ngozi-uzor" class="contact-pill"><i class="fab fa-github"></i>
+                            GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
-        <p>© 2024 Blessing Ngozi Uzor | Academic Portfolio | Hosted on GitHub Pages</p>
-        <p style="font-size: 0.8em;">Prospective PhD Candidate in Data Science & Applied Statistics</p>
+        <div class="container">
+            <p>&copy; 2024 Blessing Ngozi Uzor. All rights reserved.</p>
+            <p class="small">Prospective PhD Candidate in Data Science & Applied Statistics</p>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
+
 </html>

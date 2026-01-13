@@ -1,1350 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Blessing Ngozi Uzor | MSc Mathematical Sciences | Research in Educational Data Science, Machine Learning, and Social Impact">
-    <title>Blessing Ngozi Uzor - Academic Portfolio</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Blessing Ngozi Uzor | MSc Mathematical Sciences (Data Science)">
+    <title>Blessing Ngozi Uzor</title>
 
     <style>
-        /* --- Variables & Clean Reset --- */
-        :root {
-            /* Day Theme */
-            --primary: #2563eb;
-            /* Vibrant Royal Blue */
-            --primary-dark: #1e40af;
-            --secondary: #0ea5e9;
-            /* Sky Blue */
-            --accent: #f59e0b;
-            /* Amber/Gold for "Academic Excellence" */
-
-            --bg-body: #ffffff;
-            --bg-light: #f8fafc;
-            --bg-card: #ffffff;
-            --bg-glass: rgba(255, 255, 255, 0.85);
-
-            --text-main: #0f172a;
-            /* Slate 900 */
-            --text-muted: #475569;
-            /* Slate 600 */
-            --text-light: #94a3b8;
-
-            --border: #e2e8f0;
-            --nav-border: rgba(226, 232, 240, 0.6);
-
-            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
-            --shadow-neon: 0 0 0 transparent;
-
-            --radius-sm: 0.5rem;
-            --radius: 1rem;
-            --radius-lg: 1.5rem;
-
-            --font-heading: 'Playfair Display', serif;
-            --font-body: 'Inter', sans-serif;
-
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        [data-theme="dark"] {
-            /* Night Theme */
-            --primary: #3b82f6;
-            /* Brighter Blue for Dark Mode */
-            --primary-dark: #60a5fa;
-            --secondary: #38bdf8;
-            --accent: #fbbf24;
-
-            --bg-body: #0f172a;
-            /* Slate 900 */
-            --bg-light: #1e293b;
-            /* Slate 800 */
-            --bg-card: #1e293b;
-            --bg-glass: rgba(15, 23, 42, 0.85);
-
-            --text-main: #f8fafc;
-            /* Slate 50 */
-            --text-muted: #cbd5e1;
-            /* Slate 300 */
-            --text-light: #64748b;
-
-            --border: #334155;
-            --nav-border: rgba(51, 65, 85, 0.6);
-
-            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
-            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
-            --shadow-neon: 0 0 15px rgba(59, 130, 246, 0.15);
-            /* Subtle glow */
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 90px;
-        }
-
         body {
-            background-color: var(--bg-body);
-            color: var(--text-main);
-            font-family: var(--font-body);
-            line-height: 1.7;
-            transition: background-color 0.4s ease, color 0.4s ease;
-            overflow-x: hidden;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #000000;
+            line-height: 1.6;
         }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-            font-family: var(--font-heading);
-            color: var(--text-main);
-            line-height: 1.25;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition);
-        }
-
-        .section {
-            padding: 6rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
+        header, section, footer {
+            max-width: 900px;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 2rem 1.5rem;
         }
 
-        /* --- Scroll Progress --- */
-        .scroll-progress-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            z-index: 1002;
-            background: transparent;
-        }
-
-        .scroll-progress-bar {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
-            width: 0%;
-            transition: width 0.1s ease-out;
-        }
-
-        /* --- Navbar --- */
-        .navbar {
-            position: sticky;
-            top: 0;
-            background: var(--bg-glass);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--nav-border);
-            z-index: 1000;
-            padding: 1rem 0;
-            transition: padding 0.3s ease, background 0.4s ease;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: var(--font-heading);
-            font-size: 1.75rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .nav-links {
+        header {
             display: flex;
             gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            font-weight: 500;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-links .btn-nav {
-            background: var(--primary);
-            color: white !important;
-            padding: 0.5rem 1.25rem;
-            border-radius: 50px;
-            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
-        }
-
-        .nav-links .btn-nav:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
-        }
-
-        .nav-links .btn-nav::after {
-            display: none;
-        }
-
-        /* Theme Toggle */
-        .theme-toggle {
-            background: transparent;
-            border: 1px solid var(--border);
-            color: var(--text-muted);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 1.1rem;
-            transition: var(--transition);
-        }
-
-        .theme-toggle:hover {
-            background: var(--bg-light);
-            color: var(--primary);
-            border-color: var(--primary);
-            transform: rotate(15deg);
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            font-size: 1.5rem;
-            background: none;
-            border: none;
-            color: var(--text-main);
-            cursor: pointer;
-        }
-
-        /* --- Hero --- */
-        .hero {
-            position: relative;
-            padding: 6rem 0 8rem;
-            background-color: var(--bg-body);
-        }
-
-        .hero-bg-overlay {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.08) 0%, transparent 40%),
-                radial-gradient(circle at 20% 80%, rgba(14, 165, 233, 0.08) 0%, transparent 40%);
-            pointer-events: none;
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 4rem;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-text .greeting {
-            display: inline-block;
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-            background: rgba(37, 99, 235, 0.1);
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .main-title {
-            font-size: 3.75rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            line-height: 1.1;
-        }
-
-        /* --- Typewriter (Removed) & Static Subtitle --- */
-        .hero-subtitle {
-            font-size: 1.75rem;
-            color: var(--text-muted);
-            font-family: var(--font-heading);
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-        }
-
-        .cursor {
-            /* Cursor styles removed or kept hidden if needed, but removing entire block is cleaner */
-            display: none;
-        }
-
-        .institution {
-            font-size: 1.1rem;
-            color: var(--text-main);
-            font-weight: 500;
-            margin-bottom: 2rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .institution i {
-            color: var(--primary);
-        }
-
-        .hero-description {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            max-width: 540px;
-            margin-bottom: 2.5rem;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1.25rem;
-        }
-
-        .btn {
-            padding: 0.85rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            letter-spacing: 0.02em;
-            cursor: pointer;
-            transition: var(--transition);
-            text-align: center;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            border: none;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.45);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--border);
-            color: var(--text-main);
-        }
-
-        .btn-outline:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-            background: rgba(37, 99, 235, 0.05);
-        }
-
-        .img-wrapper {
-            position: relative;
-            z-index: 2;
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            overflow: hidden;
-            width: 380px;
-            height: 380px;
-            border: 5px solid var(--bg-body);
-            box-shadow: var(--shadow-lg);
-            /* Animation removed for stability */
-            /* animation: morph 8s ease-in-out infinite; */
-            background: var(--bg-light);
+            border-bottom: 1px solid #ddd;
         }
 
         .profile-photo {
-            width: 100%;
-            height: 100%;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
             object-fit: cover;
+            border: 1px solid #ccc;
         }
 
-        @keyframes morph {
-            0% {
-                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-            }
-
-            50% {
-                border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-            }
-
-            100% {
-                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-            }
-        }
-
-        /* --- Section Headers --- */
-        .section-header {
-            margin-bottom: 4rem;
-        }
-
-        .section-subtitle {
-            display: block;
-            text-transform: uppercase;
-            color: var(--secondary);
-            font-weight: 600;
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            margin-bottom: 0.5rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.75rem;
-            margin-bottom: 1rem;
-        }
-
-        .line {
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            margin: 0 auto;
-            border-radius: 2px;
-        }
-
-        /* --- About Grid --- */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        .mission-text {
-            border-left: 4px solid var(--primary);
-            padding: 1.5rem;
-            background: var(--bg-light);
-            border-radius: 0 var(--radius) var(--radius) 0;
-            font-style: italic;
-            color: var(--text-main);
-            font-weight: 500;
-            margin: 2rem 0;
-        }
-
-        .stats-row {
-            display: flex;
-            gap: 3rem;
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border);
-        }
-
-        .stat-item {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .stat-number {
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: var(--primary);
-            font-family: var(--font-heading);
-        }
-
-        .stat-label {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .vision-card {
-            position: relative;
-            padding: 2px;
-            border-radius: var(--radius-lg);
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-        }
-
-        .card-glass {
-            background: var(--bg-card);
-            border-radius: var(--radius);
-            padding: 2.5rem;
-            height: 100%;
-        }
-
-        .vision-card h3 {
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-        }
-
-        .vision-card ul li {
-            margin-bottom: 1.25rem;
-            display: flex;
-            gap: 1rem;
-            align-items: start;
-            color: var(--text-muted);
-        }
-
-        .vision-card ul li i {
-            color: var(--secondary);
-            margin-top: 5px;
-        }
-
-        /* --- Projects & Filter --- */
-        .bg-light {
-            background-color: var(--bg-light);
-        }
-
-        .filter-container {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            background: transparent;
-            border: 1px solid var(--border);
-            padding: 0.6rem 1.5rem;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: 500;
-            color: var(--text-muted);
-            transition: var(--transition);
-        }
-
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .project-card {
-            background: var(--bg-card);
-            border-radius: var(--radius);
-            overflow: hidden;
-            border: 1px solid var(--border);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--primary);
-        }
-
-        .card-content {
-            padding: 2.5rem;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card-badge {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            font-weight: 700;
-            padding: 0.35rem 0.85rem;
-            border-radius: 4px;
-            background: rgba(37, 99, 235, 0.1);
-            color: var(--primary);
-        }
-
-        .card-badge.pub {
-            background: rgba(245, 158, 11, 0.1);
-            color: var(--accent);
-        }
-
-        .project-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            padding-right: 3rem;
-        }
-
-        .project-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 2rem;
-            flex: 1;
-        }
-
-        .citation {
-            font-style: italic;
-            font-size: 0.9rem !important;
-            border-left: 3px solid var(--accent);
-            padding-left: 1rem;
-        }
-
-        .card-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid var(--border);
-            padding-top: 1.5rem;
-            margin-top: auto;
-        }
-
-        .tech-stack {
-            font-size: 0.85rem;
-            color: var(--text-light);
-            font-weight: 500;
-        }
-
-        .card-link {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .card-link:hover {
-            gap: 0.75rem;
-        }
-
-        /* --- Bento Grid Skills --- */
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            /* max-width: 1000px; */
-            margin: 0 auto;
-        }
-
-        .bento-item {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 2rem;
-            transition: var(--transition);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .bento-item:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--secondary);
-        }
-
-        .main-skill {
-            grid-column: span 2;
-            background: linear-gradient(145deg, var(--bg-card) 0%, rgba(37, 99, 235, 0.03) 100%);
-        }
-
-        .wide {
-            grid-column: span 3;
-        }
-
-        .bento-icon {
+        h1 {
+            margin: 0;
             font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .bento-item h3 {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-        }
-
-        .bento-item p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-        }
-
-        .skill-cloud {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .skill-cloud span {
-            background: var(--bg-light);
-            padding: 0.35rem 0.85rem;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--text-main);
-            border: 1px solid var(--border);
-        }
-
-        .skill-list-simple ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .skill-list-simple li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid var(--border);
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        .skill-list-simple li:last-child {
-            border-bottom: none;
-        }
-
-        /* --- Contact & Footer --- */
-        /* Add styles matching the new premium theme for contact and footer here... */
-        .contact-card {
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
-            border-radius: var(--radius-lg);
-            padding: 5rem 2rem;
-            text-align: center;
-            color: white;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-pill {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
             font-weight: 600;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
         }
 
-        .contact-pill:hover {
-            background: white;
-            color: var(--primary);
-            transform: translateY(-3px);
+        h2 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 0.5rem 0;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        section {
+            border-bottom: 1px solid #eee;
+        }
+
+        a {
+            color: #000;
+            text-decoration: underline;
         }
 
         footer {
-            background: var(--bg-body);
-            border-top: 1px solid var(--border);
-            padding: 3rem 0;
+            font-size: 0.9rem;
+            color: #444;
             text-align: center;
-            color: var(--text-muted);
-        }
-
-        /* --- Responsive --- */
-        @media (max-width: 900px) {
-            .bento-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .main-skill,
-            .wide {
-                grid-column: span 1;
-            }
-
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 3rem;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .img-wrapper {
-                margin: 0 auto;
-                width: 300px;
-                height: 300px;
-            }
-
-            .hero-buttons {
-                justify-content: center;
-            }
-
-            .institution {
-                justify-content: center;
-            }
-
-            .hero-description {
-                margin: 0 auto 2.5rem;
-            }
-
-            .nav-links {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--bg-card);
-                flex-direction: column;
-                padding: 2rem;
-                box-shadow: var(--shadow-xl);
-                border-bottom: 1px solid var(--border);
-                transform: translateY(-20px);
-                opacity: 0;
-                pointer-events: none;
-                transition: var(--transition);
-                gap: 1.5rem;
-                align-items: center;
-            }
-
-            .nav-links.active {
-                transform: translateY(0);
-                opacity: 1;
-                pointer-events: all;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .nav-links .btn-nav {
-                width: 100%;
-                text-align: center;
-            }
-        }
-
-        /* Animations Fade Up */
-        .fade-up-item {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-
-        .fade-up-item.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress-container">
-        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+<header>
+    <img src="Blessing Ngozi (3).JPG" alt="Blessing Ngozi Uzor" class="profile-photo"
+         onerror="this.src='https://ui-avatars.com/api/?name=Blessing+Uzor&size=300';">
+
+    <div>
+        <h1>Blessing Ngozi Uzor</h1>
+        <p>Master’s Student, Mathematical Sciences (Data Science)</p>
+        <p>African Institute for Mathematical Sciences, Cameroon</p>
+        <p>Email: <a href="mailto:blessing.uzor@aims-cameroon.org">blessing.uzor@aims-cameroon.org</a></p>
     </div>
+</header>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">B.U.</a>
+<section>
+    <h2>About</h2>
+    <p>
+        I am a Master’s student in Mathematical Sciences (Data Science) at the African Institute
+        for Mathematical Sciences (AIMS), Cameroon. I hold a Bachelor’s degree in Science Education
+        (Mathematics) from Delta State University, Nigeria.
+    </p>
+    <p>
+        My academic interests lie in educational data science, statistical modeling, and the use
+        of data-driven methods to understand learning outcomes and social inequality in
+        Sub-Saharan Africa.
+    </p>
+</section>
 
-            <div class="nav-right">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#service">Leadership</a></li>
-                    <li><a href="#contact" class="btn-nav">Contact</a></li>
-                </ul>
+<section>
+    <h2>Education</h2>
 
-                <!-- Theme Toggle -->
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
-                    <i class="fas fa-moon"></i>
-                </button>
+    <h3>MSc Mathematical Sciences (Data Science)</h3>
+    <p>African Institute for Mathematical Sciences, Cameroon</p>
+    <p>Expected: 2025</p>
 
-                <button class="mobile-menu-btn" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
+    <h3>BSc Education (Mathematics)</h3>
+    <p>Delta State University, Nigeria</p>
+    <p>First Class Honors, 2024</p>
+</section>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-bg-overlay"></div>
-        <div class="container hero-content">
-            <div class="hero-text">
-                <span class="greeting fade-up-item">Hello, I'm</span>
-                <h1 class="main-title fade-up-item">Blessing Ngozi Uzor</h1>
-                <!-- Static Title Replaced Typewriter -->
-                <h2 class="hero-subtitle fade-up-item">Master Student Data Science</h2>
+<section>
+    <h2>Research Interests</h2>
+    <ul>
+        <li>Educational Data Science</li>
+        <li>Statistical Modeling</li>
+        <li>Machine Learning (Interpretable Models)</li>
+        <li>Learning Outcomes and Educational Equity</li>
+        <li>Social Impact Research</li>
+    </ul>
+</section>
 
-                <p class="institution fade-up-item"><i class="fas fa-university"></i> African Institute For Mathematical
-                    Sciences</p>
-                <p class="hero-description fade-up-item">Leveraging <strong>machine learning</strong> and
-                    <strong>statistical modeling</strong> to drive social impact and educational equity in Sub-Saharan
-                    Africa.
-                </p>
-                <div class="hero-buttons fade-up-item">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#contact" class="btn btn-outline">Get in Touch</a>
-                </div>
-            </div>
-            <div class="hero-image-container fade-up-item">
-                <div class="img-wrapper">
-                    <!-- User should ensure this image exists or use a placeholder -->
-                    <img src="Blessing Ngozi (3).JPG" alt="Blessing Ngozi Uzor" class="profile-photo"
-                        onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Blessing+Uzor&background=0ea5e9&color=fff&size=400';">
-                </div>
-                <div class="decorative-circle"></div>
-                <div class="decorative-dots"></div>
-            </div>
-        </div>
-    </header>
+<section>
+    <h2>Selected Projects</h2>
 
-    <main>
-        <!-- About Me & Research Vision -->
-        <section id="about" class="section">
-            <div class="container">
-                <div class="section-header fade-up-item">
-                    <span class="section-subtitle">Biography</span>
-                    <h2>About Me & Vision</h2>
-                    <div class="line"></div>
-                </div>
-                <div class="about-grid">
-                    <div class="about-text fade-up-item">
-                        <p>I am a Master’s student in <strong>Mathematical Sciences (Data Science Major)</strong> at
-                            AIMS, Cameroon, with a Bachelor’s in Science Education. My academic training combines strong
-                            foundations in mathematics and computation with a growing focus on data-driven research in
-                            education and social systems.</p>
-                        <p class="mission-text">My research lies at the intersection of <em>machine learning,
-                                statistical modeling, educational data science, and social impact</em>. I am dedicated
-                            to understanding learning outcomes, structural inequalities, and policy effectiveness.</p>
+    <h3>Factors Influencing Academic Performance</h3>
+    <p>
+        Quantitative study examining socioeconomic and school-related factors affecting
+        mathematics performance among secondary school students in Ethiope East, Nigeria.
+    </p>
 
-                        <div class="stats-row">
-                            <div class="stat-item">
-                                <span class="stat-number">2+</span>
-                                <span class="stat-label">Years Research</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">1st</span>
-                                <span class="stat-label">Class Honors</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">10+</span>
-                                <span class="stat-label">Projects</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="vision-card fade-up-item">
-                        <div class="card-glass">
-                            <h3><i class="fas fa-lightbulb"></i> Long-Term Vision</h3>
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> Develop interpretable ML models for marginalized
-                                    regions.</li>
-                                <li><i class="fas fa-check-circle"></i> Apply causal inference to inform evidence-based
-                                    policy.</li>
-                                <li><i class="fas fa-check-circle"></i> Bridge theory and practice for scalable
-                                    innovations.</li>
-                                <li><i class="fas fa-check-circle"></i> Advance equity in African education.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <h3>Mathematics Education in Nigerian Higher Institutions</h3>
+    <p>
+        Mixed-methods study exploring the relationship between teachers’ content knowledge
+        and student achievement at Delta State University.
+    </p>
+</section>
 
-        <!-- Education -->
-        <section id="education" class="section bg-light">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Education & Honors</h2>
-                    <div class="line"></div>
-                </div>
-                <div class="timeline">
-                    <!-- Item 1 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Expected 2025</div>
-                        <div class="timeline-content">
-                            <h3>MSc Mathematical Sciences (Data Science)</h3>
-                            <span class="uni">African Institute For Mathematical Sciences, Cameroon</span>
-                            <p><strong>Thesis:</strong> "Predictive Modeling of Educational Outcomes in Sub-Saharan
-                                Africa Using Interpretable Machine Learning"</p>
-                        </div>
-                    </div>
-                    <!-- Item 2 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">2024</div>
-                        <div class="timeline-content">
-                            <h3>BSc Education, Mathematics</h3>
-                            <span class="uni">Delta State University, Nigeria</span>
-                            <p>Graduated with <strong>First Class Honors</strong> | Faculty Award for Academic
-                                Excellence</p>
-                        </div>
-                    </div>
-                </div>
+<section>
+    <h2>Publications & Presentations</h2>
+    <ul>
+        <li>
+            Uzor, B. N. (2024). <em>Analyzing Predictors of Student Success in Mathematics Using
+            Statistical Models.</em> AIMS Research Symposium.
+        </li>
+        <li>
+            Uzor, B. N. (2023). <em>Educational Data Science Approaches to Improving Learning
+            Outcomes in Nigeria.</em> Manuscript in preparation.
+        </li>
+    </ul>
+</section>
 
-                <div class="honors-grid">
-                    <div class="honor-card">
-                        <div class="icon-box"><i class="fas fa-award"></i></div>
-                        <h4>AIMS Merit Scholarship</h4>
-                        <p>Awarded to top 5% of cohort for exceptional research promise (2024).</p>
-                    </div>
-                    <div class="honor-card">
-                        <div class="icon-box"><i class="fas fa-medal"></i></div>
-                        <h4>Faculty Award</h4>
-                        <p>For Outstanding Mathematics Student, Delta State University (2024).</p>
-                    </div>
-                    <div class="honor-card">
-                        <div class="icon-box"><i class="fas fa-microphone"></i></div>
-                        <h4>Research Presenter</h4>
-                        <p>Showcased research on interpretable ML at AIMS Research Symposium 2024.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section>
+    <h2>Technical Skills</h2>
+    <ul>
+        <li>Python, R</li>
+        <li>Statistical Analysis and Regression Models</li>
+        <li>Data Wrangling and Exploratory Analysis</li>
+        <li>LaTeX and Academic Writing</li>
+    </ul>
+</section>
 
-        <!-- Projects -->
-        <section id="projects" class="section">
-            <div class="container">
-                <div class="section-header fade-up-item">
-                    <span class="section-subtitle">Portfolio</span>
-                    <h2>Projects & Research</h2>
-                    <div class="line"></div>
-                </div>
+<section>
+    <h2>Service</h2>
+    <ul>
+        <li>Peer Tutor, African Institute for Mathematical Sciences (2024)</li>
+        <li>Student Mentorship and Academic Support</li>
+    </ul>
+</section>
 
-                <!-- Filter Buttons -->
-                <div class="filter-container fade-up-item">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="research">Research</button>
-                    <button class="filter-btn" data-filter="publication">Publications</button>
-                    <button class="filter-btn" data-filter="mixed">Mixed-Methods</button>
-                </div>
+<section>
+    <h2>Links</h2>
+    <ul>
+        <li><a href="https://www.linkedin.com/in/uzor-blessing-ngozi-2a97b01a7/">LinkedIn</a></li>
+        <li><a href="https://github.com/Ngozi-uzor">GitHub</a></li>
+        <li><a href="UZORBLESSINGNGOZICV.pdf">Curriculum Vitae (PDF)</a></li>
+    </ul>
+</section>
 
-                <div class="projects-grid">
-                    <!-- Project 1 -->
-                    <div class="project-card fade-up-item" data-category="research">
-                        <div class="card-content">
-                            <div class="card-badge">Research</div>
-                            <h3>Factors Influencing Academic Performance</h3>
-                            <p>Quantitative analysis of secondary school students in Ethiope East, Nigeria. Identified
-                                key socioeconomic factors affecting STEM achievement using regression analysis.</p>
-                            <div class="card-footer">
-                                <span class="tech-stack">📊 SPSS / R</span>
-                                <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project 2 -->
-                    <div class="project-card fade-up-item" data-category="mixed">
-                        <div class="card-content">
-                            <div class="card-badge">Mixed-Methods</div>
-                            <h3>Mathematics Education in Higher Inst.</h3>
-                            <p>Evaluated the correlation between teachers’ content knowledge and student outcomes at
-                                Delta State University. Proposed a new teacher training framework.</p>
-                            <div class="card-footer">
-                                <span class="tech-stack">📝 Qualitative Analysis</span>
-                                <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Pub 1 -->
-                    <div class="project-card publication fade-up-item" data-category="publication">
-                        <div class="card-content">
-                            <div class="card-badge pub">Publication</div>
-                            <h3>Predictors of Student Success</h3>
-                            <p class="citation"><strong>Uzor, B.N. (2024).</strong> <em>Analyzing Predictors of Student
-                                    Success in Mathematics Using Statistical Models.</em> AIMS Research Symposium.</p>
-                            <div class="card-footer">
-                                <span class="tech-stack">🎤 Symposium</span>
-                                <a href="#" class="card-link">View Abstract <i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Pub 2 -->
-                    <div class="project-card publication fade-up-item" data-category="publication">
-                        <div class="card-content">
-                            <div class="card-badge pub">Preprint</div>
-                            <h3>Data Science for Learning Outcomes</h3>
-                            <p class="citation"><strong>Uzor, B.N. (2023).</strong> <em>Educational Data Science
-                                    Approaches to Improving Learning Outcomes in Nigeria.</em> Manuscript in
-                                preparation.</p>
-                            <div class="card-footer">
-                                <span class="tech-stack">📄 Paper</span>
-                                <a href="#" class="card-link">View Draft <i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="center-btn fade-up-item">
-                    <a href="UZORBLESSINGNGOZICV.pdf" class="btn btn-outline-dark" download><i
-                            class="fas fa-file-pdf"></i> Download Full CV</a>
-                </div>
-            </div>
-        </section>
+<footer>
+    <p>&copy; 2024 Blessing Ngozi Uzor</p>
+</footer>
 
-        <!-- Skills: Bento Grid Layout -->
-        <section id="skills" class="section bg-light">
-            <div class="container">
-                <div class="section-header fade-up-item">
-                    <span class="section-subtitle">Expertise</span>
-                    <h2>Technical Proficiency</h2>
-                    <div class="line"></div>
-                </div>
-
-                <div class="bento-grid">
-                    <!-- Large item -->
-                    <div class="bento-item main-skill fade-up-item">
-                        <div class="bento-icon"><i class="fab fa-python"></i></div>
-                        <h3>Data Science & ML</h3>
-                        <p>Specialized in Python & R for building predictive models and statistical analysis.</p>
-                        <div class="skill-cloud">
-                            <span>Python</span><span>R</span><span>Scikit-Learn</span><span>Pandas</span><span>Tidyverse</span>
-                        </div>
-                    </div>
-
-                    <!-- Medium item -->
-                    <div class="bento-item fade-up-item">
-                        <div class="bento-icon"><i class="fas fa-chart-line"></i></div>
-                        <h3>Statistical Analysis</h3>
-                        <div class="skill-list-simple">
-                            <ul>
-                                <li>Bayesian Analysis</li>
-                                <li>Causal Inference</li>
-                                <li>Regression Models</li>
-                                <li>Multilevel Modeling</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Medium item -->
-                    <div class="bento-item fade-up-item">
-                        <div class="bento-icon"><i class="fas fa-database"></i></div>
-                        <h3>Data Management</h3>
-                        <div class="skill-list-simple">
-                            <ul>
-                                <li>SQL</li>
-                                <li>Data Wrangling</li>
-                                <li>Exploratory Analysis</li>
-                                <li>Reproducible Research</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Wide item -->
-                    <div class="bento-item wide fade-up-item">
-                        <div class="bento-icon"><i class="fas fa-pen-nib"></i></div>
-                        <h3>Research Communication</h3>
-                        <p>Communicating complex data insights through academic writing and visualizations.</p>
-                        <div class="skill-cloud">
-                            <span>LaTeX</span><span>Data Visualization</span><span>Technical Writing</span><span>Public
-                                Speaking</span><span>English (Fluent)</span><span>French (Beginner)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Service -->
-        <section id="service" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Service & Leadership</h2>
-                    <div class="line"></div>
-                </div>
-                <div class="service-list">
-                    <div class="service-item">
-                        <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                        <div class="details">
-                            <h3>Peer Tutor (2024)</h3>
-                            <p>Provide weekly tutoring sessions in advanced calculus and probability to Master's
-                                students at AIMS.</p>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="icon"><i class="fas fa-users-cog"></i></div>
-                        <div class="details">
-                            <h3>Department Committee Member</h3>
-                            <p>Participated in curriculum development and student mentorship activities.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="section contact-section">
-            <div class="container">
-                <div class="contact-card">
-                    <h2>Let's Connect</h2>
-                    <p>I am always open to discussing research collaborations, data science opportunities, or
-                        educational policy.</p>
-                    <div class="contact-links">
-                        <a href="mailto:blessing.uzor@aims-cameroon.org" class="contact-pill"><i
-                                class="fas fa-envelope"></i> Email Me</a>
-                        <a href="https://www.linkedin.com/in/uzor-blessing-ngozi-2a97b01a7/" class="contact-pill"><i
-                                class="fab fa-linkedin"></i> LinkedIn</a>
-                        <a href="https://github.com/Ngozi-uzor" class="contact-pill"><i class="fab fa-github"></i>
-                            GitHub</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Blessing Ngozi Uzor. All rights reserved.</p>
-            <p class="small">Prospective PhD Candidate in Data Science & Applied Statistics</p>
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-
-            // --- Dark Mode Logic ---
-            const themeToggle = document.getElementById('themeToggle');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-            // Set initial theme
-            if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && prefersDark)) {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-            }
-
-            themeToggle.addEventListener('click', () => {
-                const currentTheme = document.documentElement.getAttribute('data-theme');
-                if (currentTheme === 'dark') {
-                    document.documentElement.setAttribute('data-theme', 'light');
-                    localStorage.setItem('theme', 'light');
-                    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-                } else {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                    localStorage.setItem('theme', 'dark');
-                    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-                }
-            });
-
-            /* --- Typewriter Effect Removed --- */
-
-            // --- Project Filtering ---
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            const projects = document.querySelectorAll('.project-card');
-
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // Remove active class from all
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    // Add active to click
-                    btn.classList.add('active');
-
-                    const filterValue = btn.getAttribute('data-filter');
-
-                    projects.forEach(project => {
-                        const category = project.getAttribute('data-category');
-
-                        if (filterValue === 'all' || filterValue === category) {
-                            project.style.display = 'flex';
-                            setTimeout(() => {
-                                project.style.opacity = '1';
-                                project.style.transform = 'translateY(0)';
-                            }, 50);
-                        } else {
-                            project.style.opacity = '0';
-                            project.style.transform = 'translateY(10px)';
-                            setTimeout(() => {
-                                project.style.display = 'none';
-                            }, 300);
-                        }
-                    });
-                });
-            });
-
-            // --- Scroll Progress Bar ---
-            window.addEventListener('scroll', () => {
-                const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-                const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                const scrolled = (scrollTop / scrollHeight) * 100;
-                document.getElementById('scrollProgressBar').style.width = scrolled + '%';
-            });
-
-            // --- Scroll Animation Observer ---
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.fade-up-item').forEach(item => {
-                observer.observe(item);
-            });
-
-            // --- Mobile Menu ---
-            const mobileBtn = document.querySelector('.mobile-menu-btn');
-            const navLinks = document.querySelector('.nav-links');
-
-            if (mobileBtn) {
-                mobileBtn.addEventListener('click', () => {
-                    navLinks.classList.toggle('active');
-                    const icon = mobileBtn.querySelector('i');
-                    if (navLinks.classList.contains('active')) {
-                        icon.classList.remove('fa-bars');
-                        icon.classList.add('fa-times');
-                    } else {
-                        icon.classList.remove('fa-times');
-                        icon.classList.add('fa-bars');
-                    }
-                });
-            }
-
-        });
-    </script>
 </body>
-
 </html>

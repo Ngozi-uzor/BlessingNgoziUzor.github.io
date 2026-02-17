@@ -260,6 +260,35 @@
             color: white;
         }
 
+        /* Python Guide Box */
+        .python-guide-box a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(44, 95, 141, 0.3);
+        }
+
+        .python-guide-box ul {
+            padding-left: 1.2rem;
+        }
+
+        .python-guide-box li {
+            margin-bottom: 0.4rem;
+        }
+
+        /* Bonus Cards */
+        .bonus-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(44, 95, 141, 0.3);
+        }
+
+        .content-modal {
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         .social-links i {
             font-size: 1.2rem;
             color: var(--primary-color);
@@ -681,12 +710,11 @@
         <ul style="margin: 0;">
             <li>Data Science</li>
             <li>Artificial Intelligence</li>
-            <li>AI in Education</li>
             <li>Student Achievement</li>
             <li>Educational Technology</li>
+            <li>Mathematics Education</li>
         </ul>
         <ul style="margin: 0;">
-            <li>Mathematics Education</li>
             <li>Statistical Modeling</li>
             <li>Machine Learning</li>
             <li>Learning Outcomes and Educational Equity</li>
@@ -1091,31 +1119,32 @@
 
     <div class="skills-grid">
         <div class="skill-category">
-            <h4><i class="fas fa-code"></i> Technical Skills</h4>
-            <div class="skill-item"><i class="fab fa-python"></i> Python, R</div>
-            <div class="skill-item"><i class="fas fa-chart-line"></i> Statistical Analysis and Regression Models</div>
-            <div class="skill-item"><i class="fas fa-database"></i> Data Wrangling and Exploratory Analysis</div>
+            <h4><i class="fas fa-code"></i> Programming & Data Science</h4>
+            <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+            <div class="skill-item"><i class="fab fa-r-project"></i> R</div>
+            <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
+            <div class="skill-item"><i class="fas fa-chart-line"></i> Statistical Analysis & Regression Models</div>
             <div class="skill-item"><i class="fas fa-chart-bar"></i> Data Visualization</div>
-            <div class="skill-item"><i class="fas fa-file-alt"></i> LaTeX and Academic Writing</div>
+            <div class="skill-item"><i class="fas fa-brain"></i> Machine Learning</div>
         </div>
 
         <div class="skill-category">
-            <h4><i class="fas fa-laptop"></i> ICT Skills</h4>
-            <div class="skill-item"><i class="fab fa-microsoft"></i> Microsoft Office Suite (Word, Excel, PowerPoint)</div>
-            <div class="skill-item"><i class="fas fa-chart-pie"></i> Data Analysis Tools (SPSS, SQL)</div>
+            <h4><i class="fas fa-laptop"></i> Tools & Technologies</h4>
+            <div class="skill-item"><i class="fab fa-microsoft"></i> Microsoft Office Suite</div>
+            <div class="skill-item"><i class="fas fa-chart-pie"></i> SPSS</div>
+            <div class="skill-item"><i class="fas fa-table"></i> Data Wrangling & Exploratory Analysis</div>
             <div class="skill-item"><i class="fas fa-file-code"></i> LaTeX</div>
-            <div class="skill-item"><i class="fab fa-python"></i> Python (Beginner)</div>
+            <div class="skill-item"><i class="fas fa-file-alt"></i> Academic Writing</div>
         </div>
 
         <div class="skill-category">
             <h4><i class="fas fa-user-friends"></i> Personal Skills</h4>
-            <div class="skill-item"><i class="fas fa-comments"></i> Excellent writing, speaking, and communication</div>
-            <div class="skill-item"><i class="fas fa-users"></i> Strong teamwork and collaboration</div>
-            <div class="skill-item"><i class="fas fa-crown"></i> Leadership and management</div>
-            <div class="skill-item"><i class="fas fa-fire"></i> Grit and determination</div>
-            <div class="skill-item"><i class="fas fa-lightbulb"></i> Problem-solving and critical thinking</div>
-            <div class="skill-item"><i class="fas fa-sync-alt"></i> Adaptability and resilience</div>
-            <div class="skill-item"><i class="fas fa-handshake"></i> Strong interpersonal skills</div>
+            <div class="skill-item"><i class="fas fa-comments"></i> Communication & Public Speaking</div>
+            <div class="skill-item"><i class="fas fa-users"></i> Teamwork & Collaboration</div>
+            <div class="skill-item"><i class="fas fa-crown"></i> Leadership & Management</div>
+            <div class="skill-item"><i class="fas fa-lightbulb"></i> Problem-Solving & Critical Thinking</div>
+            <div class="skill-item"><i class="fas fa-sync-alt"></i> Adaptability & Resilience</div>
+            <div class="skill-item"><i class="fas fa-fire"></i> Grit & Determination</div>
         </div>
     </div>
 </section>
@@ -1135,37 +1164,66 @@
         <li>Free academic support for Delta State University students</li>
     </ul>
 
+    <h3><i class="fab fa-python"></i> Python Mastery Guide — From Zero to Python Pro</h3>
+    <div class="python-guide-box" style="background: var(--card-bg); border: 2px solid var(--primary-color); border-radius: 8px; padding: 1.5rem; margin: 1rem 0;">
+        <h4 style="color: var(--primary-color); margin-top: 0;">Learn Python Without the Confusion</h4>
+        <p>
+            Remember feeling lost when everyone talked about Python? I've been there! When I started my Master's in Mathematical Sciences, programming felt impossible. I thought Python was literally just a snake, and coding seemed like something only "tech geniuses" could do.
+        </p>
+        <p>
+            <strong>But here's what I discovered:</strong> Python isn't just for computer science students. It became my secret weapon in Data Science — helping me analyze datasets, build predictive models, and excel in my studies. If a science student like me could master it, so can you!
+        </p>
+        <p>
+            <strong>I built this free guide specifically to help:</strong>
+        </p>
+        <ul style="margin: 0.5rem 0;">
+            <li>O-Level students curious about programming</li>
+            <li>Fresh graduates preparing for the job market</li>
+            <li>First-year university students in ANY field (Arts, Sciences, Medicine, Engineering)</li>
+            <li>Anyone who thinks "Python is too hard for me"</li>
+        </ul>
+        <p>
+            <strong>What makes this different?</strong> I designed it based on the struggles I faced — with clear explanations, practical examples, and a step-by-step approach that anyone can follow. No jargon, no assumptions, just straightforward learning.
+        </p>
+        <p style="margin-top: 1rem; padding: 1rem; background: var(--secondary-bg); border-left: 4px solid var(--primary-color); border-radius: 4px;">
+            <strong><i class="fas fa-rocket"></i> Start your Python journey today!</strong> Track your progress as you go from complete beginner to building real projects. The guide is 100% free and built to help you succeed.
+        </p>
+        <a href="https://ngozi-uzor.github.io/Python-Mastery-Guide---From-Zero-to-Python-Pro/" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: var(--primary-color); color: white; text-decoration: none; border-radius: 5px; font-weight: 600; margin-top: 1rem; transition: transform 0.2s;">
+            <i class="fas fa-book-reader"></i> Begin Your Python Journey Now
+        </a>
+    </div>
+
     <h3>Gallery</h3>
     <div class="photo-gallery">
         <div class="photo-item">
-            <img src="https://raw.githubusercontent.com/Ngozi-uzor/BlessingNgoziUzor.github.io/main/enhanced_images/enhanced_uploaded_image_0_1767333530888.jpg" alt="ETA Network Activity">
+            <img src="enhanced_images/enhanced_uploaded_image_0_1767333530888.jpg" alt="ETA Network Activity" loading="lazy" width="400" height="300">
         </div>
         <div class="photo-item">
-            <img src="https://raw.githubusercontent.com/Ngozi-uzor/BlessingNgoziUzor.github.io/main/enhanced_images/enhanced_uploaded_image_1_1767333530888.jpg" alt="Student Mentorship">
+            <img src="enhanced_images/enhanced_uploaded_image_1_1767333530888.jpg" alt="Student Mentorship" loading="lazy" width="400" height="300">
         </div>
         <div class="photo-item">
-            <img src="https://raw.githubusercontent.com/Ngozi-uzor/BlessingNgoziUzor.github.io/main/enhanced_images/enhanced_uploaded_image_2_1767333530888.jpg" alt="Educational Support">
+            <img src="enhanced_images/enhanced_uploaded_image_2_1767333530888.jpg" alt="Educational Support" loading="lazy" width="400" height="300">
         </div>
         <div class="photo-item">
-            <img src="https://raw.githubusercontent.com/Ngozi-uzor/BlessingNgoziUzor.github.io/main/enhanced_images/enhanced_uploaded_image_4_1767333530888.jpg" alt="Community Outreach">
+            <img src="enhanced_images/enhanced_uploaded_image_4_1767333530888.jpg" alt="Community Outreach" loading="lazy" width="400" height="300">
         </div>
         <div class="photo-item">
-            <img src="https://raw.githubusercontent.com/Ngozi-uzor/BlessingNgoziUzor.github.io/main/enhanced_images/enhanced_uploaded_image_0_1767333546192.jpg" alt="Keep Them in School Campaign">
+            <img src="enhanced_images/enhanced_uploaded_image_0_1767333546192.jpg" alt="Keep Them in School Campaign" loading="lazy" width="400" height="300">
         </div>
         <div class="photo-item">
-            <img src="https://raw.githubusercontent.com/Ngozi-uzor/BlessingNgoziUzor.github.io/main/enhanced_images/enhanced_uploaded_image_1_1767333546192.jpg" alt="Academic Guidance">
+            <img src="enhanced_images/enhanced_uploaded_image_1_1767333546192.jpg" alt="Academic Guidance" loading="lazy" width="400" height="300">
         </div>
         <div class="photo-item">
-            <img src="https://raw.githubusercontent.com/Ngozi-uzor/BlessingNgoziUzor.github.io/main/enhanced_images/enhanced_uploaded_image_2_1767333546192.jpg" alt="Student Registration Support">
+            <img src="enhanced_images/enhanced_uploaded_image_2_1767333546192.jpg" alt="Student Registration Support" loading="lazy" width="400" height="300">
         </div>
         <div class="photo-item">
-            <img src="https://raw.githubusercontent.com/Ngozi-uzor/BlessingNgoziUzor.github.io/main/enhanced_images/enhanced_uploaded_image_3_1767333546192.jpg" alt="Educational Advocacy">
+            <img src="enhanced_images/enhanced_uploaded_image_3_1767333546192.jpg" alt="Educational Advocacy" loading="lazy" width="400" height="300">
         </div>
         <div class="photo-item">
-            <img src="https://raw.githubusercontent.com/Ngozi-uzor/BlessingNgoziUzor.github.io/main/enhanced_images/enhanced_uploaded_image_4_1767333546192.jpg" alt="ETA Mentorship Session">
+            <img src="enhanced_images/enhanced_uploaded_image_4_1767333546192.jpg" alt="ETA Mentorship Session" loading="lazy" width="400" height="300">
         </div>
         <div class="photo-item">
-            <img src="https://raw.githubusercontent.com/Ngozi-uzor/BlessingNgoziUzor.github.io/main/enhanced_images/enhanced_uploaded_image_0_1767333576595.jpg" alt="Educate Them All Initiative">
+            <img src="enhanced_images/enhanced_uploaded_image_0_1767333576595.jpg" alt="Educate Them All Initiative" loading="lazy" width="400" height="300">
         </div>
     </div>
 </section>
@@ -1216,6 +1274,281 @@
         </a>
     </div>
 </section>
+
+<section id="bonus-content" style="text-align: center; padding: 3rem 1.5rem;">
+    <p style="font-size: 1.1rem; color: var(--subtitle-color); margin-bottom: 2rem;">
+        <i class="fas fa-arrow-down"></i> Since you've made it to the bottom, here are some bonus treasures!
+    </p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
+        <!-- Music Card -->
+        <div class="bonus-card" style="background: var(--card-bg); border: 2px solid var(--primary-color); border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.3s;" onclick="toggleContent('music')">
+            <i class="fas fa-music" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+            <h3 style="color: var(--primary-color); margin: 1rem 0;">🎵 My Favorite Songs</h3>
+            <p style="color: var(--text-color);">Music that moves my soul</p>
+            <span style="color: var(--primary-color); font-weight: 600; margin-top: 1rem; display: inline-block;">
+                Click to listen <i class="fas fa-arrow-right"></i>
+            </span>
+        </div>
+
+        <!-- Quotes Card -->
+        <div class="bonus-card" style="background: var(--card-bg); border: 2px solid var(--primary-color); border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.3s;" onclick="toggleContent('quotes')">
+            <i class="fas fa-quote-right" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+            <h3 style="color: var(--primary-color); margin: 1rem 0;">💬 Quotes I Live By</h3>
+            <p style="color: var(--text-color);">Wisdom from Yoruba, Igbo, African proverbs & life</p>
+            <span style="color: var(--primary-color); font-weight: 600; margin-top: 1rem; display: inline-block;">
+                Click to discover <i class="fas fa-arrow-right"></i>
+            </span>
+        </div>
+    </div>
+</section>
+
+<!-- Music Modal/Page -->
+<div id="music" class="content-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 2000; overflow-y: auto;">
+    <div style="max-width: 900px; margin: 2rem auto; background: var(--bg-color); border-radius: 12px; padding: 2rem; position: relative;">
+        <button onclick="toggleContent('music')" style="position: absolute; top: 1rem; right: 1rem; background: var(--primary-color); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 1.5rem; cursor: pointer;">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <h2 style="color: var(--primary-color); margin-bottom: 2rem;"><i class="fas fa-music"></i> My Favorite Songs of All Time</h2>
+        
+        <p style="margin-bottom: 2rem; color: var(--text-color);">Music that moves my soul and keeps me inspired. These are the tracks I return to again and again! 🎶</p>
+        
+        <!-- Song 1: Wizkid - Ojuelegba -->
+        <div style="background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem;">
+            <h3 style="color: var(--primary-color); margin-top: 0;">
+                <i class="fas fa-headphones"></i> Wizkid - Ojuelegba
+            </h3>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin: 1rem 0;">
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                    src="https://www.youtube.com/embed/Q7QiLceJSLQ" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p style="color: var(--subtitle-color); font-style: italic;">A classic Afrobeats anthem that tells a powerful story</p>
+        </div>
+
+        <!-- Song 2: P-Square - No One Like You -->
+        <div style="background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem;">
+            <h3 style="color: var(--primary-color); margin-top: 0;">
+                <i class="fas fa-headphones"></i> P-Square - No One Like You
+            </h3>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin: 1rem 0;">
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                    src="https://www.youtube.com/embed/ty2advRiWJM" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p style="color: var(--subtitle-color); font-style: italic;">Timeless music from the legendary P-Square</p>
+        </div>
+
+        <!-- Song 3: P-Square - Beautiful Onyinye ft. Rick Ross -->
+        <div style="background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem;">
+            <h3 style="color: var(--primary-color); margin-top: 0;">
+                <i class="fas fa-headphones"></i> P-Square - Beautiful Onyinye ft. Rick Ross
+            </h3>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin: 1rem 0;">
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                    src="https://www.youtube.com/embed/F6FEd2-6rt8" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p style="color: var(--subtitle-color); font-style: italic;">African excellence meets international collaboration</p>
+        </div>
+
+        <!-- Song 4: Fela Kuti - Water No Get Enemy -->
+        <div style="background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem;">
+            <h3 style="color: var(--primary-color); margin-top: 0;">
+                <i class="fas fa-headphones"></i> Fela Kuti - Water No Get Enemy
+            </h3>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin: 1rem 0;">
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                    src="https://www.youtube.com/embed/kisTH3SFegc" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p style="color: var(--subtitle-color); font-style: italic;">The legendary Fela Kuti - Afrobeat pioneer with timeless wisdom</p>
+        </div>
+    </div>
+</div>
+
+<!-- Quotes Modal/Page -->
+<div id="quotes" class="content-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 2000; overflow-y: auto;">
+    <div style="max-width: 800px; margin: 2rem auto; background: var(--bg-color); border-radius: 12px; padding: 2rem; position: relative;">
+        <button onclick="toggleContent('quotes')" style="position: absolute; top: 1rem; right: 1rem; background: var(--primary-color); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 1.5rem; cursor: pointer;">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <h2 style="color: var(--primary-color); margin-bottom: 2rem;"><i class="fas fa-quote-right"></i> Quotes I Live By</h2>
+        
+        <!-- Fun Facts Section -->
+        <div class="quote-box" style="background: linear-gradient(135deg, var(--card-bg) 0%, var(--secondary-bg) 100%); border: 2px solid var(--primary-color); padding: 1.5rem; margin-bottom: 2rem; border-radius: 12px;">
+            <h3 style="color: var(--primary-color); margin-bottom: 1rem;"><i class="fas fa-heart"></i> Before the Quotes... A Little About Me!</h3>
+            
+            <div style="margin: 1rem 0;">
+                <p><strong><i class="fas fa-futbol"></i> Sports Enthusiast:</strong></p>
+                <p style="margin-left: 1.5rem;">I play football for fun and table tennis (not the best, but yes, I'm above average! 😄). Sports teach me teamwork, resilience, and the joy of friendly competition.</p>
+            </div>
+            
+            <div style="margin: 1rem 0;">
+                <p><strong><i class="fas fa-music"></i> Music Lover:</strong></p>
+                <p style="margin-left: 1.5rem;">I listen to good music from all genres, paying close attention to the melody, rhythm, and lyrics. I love Afrobeats a lot! My playlist includes legends like <strong>Fela Anikulapo Kuti</strong>, <strong>Wizkid</strong>, <strong>Asake</strong>, and many other great artists from Africa and beyond.</p>
+            </div>
+            
+            <div style="margin: 1rem 0;">
+                <p><strong><i class="fas fa-cross"></i> Faith:</strong></p>
+                <p style="margin-left: 1.5rem;">I am a Christian and believe in God and His son Jesus Christ. My faith grounds me, but I do not discriminate in any way. I respect all beliefs and embrace diversity.</p>
+            </div>
+            
+            <p style="margin-top: 1rem; font-style: italic; color: var(--subtitle-color);">
+                Now that you know a bit more about me, here are the words that guide my journey... 💫
+            </p>
+        </div>
+
+        <!-- Life Wisdom -->
+        <div class="quote-box" style="background: var(--card-bg); border-left: 4px solid var(--primary-color); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: 8px;">
+            <h3 style="color: var(--primary-color);">💫 Life Wisdom</h3>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"This too shall pass."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">A reminder of the impermanence of all things. It offers solace in suffering and humility in triumph.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"Know thyself."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">Understand your own character, feelings, motives, and desires to live authentically.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"Be the change you wish to see in the world."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">Instead of complaining, embody the solution. If you want kindness, be kinder.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"The unexamined life is not worth living."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">A life without questioning, reflecting, and seeking truth is mere existence, not fulfillment.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"The obstacle is the way."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">What stands in your path isn't a barrier, but the path itself. Overcoming obstacles builds character.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"Wherever you go, there you are."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">You cannot escape yourself. Changing your location won't solve internal discontent.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"This is a wonderful day. I've never seen this one before."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">Approach each day with fresh eyes and wonder, free from the baggage of yesterday.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"He who has a why to live for can bear almost any how."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">A strong sense of purpose provides the strength to endure any hardship.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"Everything you've ever wanted is on the other side of fear."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">The greatest opportunities lie just beyond your fears. Fear is not a stop sign, but a compass.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"The journey of a thousand miles begins with a single step."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">Daunting tasks become achievable when you break them down and simply begin.</p>
+            </blockquote>
+        </div>
+
+        <!-- African Proverbs -->
+        <div class="quote-box" style="background: var(--card-bg); border-left: 4px solid var(--primary-color); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: 8px;">
+            <h3 style="color: var(--primary-color);">🌍 African & Nigerian Proverbs</h3>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"A lion will not give birth to a goat."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">You only produce your own kind; character and nature are inherited.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"The child who is not embraced by the village will burn it down just to feel its warmth."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">If you neglect or ostracize a person, especially a young one, they may retaliate in harmful ways just to get attention or feel valued.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"Until a lion learns to write, every story shall glorify the hunter."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">History is written by the powerful; the perspective of the oppressed is often unheard.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"The axe forgets, but the tree remembers."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">The one who causes harm may move on, but the victim never forgets the pain.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"When two elephants fight, it is the grass that gets trampled."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">When the powerful clash, it is always the innocent and weak who suffer.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"You cannot convince a monkey that honey is sweeter than a banana."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">People hold onto what they know and trust; you cannot force someone to change their mind or preferences.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"No matter how hot your anger is, it cannot cook yams."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">Anger alone achieves nothing; it cannot solve problems or provide for needs.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"Even if a goat frowns its face, someone will buy it at the market."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">Your current situation or appearance does not determine your value or success; everyone has their place.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"A one-eyed person is rarely grateful to God until they are blinded."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">People often fail to appreciate what they have until they lose it entirely.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"The same sun that hardens clay melts wax."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">The same circumstances can strengthen one person while destroying another; it is a matter of character and perception.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"Wisdom is like a baobab tree; no one individual can embrace it."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">No single person knows everything; wisdom is collective and we learn from each other.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"He who has an anus, do not laugh at your neighbour's farts."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">Do not mock others for flaws or mistakes that you yourself are capable of making.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"Eme ngwa ngwa emeghara ọdachi."</strong> (Igbo)</p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">"If things are done quickly, disaster is averted." - Procrastination leads to problems; timely action prevents unnecessary suffering.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"Ọ bụ mmụọ ndị na-efe na-egbu ha."</strong> (Igbo)</p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">"It is the deity that people worship that kills them." - What we devote ourselves to can ultimately be our downfall; choose your priorities and allegiances wisely.</p>
+            </blockquote>
+            
+            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
+                <p style="font-style: italic;"><strong>"A man who counts his chickens before they hatch is unwise."</strong></p>
+                <p style="color: var(--subtitle-color); font-size: 0.9rem;">Do not assume success before it actually happens; patience and proper planning are essential.</p>
+            </blockquote>
+        </div>
+    </div>
+</div>
 
 <footer>
     <p>&copy; 2024 Blessing Ngozi Uzor</p>
@@ -1268,14 +1601,50 @@ function toggleMenu() {
     }
 }
 
+// Toggle content modals
+function toggleContent(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal.style.display === 'none' || modal.style.display === '') {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    } else {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+}
+
 // Close menu when clicking outside
 document.addEventListener('click', function(event) {
     const nav = document.getElementById('sideNav');
     const menuToggle = document.querySelector('.menu-toggle');
     
-    if (nav.contains(event.target) && !menuToggle.contains(event.target) && nav.classList.contains('open')) {
+    if (!nav.contains(event.target) && !menuToggle.contains(event.target) && nav.classList.contains('open')) {
         toggleMenu();
     }
+});
+
+// Image loading optimization
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.photo-item img');
+    
+    images.forEach(img => {
+        if (img.complete) {
+            img.style.opacity = '1';
+        } else {
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+            });
+            
+            // Handle errors - show placeholder
+            img.addEventListener('error', function() {
+                this.style.display = 'none';
+                const placeholder = document.createElement('div');
+                placeholder.className = 'photo-placeholder';
+                placeholder.innerHTML = '<i class="fas fa-image"></i>';
+                this.parentElement.appendChild(placeholder);
+            });
+        }
+    });
 });
 </script>
 

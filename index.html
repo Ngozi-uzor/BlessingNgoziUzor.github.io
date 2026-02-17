@@ -1,6 +1,3 @@
-Blessing uzor website updated · HTML
-Copy
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +5,7 @@ Copy
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Blessing Ngozi Uzor | MSc Mathematical Sciences (Data Science)">
     <title>Blessing Ngozi Uzor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         * {
@@ -170,10 +168,317 @@ Copy
                 font-size: 1.3rem;
             }
         }
+
+        /* Icon styles */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-item i {
+            color: #2c5f8d;
+            width: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #f0f7ff;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #2c5f8d;
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-links a:hover i {
+            color: white;
+        }
+
+        .social-links i {
+            font-size: 1.2rem;
+            color: #2c5f8d;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-item i {
+            color: #2c5f8d;
+            width: 20px;
+        }
+
+        .language-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .language-item i {
+            color: #2c5f8d;
+        }
+
+        /* Photo gallery styles */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .photo-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            aspect-ratio: 4/3;
+            background: #f0f0f0;
+            border: 2px solid #e0e0e0;
+        }
+
+        .photo-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .photo-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: #999;
+            font-size: 3rem;
+        }
+
+        /* Project card styles */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .project-card {
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: #2c5f8d;
+            box-shadow: 0 4px 10px rgba(44, 95, 141, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: #2c5f8d;
+            margin-top: 0;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+
+        .project-tag {
+            background: #2c5f8d;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+
+        .project-links {
+            margin-top: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: white;
+            border: 1px solid #2c5f8d;
+            border-radius: 5px;
+            color: #2c5f8d;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .project-links a:hover {
+            background: #2c5f8d;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .photo-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Navigation menu styles */
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            background: #2c5f8d;
+            color: white;
+            border: none;
+            padding: 0.75rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background 0.3s;
+        }
+
+        .menu-toggle:hover {
+            background: #1a3a52;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 280px;
+            height: 100vh;
+            background: #2c5f8d;
+            z-index: 1000;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+        }
+
+        nav.open {
+            right: 0;
+        }
+
+        nav ul {
+            padding: 4rem 0 2rem 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: background 0.3s;
+            border-left: 3px solid transparent;
+        }
+
+        nav a:hover {
+            background: #1a3a52;
+            border-left-color: white;
+            text-decoration: none;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                width: 250px;
+                right: -250px;
+            }
+
+            .menu-toggle {
+                top: 15px;
+                right: 15px;
+                padding: 0.6rem 0.9rem;
+                font-size: 1.1rem;
+            }
+        }
     </style>
 </head>
 
 <body>
+
+<button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+    <i class="fas fa-bars"></i>
+</button>
+
+<div class="overlay" onclick="toggleMenu()"></div>
+
+<nav id="sideNav">
+    <ul>
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#education" onclick="toggleMenu()">Education</a></li>
+        <li><a href="#research-interests" onclick="toggleMenu()">Research Interests</a></li>
+        <li><a href="#research-experience" onclick="toggleMenu()">Research Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#teaching" onclick="toggleMenu()">Teaching Experience</a></li>
+        <li><a href="#leadership" onclick="toggleMenu()">Leadership & Community Service</a></li>
+        <li><a href="#volunteer" onclick="toggleMenu()">Volunteer Experience</a></li>
+        <li><a href="#ngo" onclick="toggleMenu()">Educate Them All (NGO)</a></li>
+        <li><a href="#memberships" onclick="toggleMenu()">Academic Memberships</a></li>
+        <li><a href="#awards" onclick="toggleMenu()">Honours & Awards</a></li>
+        <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+        <li><a href="#languages" onclick="toggleMenu()">Languages</a></li>
+        <li><a href="#hobbies" onclick="toggleMenu()">Hobbies & Interests</a></li>
+        <li><a href="#links" onclick="toggleMenu()">Links</a></li>
+    </ul>
+</nav>
 
 <header>
     <img src="Blessing Ngozi (3).JPG" alt="Blessing Ngozi Uzor" class="profile-photo"
@@ -182,24 +487,26 @@ Copy
     <div class="header-content">
         <h1>Blessing Ngozi Uzor</h1>
         <p class="subtitle">Master's Student, Mathematical Sciences (Data Science)</p>
-        <p class="subtitle">African Institute for Mathematical Sciences, Limbe, Cameroon</p>
-        <p>Email: <a href="mailto:blessing.uzor@aims-cameroon.org">blessing.uzor@aims-cameroon.org</a></p>
+        <p class="subtitle"><i class="fas fa-map-marker-alt"></i> African Institute for Mathematical Sciences, Limbe, Cameroon</p>
     </div>
 </header>
 
-<section>
+<section id="about">
     <h2>About</h2>
     <p>
         I am a Mathematician, Educationist and a current Mastercard Foundation Scholar pursuing graduate studies in Data Science at the African Institute for Mathematical Sciences (AIMS), Cameroon. My work sits at the intersection of applied mathematics, Artificial Intelligence, and education systems. I am particularly interested in using data-driven methods, machine learning, and mathematical/statistical modelling to address real-world challenges in education, public health and climate resilience across Africa. My long-term goal is to contribute to data-driven solutions that strengthen learning systems and improve outcomes for underserved communities.
     </p>
 </section>
 
-<section>
+<section id="education">
     <h2>Education</h2>
 
     <div class="experience-item">
-        <h3>MSc Mathematical Sciences (Major: Data Science)</h3>
-        <p class="subtitle">African Institute for Mathematical Sciences, Cameroon</p>
+        <div class="experience-header">
+            <h3>MSc Mathematical Sciences (Major: Data Science)</h3>
+            <span class="date">Aug 2025 – Present</span>
+        </div>
+        <p class="subtitle">African Institute for Mathematical Sciences, Limbe, Cameroon</p>
     </div>
 
     <div class="experience-item">
@@ -213,42 +520,173 @@ Copy
     </div>
 </section>
 
-<section>
+<section id="research-interests">
     <h2>Research Interests</h2>
-    <ul>
-        <li>Data Science</li>
-        <li>Artificial Intelligence</li>
-        <li>Statistical Modeling</li>
-        <li>Machine Learning</li>
-        <li>Learning Outcomes and Educational Equity</li>
-        <li>Social Impact Research</li>
-    </ul>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0 2rem;">
+        <ul style="margin: 0;">
+            <li>Data Science</li>
+            <li>Artificial Intelligence</li>
+            <li>AI in Education</li>
+            <li>Student Achievement</li>
+            <li>Educational Technology</li>
+        </ul>
+        <ul style="margin: 0;">
+            <li>Mathematics Education</li>
+            <li>Statistical Modeling</li>
+            <li>Machine Learning</li>
+            <li>Learning Outcomes and Educational Equity</li>
+            <li>Social Impact Research</li>
+        </ul>
+    </div>
 </section>
 
-<section>
+<section id="research-experience">
     <h2>Research Experience</h2>
 
     <div class="experience-item">
         <h3>Undergraduate Research Projects</h3>
+        <p class="subtitle">Delta State University, Nigeria</p>
         
-        <h4>Factors Influencing Academic Performance</h4>
-        <p>
-            Quantitative study examining socioeconomic and school-related factors affecting
-            mathematics performance among secondary school students in Ethiope East, Nigeria.
-            Designed and conducted a quantitative survey-based study examining
-            parental background, teacher experience, and mathematics performance.
-            Applied regression analysis and statistical testing using R.
-        </p>
+        <h4>Thesis: Perceived Factors Influencing Academic Performance of Mathematics Students in Ethiope East Local Government Area</h4>
+        <ul>
+            <li>Designed and executed a Descriptive Survey Study on 240 students across six senior secondary schools, employing a Random Sampling Technique and Validated Questionnaire for data collection</li>
+            <li>Conducted Hypothesis Testing to analyze the relationship between student performance and five key variables: Socio-economic Determinants (parental education/income), Teacher Quality Metrics (qualification/experience), and Cultural Background</li>
+            <li>Performed Statistical Correlation Analysis to evaluate the impact of Pedagogical Strategies and classroom factors on academic outcomes</li>
+        </ul>
 
-        <h4>Mathematics Education in Nigerian Higher Institutions</h4>
-        <p>
-            Mixed-methods study exploring the relationship between teachers' content knowledge
-            and student achievement at Delta State University.
-        </p>
+        <h4>Undergraduate Seminar: Enhancing Effective Mathematics Education in Nigerian Higher Institutions</h4>
+        <p><em>A case study of teachers' knowledge and student performance</em></p>
+        <ul>
+            <li>Conducted a Quantitative Study using Hypothesis Testing to evaluate the correlation between four variables (teacher experience, qualification, teaching practices, and class size) and student academic performance</li>
+            <li>Utilized Statistical Correlation Analysis to challenge traditional assumptions, finding no significant relationship between teacher experience/qualification and student outcomes, urging focus on pedagogical strategy</li>
+            <li>Performed Technology Integration Assessment by surveying educators' adoption of Advanced Applications (MATLAB/GeoGebra) and Hands-on Learning methods in teaching mathematics</li>
+        </ul>
     </div>
 </section>
 
-<section>
+<section id="projects">
+    <h2><i class="fas fa-code"></i> Projects</h2>
+    
+    <div class="projects-grid">
+        <!-- Project 1: Decoder-Only Transformer -->
+        <div class="project-card">
+            <h3><i class="fas fa-brain"></i> Decoder-Only Transformer Implementation | Deep Learning</h3>
+            <p>Built a Transformer decoder from scratch, implementing self-attention, positional encoding, and masked multi-head attention, and created a custom dataset and training loop to demonstrate correct sequence mapping inference. Applied teacher forcing and cross-entropy loss with the Adam optimizer, visualizing attention patterns and training convergence to validate the model's learning process.</p>
+            <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">PyTorch</span>
+                <span class="project-tag">Deep Learning</span>
+                <span class="project-tag">Group Project</span>
+            </div>
+            <div class="project-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> Report</a>
+            </div>
+        </div>
+
+        <!-- Project 2: Student Performance Prediction -->
+        <div class="project-card">
+            <h3><i class="fas fa-graduation-cap"></i> Student Performance Prediction Model | Supervised Machine Learning</h3>
+            <p>Developed a regression model to predict student performance using academic and lifestyle factors (study hours, sleep, extracurriculars), performing data cleaning, visualization, and correlation analysis to identify Previous Scores and Hours Studied as the strongest predictors. Trained a Multiple Linear Regression model, achieving 98.9% explained variance (R² = 0.989) and an RMSE of 2.04 on the test set, and derived actionable insights from model coefficients.</p>
+            <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Scikit-learn</span>
+                <span class="project-tag">Pandas</span>
+                <span class="project-tag">Matplotlib</span>
+                <span class="project-tag">Group Project</span>
+            </div>
+            <div class="project-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" target="_blank"><i class="fas fa-chart-line"></i> Analysis</a>
+            </div>
+        </div>
+
+        <!-- Project 3: Statistical Inference on Birth Weight -->
+        <div class="project-card">
+            <h3><i class="fas fa-chart-bar"></i> Statistical Inference on Birth Weight Data: Hypothesis Testing & Confidence Intervals</h3>
+            <p>Conducted a full statistical inference analysis on the birthwt dataset to investigate factors influencing low birth weight, applying hypothesis testing and confidence intervals. Empirically validated the Central Limit Theorem through simulation (1000 samples, n=30) and performed F-test and Chi-square test of independence, identifying a significant association between smoking and low birth weight (p=0.0396).</p>
+            <div class="project-tags">
+                <span class="project-tag">R</span>
+                <span class="project-tag">ggplot2</span>
+                <span class="project-tag">Statistical Inference</span>
+                <span class="project-tag">Individual Project</span>
+            </div>
+            <div class="project-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> Report</a>
+            </div>
+        </div>
+
+        <!-- Project 4: Chinese Remainder Theorem -->
+        <div class="project-card">
+            <h3><i class="fas fa-calculator"></i> Chinese Remainder Theorem Algorithm: Recursive Modular Solver</h3>
+            <p>Designed and implemented a recursive algorithm in Python to solve systems of simultaneous linear congruences using the Chinese Remainder Theorem (CRT). Engineered core functions from scratch: a recursive GCD calculator, an Extended Euclidean Algorithm (Bézout coefficients), and a pairwise coprimality checker. Developed a robust solver that recursively reduces n congruences to a single solution modulo the product of all moduli, handling edge cases gracefully.</p>
+            <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Number Theory</span>
+                <span class="project-tag">Algorithms</span>
+                <span class="project-tag">Group Project</span>
+            </div>
+            <div class="project-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" target="_blank"><i class="fas fa-file-code"></i> Code</a>
+            </div>
+        </div>
+
+        <!-- Project 5: Heart Failure Mortality Risk -->
+        <div class="project-card">
+            <h3><i class="fas fa-heartbeat"></i> Predictive Modeling for Heart Failure Mortality Risk</h3>
+            <p>Conducted an end-to-end data science project to predict mortality risk in heart failure patients using a clinical dataset of 299 patients and 13 variables. Performed exploratory data analysis (EDA) to identify key clinical risk factors and built classification models including Logistic Regression and Random Forest. Achieved an AUC of 0.895 with a Random Forest model, demonstrating strong performance (84.75% accuracy) on the test set. Delivered actionable clinical insights by interpreting feature importance.</p>
+            <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Scikit-learn</span>
+                <span class="project-tag">Data Mining</span>
+                <span class="project-tag">Healthcare</span>
+                <span class="project-tag">Group Project</span>
+            </div>
+            <div class="project-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" target="_blank"><i class="fas fa-chart-line"></i> Analysis</a>
+            </div>
+        </div>
+
+        <!-- Project 6: FINA Personal Finance Tracker -->
+        <div class="project-card">
+            <h3><i class="fas fa-wallet"></i> FINA – Full-Stack Personal Finance Tracker</h3>
+            <p>Designed and deployed a secure, full-stack personal finance web application with Flask REST API backend and dynamic JavaScript/Tailwind CSS frontend. Engineered robust user authentication using Flask-JWT-Extended and implemented PostgreSQL database via SQLAlchemy ORM. Developed complete frontend logic with ES6+ JavaScript, handling form validation and JWT session management. Deployed full application stack on Render with production-grade integration.</p>
+            <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Flask</span>
+                <span class="project-tag">PostgreSQL</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Tailwind CSS</span>
+                <span class="project-tag">Group Project</span>
+            </div>
+            <div class="project-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
+        </div>
+
+        <!-- Project 7: Logistic Regression from Scratch -->
+        <div class="project-card">
+            <h3><i class="fas fa-atom"></i> Logistic Regression from Scratch for Particle Classification</h3>
+            <p>Built a Logistic Regression classifier from the ground up (without scikit-learn) to distinguish between electron and hadron particles. Implemented the complete ML pipeline: data loading, binary label encoding, 80/20 train-test splitting, feature standardization, and matrix augmentation. Developed core algorithms including sigmoid activation, cross-entropy loss, and gradient computation using vectorized NumPy operations. Achieved ~88% accuracy and 90% recall on the test set.</p>
+            <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">NumPy</span>
+                <span class="project-tag">Machine Learning</span>
+                <span class="project-tag">Individual Project</span>
+            </div>
+            <div class="project-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> Report</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="teaching">
     <h2>Teaching Experience</h2>
 
     <div class="experience-item">
@@ -299,7 +737,7 @@ Copy
     </div>
 </section>
 
-<section>
+<section id="leadership">
     <h2>Leadership & Community Service</h2>
 
     <div class="experience-item">
@@ -372,7 +810,7 @@ Copy
     </div>
 </section>
 
-<section>
+<section id="volunteer">
     <h2>Volunteer Experience & Extracurricular Activities</h2>
 
     <div class="experience-item">
@@ -449,7 +887,7 @@ Copy
     </div>
 </section>
 
-<section>
+<section id="awards">
     <h2>Honours and Awards</h2>
 
     <div class="experience-item">
@@ -493,47 +931,115 @@ Copy
     </div>
 </section>
 
-<section>
+<section id="skills">
     <h2>Skills</h2>
 
     <div class="skills-grid">
         <div class="skill-category">
-            <h4>Technical Skills</h4>
-            <ul>
-                <li>Python, R</li>
-                <li>Statistical Analysis and Regression Models</li>
-                <li>Data Wrangling and Exploratory Analysis</li>
-                <li>Data Visualization</li>
-                <li>LaTeX and Academic Writing</li>
-            </ul>
+            <h4><i class="fas fa-code"></i> Technical Skills</h4>
+            <div class="skill-item"><i class="fab fa-python"></i> Python, R</div>
+            <div class="skill-item"><i class="fas fa-chart-line"></i> Statistical Analysis and Regression Models</div>
+            <div class="skill-item"><i class="fas fa-database"></i> Data Wrangling and Exploratory Analysis</div>
+            <div class="skill-item"><i class="fas fa-chart-bar"></i> Data Visualization</div>
+            <div class="skill-item"><i class="fas fa-file-alt"></i> LaTeX and Academic Writing</div>
         </div>
 
         <div class="skill-category">
-            <h4>ICT Skills</h4>
-            <ul>
-                <li>Microsoft Office Suite (Word, Excel, PowerPoint)</li>
-                <li>Data Analysis Tools (SPSS, SQL)</li>
-                <li>LaTeX</li>
-                <li>Python (Beginner)</li>
-            </ul>
+            <h4><i class="fas fa-laptop"></i> ICT Skills</h4>
+            <div class="skill-item"><i class="fab fa-microsoft"></i> Microsoft Office Suite (Word, Excel, PowerPoint)</div>
+            <div class="skill-item"><i class="fas fa-chart-pie"></i> Data Analysis Tools (SPSS, SQL)</div>
+            <div class="skill-item"><i class="fas fa-file-code"></i> LaTeX</div>
+            <div class="skill-item"><i class="fab fa-python"></i> Python (Beginner)</div>
         </div>
 
         <div class="skill-category">
-            <h4>Personal Skills</h4>
-            <ul>
-                <li>Excellent writing, speaking, and communication</li>
-                <li>Strong teamwork and collaboration</li>
-                <li>Leadership and management</li>
-                <li>Grit and determination</li>
-                <li>Problem-solving and critical thinking</li>
-                <li>Adaptability and resilience</li>
-                <li>Strong interpersonal skills</li>
-            </ul>
+            <h4><i class="fas fa-user-friends"></i> Personal Skills</h4>
+            <div class="skill-item"><i class="fas fa-comments"></i> Excellent writing, speaking, and communication</div>
+            <div class="skill-item"><i class="fas fa-users"></i> Strong teamwork and collaboration</div>
+            <div class="skill-item"><i class="fas fa-crown"></i> Leadership and management</div>
+            <div class="skill-item"><i class="fas fa-fire"></i> Grit and determination</div>
+            <div class="skill-item"><i class="fas fa-lightbulb"></i> Problem-solving and critical thinking</div>
+            <div class="skill-item"><i class="fas fa-sync-alt"></i> Adaptability and resilience</div>
+            <div class="skill-item"><i class="fas fa-handshake"></i> Strong interpersonal skills</div>
         </div>
     </div>
 </section>
 
-<section>
+<section id="ngo">
+    <h2><i class="fas fa-graduation-cap"></i> Educate Them All (ETA) Network</h2>
+    <p>
+        Educate Them All (ETA) Network is my initiative dedicated to making education accessible to underprivileged students. 
+        Through mentorship, academic support, and community outreach, we work to keep students in school and help them achieve their educational goals.
+    </p>
+    
+    <h3>Our Impact</h3>
+    <ul>
+        <li>Mentored 6 students from secondary to university levels</li>
+        <li>Assisted with WAEC and JAMB registrations</li>
+        <li>"Keep Them in School" campaign promoting education over child labor</li>
+        <li>Free academic support for Delta State University students</li>
+    </ul>
+
+    <h3>Gallery</h3>
+    <div class="photo-gallery">
+        <div class="photo-item">
+            <div class="photo-placeholder">
+                <i class="fas fa-image"></i>
+            </div>
+        </div>
+        <div class="photo-item">
+            <div class="photo-placeholder">
+                <i class="fas fa-image"></i>
+            </div>
+        </div>
+        <div class="photo-item">
+            <div class="photo-placeholder">
+                <i class="fas fa-image"></i>
+            </div>
+        </div>
+        <div class="photo-item">
+            <div class="photo-placeholder">
+                <i class="fas fa-image"></i>
+            </div>
+        </div>
+        <div class="photo-item">
+            <div class="photo-placeholder">
+                <i class="fas fa-image"></i>
+            </div>
+        </div>
+        <div class="photo-item">
+            <div class="photo-placeholder">
+                <i class="fas fa-image"></i>
+            </div>
+        </div>
+        <div class="photo-item">
+            <div class="photo-placeholder">
+                <i class="fas fa-image"></i>
+            </div>
+        </div>
+        <div class="photo-item">
+            <div class="photo-placeholder">
+                <i class="fas fa-image"></i>
+            </div>
+        </div>
+        <div class="photo-item">
+            <div class="photo-placeholder">
+                <i class="fas fa-image"></i>
+            </div>
+        </div>
+        <div class="photo-item">
+            <div class="photo-placeholder">
+                <i class="fas fa-image"></i>
+            </div>
+        </div>
+    </div>
+    <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+        <i class="fas fa-info-circle"></i> To add your photos: Replace the placeholder divs with 
+        <code>&lt;img src="your-photo.jpg" alt="Description"&gt;</code>
+    </p>
+</section>
+
+<section id="memberships">
     <h2>Academic Membership and Affiliations</h2>
     <ul>
         <li>Teachers Registration Council of Nigeria (TRCN)</li>
@@ -543,34 +1049,78 @@ Copy
     </ul>
 </section>
 
-<section>
-    <h2>Languages</h2>
-    <p><strong>English:</strong> Fluent (official language and medium of instruction in Nigeria)</p>
-    <p><strong>French:</strong> Beginner</p>
+<section id="languages">
+    <h2><i class="fas fa-language"></i> Languages</h2>
+    <div class="language-item">
+        <i class="fas fa-globe"></i>
+        <span><strong>English:</strong> Fluent (official language and medium of instruction in Nigeria)</span>
+    </div>
+    <div class="language-item">
+        <i class="fas fa-globe"></i>
+        <span><strong>French:</strong> Beginner</span>
+    </div>
 </section>
 
-<section>
-    <h2>Hobbies & Interests</h2>
+<section id="hobbies">
+    <h2><i class="fas fa-heart"></i> Hobbies & Interests</h2>
     <p>Research and teaching, public speaking, advocating for SDGs, sports, listening to music, volunteering, and learning about new cultures and languages.</p>
-    <p>For fun, I write stories, facts and fictions on READAFRICA. Find some of my work:</p>
+    <p><i class="fas fa-pen-fancy"></i> For fun, I write stories, facts and fictions on READAFRICA. Find some of my work:</p>
     <ul>
-        <li><a href="https://ngozi-uzor.github.io/ANIOMA/" target="_blank">IGBO BU OFU</a></li>
-        <li><a href="https://ngozi-uzor.github.io/The-Only-Hope/" target="_blank">The Only Hope: Libya to Italy</a></li>
+        <li><i class="fas fa-book"></i> <a href="https://ngozi-uzor.github.io/ANIOMA/" target="_blank">IGBO BU OFU</a></li>
+        <li><i class="fas fa-book-open"></i> <a href="https://ngozi-uzor.github.io/The-Only-Hope/" target="_blank">The Only Hope: Libya to Italy</a></li>
     </ul>
 </section>
 
-<section>
-    <h2>Links</h2>
-    <ul>
-        <li><a href="https://www.linkedin.com/in/blessing-ngozi-uzor-2a97b01a7/" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com/Ngozi-uzor" target="_blank">GitHub</a></li>
-        <li><a href="UZORBLESSINGNGOZICV.pdf">Curriculum Vitae (PDF)</a></li>
-    </ul>
+<section id="links">
+    <h2><i class="fas fa-link"></i> Links</h2>
+    <div class="social-links">
+        <a href="mailto:blessing.uzor@aims-cameroon.org">
+            <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="https://www.linkedin.com/in/blessing-ngozi-uzor-2a97b01a7/" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/Ngozi-uzor" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="UZORBLESSINGNGOZICV.pdf">
+            <i class="fas fa-file-pdf"></i> Curriculum Vitae (PDF)
+        </a>
+    </div>
 </section>
 
 <footer>
     <p>&copy; 2024 Blessing Ngozi Uzor</p>
 </footer>
+
+<script>
+function toggleMenu() {
+    const nav = document.getElementById('sideNav');
+    const overlay = document.querySelector('.overlay');
+    const menuToggle = document.querySelector('.menu-toggle');
+    
+    nav.classList.toggle('open');
+    overlay.classList.toggle('active');
+    
+    // Change icon
+    const icon = menuToggle.querySelector('i');
+    if (nav.classList.contains('open')) {
+        icon.className = 'fas fa-times';
+    } else {
+        icon.className = 'fas fa-bars';
+    }
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+    const nav = document.getElementById('sideNav');
+    const menuToggle = document.querySelector('.menu-toggle');
+    
+    if (!nav.contains(event.target) && !menuToggle.contains(event.target) && nav.classList.contains('open')) {
+        toggleMenu();
+    }
+});
+</script>
 
 </body>
 </html>

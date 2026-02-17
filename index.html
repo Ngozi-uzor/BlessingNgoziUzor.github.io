@@ -983,60 +983,36 @@
     <h3>Gallery</h3>
     <div class="photo-gallery">
         <div class="photo-item">
-            <div class="photo-placeholder">
-                <i class="fas fa-image"></i>
-            </div>
+            <img src="https://raw.githubusercontent.com/Ngozi-uzor/Ngozi-uzor.github.io/main/enhanced_images/enhanced_uploaded_image_0_1767333530888.jpg" alt="ETA Network Activity">
         </div>
         <div class="photo-item">
-            <div class="photo-placeholder">
-                <i class="fas fa-image"></i>
-            </div>
+            <img src="https://raw.githubusercontent.com/Ngozi-uzor/Ngozi-uzor.github.io/main/enhanced_images/enhanced_uploaded_image_1_1767333530888.jpg" alt="Student Mentorship">
         </div>
         <div class="photo-item">
-            <div class="photo-placeholder">
-                <i class="fas fa-image"></i>
-            </div>
+            <img src="https://raw.githubusercontent.com/Ngozi-uzor/Ngozi-uzor.github.io/main/enhanced_images/enhanced_uploaded_image_2_1767333530888.jpg" alt="Educational Support">
         </div>
         <div class="photo-item">
-            <div class="photo-placeholder">
-                <i class="fas fa-image"></i>
-            </div>
+            <img src="https://raw.githubusercontent.com/Ngozi-uzor/Ngozi-uzor.github.io/main/enhanced_images/enhanced_uploaded_image_4_1767333530888.jpg" alt="Community Outreach">
         </div>
         <div class="photo-item">
-            <div class="photo-placeholder">
-                <i class="fas fa-image"></i>
-            </div>
+            <img src="https://raw.githubusercontent.com/Ngozi-uzor/Ngozi-uzor.github.io/main/enhanced_images/enhanced_uploaded_image_0_1767333546192.jpg" alt="Keep Them in School Campaign">
         </div>
         <div class="photo-item">
-            <div class="photo-placeholder">
-                <i class="fas fa-image"></i>
-            </div>
+            <img src="https://raw.githubusercontent.com/Ngozi-uzor/Ngozi-uzor.github.io/main/enhanced_images/enhanced_uploaded_image_1_1767333546192.jpg" alt="Academic Guidance">
         </div>
         <div class="photo-item">
-            <div class="photo-placeholder">
-                <i class="fas fa-image"></i>
-            </div>
+            <img src="https://raw.githubusercontent.com/Ngozi-uzor/Ngozi-uzor.github.io/main/enhanced_images/enhanced_uploaded_image_2_1767333546192.jpg" alt="Student Registration Support">
         </div>
         <div class="photo-item">
-            <div class="photo-placeholder">
-                <i class="fas fa-image"></i>
-            </div>
+            <img src="https://raw.githubusercontent.com/Ngozi-uzor/Ngozi-uzor.github.io/main/enhanced_images/enhanced_uploaded_image_3_1767333546192.jpg" alt="Educational Advocacy">
         </div>
         <div class="photo-item">
-            <div class="photo-placeholder">
-                <i class="fas fa-image"></i>
-            </div>
+            <img src="https://raw.githubusercontent.com/Ngozi-uzor/Ngozi-uzor.github.io/main/enhanced_images/enhanced_uploaded_image_4_1767333546192.jpg" alt="ETA Mentorship Session">
         </div>
         <div class="photo-item">
-            <div class="photo-placeholder">
-                <i class="fas fa-image"></i>
-            </div>
+            <img src="https://raw.githubusercontent.com/Ngozi-uzor/Ngozi-uzor.github.io/main/enhanced_images/enhanced_uploaded_image_0_1767333576595.jpg" alt="Educate Them All Initiative">
         </div>
     </div>
-    <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-        <i class="fas fa-info-circle"></i> To add your photos: Replace the placeholder divs with 
-        <code>&lt;img src="your-photo.jpg" alt="Description"&gt;</code>
-    </p>
 </section>
 
 <section id="memberships">
@@ -1083,9 +1059,6 @@
         <a href="https://github.com/Ngozi-uzor" target="_blank">
             <i class="fab fa-github"></i> GitHub
         </a>
-        <a href="UZORBLESSINGNGOZICV.pdf">
-            <i class="fas fa-file-pdf"></i> Curriculum Vitae (PDF)
-        </a>
     </div>
 </section>
 
@@ -1093,7 +1066,7 @@
     <p>&copy; 2024 Blessing Ngozi Uzor</p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function toggleMenu() {
     const nav = document.getElementById('sideNav');
     const overlay = document.querySelector('.overlay');
@@ -1116,7 +1089,7 @@ document.addEventListener('click', function(event) {
     const nav = document.getElementById('sideNav');
     const menuToggle = document.querySelector('.menu-toggle');
     
-    if (!nav.contains(event.target) && !menuToggle.contains(event.target) && nav.classList.contains('open')) {
+    if (nav.contains(event.target) && !menuToggle.contains(event.target) && nav.classList.contains('open')) {
         toggleMenu();
     }
 });

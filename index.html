@@ -12,12 +12,43 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --bg-color: #ffffff;
+            --text-color: var(--text-color);
+            --primary-color: #2c5f8d;
+            --secondary-bg: #f8f9fa;
+            --border-color: #e0e0e0;
+            --card-bg: #f8f9fa;
+            --link-hover: #1a3a52;
+            --subtitle-color: var(--subtitle-color);
+            --date-color: var(--date-color);
+            --placeholder-color: var(--placeholder-color);
+        }
+
+        [data-theme="dark"] {
+            --bg-color: var(--text-color);
+            --text-color: #e0e0e0;
+            --primary-color: #5a9fd4;
+            --secondary-bg: #2d2d2d;
+            --border-color: #404040;
+            --card-bg: #252525;
+            --link-hover: #7ab8e8;
+            --subtitle-color: #aaa;
+            --date-color: var(--placeholder-color);
+            --placeholder-color: var(--date-color);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            background: #ffffff;
-            color: #1a1a1a;
+            background: var(--bg-color);
+            color: var(--text-color);
             line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
         header, section, footer {
@@ -30,7 +61,7 @@
             display: flex;
             gap: 2rem;
             align-items: center;
-            border-bottom: 2px solid #2c5f8d;
+            border-bottom: 2px solid var(--primary-color);
             flex-wrap: wrap;
         }
 
@@ -39,7 +70,7 @@
             height: 160px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #2c5f8d;
+            border: 3px solid var(--primary-color);
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
@@ -52,15 +83,15 @@
             margin: 0 0 0.5rem 0;
             font-size: 2rem;
             font-weight: 700;
-            color: #2c5f8d;
+            color: var(--primary-color);
         }
 
         h2 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
             font-weight: 700;
-            color: #2c5f8d;
-            border-bottom: 2px solid #e8f0f7;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
             padding-bottom: 0.5rem;
         }
 
@@ -68,14 +99,14 @@
             font-size: 1.1rem;
             margin: 1rem 0 0.25rem 0;
             font-weight: 600;
-            color: #1a1a1a;
+            color: var(--text-color);
         }
 
         h4 {
             font-size: 1rem;
             margin: 0.5rem 0 0.25rem 0;
             font-weight: 600;
-            color: #444;
+            color: var(--subtitle-color);
         }
 
         p {
@@ -83,7 +114,7 @@
         }
 
         .subtitle {
-            color: #555;
+            color: var(--subtitle-color);
             font-size: 0.95rem;
             margin: 0.25rem 0;
         }
@@ -98,27 +129,43 @@
         }
 
         section {
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid var(--border-color);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
         }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section:nth-child(1) { animation-delay: 0.1s; }
+        section:nth-child(2) { animation-delay: 0.2s; }
+        section:nth-child(3) { animation-delay: 0.3s; }
+        section:nth-child(4) { animation-delay: 0.4s; }
+        section:nth-child(5) { animation-delay: 0.5s; }
 
         section:last-of-type {
             border-bottom: none;
         }
 
         a {
-            color: #2c5f8d;
+            color: var(--primary-color);
             text-decoration: none;
             transition: color 0.2s;
         }
 
         a:hover {
-            color: #1a3a52;
+            color: var(--link-hover);
             text-decoration: underline;
         }
 
         footer {
             font-size: 0.9rem;
-            color: #666;
+            color: var(--date-color);
             text-align: center;
             border-top: 1px solid #eee;
             margin-top: 2rem;
@@ -137,7 +184,7 @@
         }
 
         .date {
-            color: #666;
+            color: var(--date-color);
             font-size: 0.9rem;
             font-style: italic;
         }
@@ -150,7 +197,7 @@
         }
 
         .skill-category h4 {
-            color: #2c5f8d;
+            color: var(--primary-color);
             margin-bottom: 0.5rem;
         }
 
@@ -183,7 +230,7 @@
         }
 
         .contact-item i {
-            color: #2c5f8d;
+            color: var(--primary-color);
             width: 20px;
         }
 
@@ -198,13 +245,13 @@
             align-items: center;
             gap: 0.5rem;
             padding: 0.5rem 1rem;
-            background: #f0f7ff;
+            background: var(--secondary-bg);
             border-radius: 5px;
             transition: all 0.3s;
         }
 
         .social-links a:hover {
-            background: #2c5f8d;
+            background: var(--primary-color);
             color: white;
             text-decoration: none;
         }
@@ -215,7 +262,7 @@
 
         .social-links i {
             font-size: 1.2rem;
-            color: #2c5f8d;
+            color: var(--primary-color);
         }
 
         .skill-item {
@@ -226,7 +273,7 @@
         }
 
         .skill-item i {
-            color: #2c5f8d;
+            color: var(--primary-color);
             width: 20px;
         }
 
@@ -238,7 +285,7 @@
         }
 
         .language-item i {
-            color: #2c5f8d;
+            color: var(--primary-color);
         }
 
         /* Photo gallery styles */
@@ -256,8 +303,8 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             transition: transform 0.3s;
             aspect-ratio: 4/3;
-            background: #f0f0f0;
-            border: 2px solid #e0e0e0;
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
         }
 
         .photo-item:hover {
@@ -277,35 +324,58 @@
             align-items: center;
             justify-content: center;
             height: 100%;
-            color: #999;
+            color: var(--placeholder-color);
             font-size: 3rem;
         }
 
         /* Project card styles */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
             margin-top: 1rem;
         }
 
         .project-card {
-            background: #f8f9fa;
-            border: 2px solid #e0e0e0;
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
             border-radius: 8px;
             padding: 1.5rem;
             transition: all 0.3s;
+            cursor: pointer;
         }
 
         .project-card:hover {
-            border-color: #2c5f8d;
+            border-color: var(--primary-color);
             box-shadow: 0 4px 10px rgba(44, 95, 141, 0.2);
             transform: translateY(-5px);
         }
 
         .project-card h3 {
-            color: #2c5f8d;
+            color: var(--primary-color);
             margin-top: 0;
+            font-size: 1rem;
+        }
+
+        .project-description {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: all 0.3s ease;
+        }
+
+        .project-card.expanded .project-description {
+            display: block;
+            -webkit-line-clamp: unset;
+        }
+
+        .project-expand-btn {
+            color: var(--primary-color);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            font-weight: 600;
         }
 
         .project-tags {
@@ -316,34 +386,40 @@
         }
 
         .project-tag {
-            background: #2c5f8d;
+            background: var(--primary-color);
             color: white;
             padding: 0.25rem 0.75rem;
             border-radius: 15px;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
         }
 
         .project-links {
             margin-top: 1rem;
             display: flex;
             gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .project-links a {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: white;
-            border: 1px solid #2c5f8d;
+            padding: 0.4rem 0.8rem;
+            background: var(--bg-color);
+            border: 1px solid var(--primary-color);
             border-radius: 5px;
-            color: #2c5f8d;
+            color: var(--primary-color);
             text-decoration: none;
             transition: all 0.3s;
+            font-size: 0.85rem;
+        }
+
+        [data-theme="dark"] .project-links a {
+            background: var(--card-bg);
         }
 
         .project-links a:hover {
-            background: #2c5f8d;
+            background: var(--primary-color);
             color: white;
         }
 
@@ -357,13 +433,82 @@
             }
         }
 
+        /* Dark mode toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1001;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background 0.3s, transform 0.3s;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle:hover {
+            background: var(--link-hover);
+            transform: rotate(180deg);
+        }
+
+        /* CTA Buttons */
+        .cta-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-color);
+            color: white !important;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none !important;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(44, 95, 141, 0.3);
+        }
+
+        .cta-button:hover {
+            background: var(--link-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(44, 95, 141, 0.4);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color) !important;
+        }
+
+        .cta-button.secondary:hover {
+            background: var(--primary-color);
+            color: white !important;
+        }
+
         /* Navigation menu styles */
         .menu-toggle {
             position: fixed;
             top: 20px;
             right: 20px;
             z-index: 1001;
-            background: #2c5f8d;
+            background: var(--primary-color);
             color: white;
             border: none;
             padding: 0.75rem 1rem;
@@ -375,7 +520,7 @@
         }
 
         .menu-toggle:hover {
-            background: #1a3a52;
+            background: var(--link-hover);
         }
 
         nav {
@@ -384,7 +529,7 @@
             right: -300px;
             width: 280px;
             height: 100vh;
-            background: #2c5f8d;
+            background: var(--primary-color);
             z-index: 1000;
             transition: right 0.3s ease;
             overflow-y: auto;
@@ -416,7 +561,7 @@
         }
 
         nav a:hover {
-            background: #1a3a52;
+            background: var(--link-hover);
             border-left-color: white;
             text-decoration: none;
         }
@@ -427,7 +572,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0,0,0,0.7);
             z-index: 999;
             display: none;
         }
@@ -453,6 +598,10 @@
 </head>
 
 <body>
+
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+</button>
 
 <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
     <i class="fas fa-bars"></i>
@@ -496,6 +645,12 @@
     <p>
         I am a Mathematician, Educationist and a current Mastercard Foundation Scholar pursuing graduate studies in Data Science at the African Institute for Mathematical Sciences (AIMS), Cameroon. My work sits at the intersection of applied mathematics, Artificial Intelligence, and education systems. I am particularly interested in using data-driven methods, machine learning, and mathematical/statistical modelling to address real-world challenges in education, public health and climate resilience across Africa. My long-term goal is to contribute to data-driven solutions that strengthen learning systems and improve outcomes for underserved communities.
     </p>
+    
+    <div class="cta-container">
+        <a href="#links" class="cta-button">
+            <i class="fas fa-envelope"></i> Let's Collaborate
+        </a>
+    </div>
 </section>
 
 <section id="education">
@@ -569,9 +724,9 @@
     
     <div class="projects-grid">
         <!-- Project 1: Decoder-Only Transformer -->
-        <div class="project-card">
+        <div class="project-card" onclick="this.classList.toggle('expanded')">
             <h3><i class="fas fa-brain"></i> Decoder-Only Transformer Implementation | Deep Learning</h3>
-            <p>Built a Transformer decoder from scratch, implementing self-attention, positional encoding, and masked multi-head attention, and created a custom dataset and training loop to demonstrate correct sequence mapping inference. Applied teacher forcing and cross-entropy loss with the Adam optimizer, visualizing attention patterns and training convergence to validate the model's learning process.</p>
+            <p class="project-description">Built a Transformer decoder from scratch, implementing self-attention, positional encoding, and masked multi-head attention, and created a custom dataset and training loop to demonstrate correct sequence mapping inference. Applied teacher forcing and cross-entropy loss with the Adam optimizer, visualizing attention patterns and training convergence to validate the model's learning process.</p><span class="project-expand-btn">Read</span>
             <div class="project-tags">
                 <span class="project-tag">Python</span>
                 <span class="project-tag">PyTorch</span>
@@ -585,9 +740,9 @@
         </div>
 
         <!-- Project 2: Student Performance Prediction -->
-        <div class="project-card">
+        <div class="project-card" onclick="this.classList.toggle('expanded')">
             <h3><i class="fas fa-graduation-cap"></i> Student Performance Prediction Model | Supervised Machine Learning</h3>
-            <p>Developed a regression model to predict student performance using academic and lifestyle factors (study hours, sleep, extracurriculars), performing data cleaning, visualization, and correlation analysis to identify Previous Scores and Hours Studied as the strongest predictors. Trained a Multiple Linear Regression model, achieving 98.9% explained variance (R² = 0.989) and an RMSE of 2.04 on the test set, and derived actionable insights from model coefficients.</p>
+            <p class="project-description">Developed a regression model to predict student performance using academic and lifestyle factors (study hours, sleep, extracurriculars), performing data cleaning, visualization, and correlation analysis to identify Previous Scores and Hours Studied as the strongest predictors. Trained a Multiple Linear Regression model, achieving 98.9% explained variance (R² = 0.989) and an RMSE of 2.04 on the test set, and derived actionable insights from model coefficients.</p><span class="project-expand-btn">Read</span>
             <div class="project-tags">
                 <span class="project-tag">Python</span>
                 <span class="project-tag">Scikit-learn</span>
@@ -602,9 +757,9 @@
         </div>
 
         <!-- Project 3: Statistical Inference on Birth Weight -->
-        <div class="project-card">
+        <div class="project-card" onclick="this.classList.toggle('expanded')">
             <h3><i class="fas fa-chart-bar"></i> Statistical Inference on Birth Weight Data: Hypothesis Testing & Confidence Intervals</h3>
-            <p>Conducted a full statistical inference analysis on the birthwt dataset to investigate factors influencing low birth weight, applying hypothesis testing and confidence intervals. Empirically validated the Central Limit Theorem through simulation (1000 samples, n=30) and performed F-test and Chi-square test of independence, identifying a significant association between smoking and low birth weight (p=0.0396).</p>
+            <p class="project-description">Conducted a full statistical inference analysis on the birthwt dataset to investigate factors influencing low birth weight, applying hypothesis testing and confidence intervals. Empirically validated the Central Limit Theorem through simulation (1000 samples, n=30) and performed F-test and Chi-square test of independence, identifying a significant association between smoking and low birth weight (p=0.0396).</p><span class="project-expand-btn">Read</span>
             <div class="project-tags">
                 <span class="project-tag">R</span>
                 <span class="project-tag">ggplot2</span>
@@ -618,9 +773,9 @@
         </div>
 
         <!-- Project 4: Chinese Remainder Theorem -->
-        <div class="project-card">
+        <div class="project-card" onclick="this.classList.toggle('expanded')">
             <h3><i class="fas fa-calculator"></i> Chinese Remainder Theorem Algorithm: Recursive Modular Solver</h3>
-            <p>Designed and implemented a recursive algorithm in Python to solve systems of simultaneous linear congruences using the Chinese Remainder Theorem (CRT). Engineered core functions from scratch: a recursive GCD calculator, an Extended Euclidean Algorithm (Bézout coefficients), and a pairwise coprimality checker. Developed a robust solver that recursively reduces n congruences to a single solution modulo the product of all moduli, handling edge cases gracefully.</p>
+            <p class="project-description">Designed and implemented a recursive algorithm in Python to solve systems of simultaneous linear congruences using the Chinese Remainder Theorem (CRT). Engineered core functions from scratch: a recursive GCD calculator, an Extended Euclidean Algorithm (Bézout coefficients), and a pairwise coprimality checker. Developed a robust solver that recursively reduces n congruences to a single solution modulo the product of all moduli, handling edge cases gracefully.</p><span class="project-expand-btn">Read</span>
             <div class="project-tags">
                 <span class="project-tag">Python</span>
                 <span class="project-tag">Number Theory</span>
@@ -634,9 +789,9 @@
         </div>
 
         <!-- Project 5: Heart Failure Mortality Risk -->
-        <div class="project-card">
+        <div class="project-card" onclick="this.classList.toggle('expanded')">
             <h3><i class="fas fa-heartbeat"></i> Predictive Modeling for Heart Failure Mortality Risk</h3>
-            <p>Conducted an end-to-end data science project to predict mortality risk in heart failure patients using a clinical dataset of 299 patients and 13 variables. Performed exploratory data analysis (EDA) to identify key clinical risk factors and built classification models including Logistic Regression and Random Forest. Achieved an AUC of 0.895 with a Random Forest model, demonstrating strong performance (84.75% accuracy) on the test set. Delivered actionable clinical insights by interpreting feature importance.</p>
+            <p class="project-description">Conducted an end-to-end data science project to predict mortality risk in heart failure patients using a clinical dataset of 299 patients and 13 variables. Performed exploratory data analysis (EDA) to identify key clinical risk factors and built classification models including Logistic Regression and Random Forest. Achieved an AUC of 0.895 with a Random Forest model, demonstrating strong performance (84.75% accuracy) on the test set. Delivered actionable clinical insights by interpreting feature importance.</p><span class="project-expand-btn">Read</span>
             <div class="project-tags">
                 <span class="project-tag">Python</span>
                 <span class="project-tag">Scikit-learn</span>
@@ -651,9 +806,9 @@
         </div>
 
         <!-- Project 6: FINA Personal Finance Tracker -->
-        <div class="project-card">
+        <div class="project-card" onclick="this.classList.toggle('expanded')">
             <h3><i class="fas fa-wallet"></i> FINA – Full-Stack Personal Finance Tracker</h3>
-            <p>Designed and deployed a secure, full-stack personal finance web application with Flask REST API backend and dynamic JavaScript/Tailwind CSS frontend. Engineered robust user authentication using Flask-JWT-Extended and implemented PostgreSQL database via SQLAlchemy ORM. Developed complete frontend logic with ES6+ JavaScript, handling form validation and JWT session management. Deployed full application stack on Render with production-grade integration.</p>
+            <p class="project-description">Designed and deployed a secure, full-stack personal finance web application with Flask REST API backend and dynamic JavaScript/Tailwind CSS frontend. Engineered robust user authentication using Flask-JWT-Extended and implemented PostgreSQL database via SQLAlchemy ORM. Developed complete frontend logic with ES6+ JavaScript, handling form validation and JWT session management. Deployed full application stack on Render with production-grade integration.</p><span class="project-expand-btn">Read</span>
             <div class="project-tags">
                 <span class="project-tag">Python</span>
                 <span class="project-tag">Flask</span>
@@ -669,9 +824,9 @@
         </div>
 
         <!-- Project 7: Logistic Regression from Scratch -->
-        <div class="project-card">
+        <div class="project-card" onclick="this.classList.toggle('expanded')">
             <h3><i class="fas fa-atom"></i> Logistic Regression from Scratch for Particle Classification</h3>
-            <p>Built a Logistic Regression classifier from the ground up (without scikit-learn) to distinguish between electron and hadron particles. Implemented the complete ML pipeline: data loading, binary label encoding, 80/20 train-test splitting, feature standardization, and matrix augmentation. Developed core algorithms including sigmoid activation, cross-entropy loss, and gradient computation using vectorized NumPy operations. Achieved ~88% accuracy and 90% recall on the test set.</p>
+            <p class="project-description">Built a Logistic Regression classifier from the ground up (without scikit-learn) to distinguish between electron and hadron particles. Implemented the complete ML pipeline: data loading, binary label encoding, 80/20 train-test splitting, feature standardization, and matrix augmentation. Developed core algorithms including sigmoid activation, cross-entropy loss, and gradient computation using vectorized NumPy operations. Achieved ~88% accuracy and 90% recall on the test set.</p><span class="project-expand-btn">Read</span>
             <div class="project-tags">
                 <span class="project-tag">Python</span>
                 <span class="project-tag">NumPy</span>
@@ -983,34 +1138,34 @@
     <h3>Gallery</h3>
     <div class="photo-gallery">
         <div class="photo-item">
-            <img src="https://raw.githubusercontent.com/Ngozi-uzor/Ngozi-uzor.github.io/main/enhanced_images/enhanced_uploaded_image_0_1767333530888.jpg" alt="ETA Network Activity">
+            <img src="https://raw.githubusercontent.com/BlessingNgoziUzor/BlessingNgoziUzor.github.io/main/enhanced_images/enhanced_uploaded_image_0_1767333530888.jpg" alt="ETA Network Activity">
         </div>
         <div class="photo-item">
-            <img src="https://raw.githubusercontent.com/Ngozi-uzor/Ngozi-uzor.github.io/main/enhanced_images/enhanced_uploaded_image_1_1767333530888.jpg" alt="Student Mentorship">
+            <img src="https://raw.githubusercontent.com/BlessingNgoziUzor/BlessingNgoziUzor.github.io/main/enhanced_images/enhanced_uploaded_image_1_1767333530888.jpg" alt="Student Mentorship">
         </div>
         <div class="photo-item">
-            <img src="https://raw.githubusercontent.com/Ngozi-uzor/Ngozi-uzor.github.io/main/enhanced_images/enhanced_uploaded_image_2_1767333530888.jpg" alt="Educational Support">
+            <img src="https://raw.githubusercontent.com/BlessingNgoziUzor/BlessingNgoziUzor.github.io/main/enhanced_images/enhanced_uploaded_image_2_1767333530888.jpg" alt="Educational Support">
         </div>
         <div class="photo-item">
-            <img src="https://raw.githubusercontent.com/Ngozi-uzor/Ngozi-uzor.github.io/main/enhanced_images/enhanced_uploaded_image_4_1767333530888.jpg" alt="Community Outreach">
+            <img src="https://raw.githubusercontent.com/BlessingNgoziUzor/BlessingNgoziUzor.github.io/main/enhanced_images/enhanced_uploaded_image_4_1767333530888.jpg" alt="Community Outreach">
         </div>
         <div class="photo-item">
-            <img src="https://raw.githubusercontent.com/Ngozi-uzor/Ngozi-uzor.github.io/main/enhanced_images/enhanced_uploaded_image_0_1767333546192.jpg" alt="Keep Them in School Campaign">
+            <img src="https://raw.githubusercontent.com/BlessingNgoziUzor/BlessingNgoziUzor.github.io/main/enhanced_images/enhanced_uploaded_image_0_1767333546192.jpg" alt="Keep Them in School Campaign">
         </div>
         <div class="photo-item">
-            <img src="https://raw.githubusercontent.com/Ngozi-uzor/Ngozi-uzor.github.io/main/enhanced_images/enhanced_uploaded_image_1_1767333546192.jpg" alt="Academic Guidance">
+            <img src="https://raw.githubusercontent.com/BlessingNgoziUzor/BlessingNgoziUzor.github.io/main/enhanced_images/enhanced_uploaded_image_1_1767333546192.jpg" alt="Academic Guidance">
         </div>
         <div class="photo-item">
-            <img src="https://raw.githubusercontent.com/Ngozi-uzor/Ngozi-uzor.github.io/main/enhanced_images/enhanced_uploaded_image_2_1767333546192.jpg" alt="Student Registration Support">
+            <img src="https://raw.githubusercontent.com/BlessingNgoziUzor/BlessingNgoziUzor.github.io/main/enhanced_images/enhanced_uploaded_image_2_1767333546192.jpg" alt="Student Registration Support">
         </div>
         <div class="photo-item">
-            <img src="https://raw.githubusercontent.com/Ngozi-uzor/Ngozi-uzor.github.io/main/enhanced_images/enhanced_uploaded_image_3_1767333546192.jpg" alt="Educational Advocacy">
+            <img src="https://raw.githubusercontent.com/BlessingNgoziUzor/BlessingNgoziUzor.github.io/main/enhanced_images/enhanced_uploaded_image_3_1767333546192.jpg" alt="Educational Advocacy">
         </div>
         <div class="photo-item">
-            <img src="https://raw.githubusercontent.com/Ngozi-uzor/Ngozi-uzor.github.io/main/enhanced_images/enhanced_uploaded_image_4_1767333546192.jpg" alt="ETA Mentorship Session">
+            <img src="https://raw.githubusercontent.com/BlessingNgoziUzor/BlessingNgoziUzor.github.io/main/enhanced_images/enhanced_uploaded_image_4_1767333546192.jpg" alt="ETA Mentorship Session">
         </div>
         <div class="photo-item">
-            <img src="https://raw.githubusercontent.com/Ngozi-uzor/Ngozi-uzor.github.io/main/enhanced_images/enhanced_uploaded_image_0_1767333576595.jpg" alt="Educate Them All Initiative">
+            <img src="https://raw.githubusercontent.com/BlessingNgoziUzor/BlessingNgoziUzor.github.io/main/enhanced_images/enhanced_uploaded_image_0_1767333576595.jpg" alt="Educate Them All Initiative">
         </div>
     </div>
 </section>
@@ -1050,7 +1205,7 @@
 <section id="links">
     <h2><i class="fas fa-link"></i> Links</h2>
     <div class="social-links">
-        <a href="mailto:blessing.uzor@aims-cameroon.org">
+        <a href="/cdn-cgi/l/email-protection#41232d243232282f266f343b2e330120282c326c22202c24332e2e2f6f2e3326">
             <i class="fas fa-envelope"></i> Email
         </a>
         <a href="https://www.linkedin.com/in/blessing-ngozi-uzor-2a97b01a7/" target="_blank">
@@ -1066,7 +1221,36 @@
     <p>&copy; 2024 Blessing Ngozi Uzor</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+// Dark mode toggle
+function toggleTheme() {
+    const html = document.documentElement;
+    const themeToggle = document.querySelector('.theme-toggle i');
+    const currentTheme = html.getAttribute('data-theme');
+    
+    if (currentTheme === 'dark') {
+        html.removeAttribute('data-theme');
+        themeToggle.className = 'fas fa-moon';
+        localStorage.setItem('theme', 'light');
+    } else {
+        html.setAttribute('data-theme', 'dark');
+        themeToggle.className = 'fas fa-sun';
+        localStorage.setItem('theme', 'dark');
+    }
+}
+
+// Load saved theme
+document.addEventListener('DOMContentLoaded', function() {
+    const savedTheme = localStorage.getItem('theme');
+    const themeToggle = document.querySelector('.theme-toggle i');
+    
+    if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeToggle.className = 'fas fa-sun';
+    }
+});
+
+// Menu toggle
 function toggleMenu() {
     const nav = document.getElementById('sideNav');
     const overlay = document.querySelector('.overlay');
@@ -1083,7 +1267,6 @@ function toggleMenu() {
         icon.className = 'fas fa-bars';
     }
 }
-
 // Close menu when clicking outside
 document.addEventListener('click', function(event) {
     const nav = document.getElementById('sideNav');

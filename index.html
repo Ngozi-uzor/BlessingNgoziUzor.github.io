@@ -1,3 +1,6 @@
+Blessing uzor website updated · HTML
+Copy
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,11 +10,15 @@
     <title>Blessing Ngozi Uzor</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
             background: #ffffff;
-            color: #000000;
+            color: #1a1a1a;
             line-height: 1.6;
         }
 
@@ -25,7 +32,8 @@
             display: flex;
             gap: 2rem;
             align-items: center;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 2px solid #2c5f8d;
+            flex-wrap: wrap;
         }
 
         .profile-photo {
@@ -33,52 +41,134 @@
             height: 160px;
             border-radius: 50%;
             object-fit: cover;
-            border: 1px solid #ccc;
+            border: 3px solid #2c5f8d;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            flex: 1;
+            min-width: 250px;
         }
 
         h1 {
-            margin: 0;
+            margin: 0 0 0.5rem 0;
             font-size: 2rem;
-            font-weight: 600;
+            font-weight: 700;
+            color: #2c5f8d;
         }
 
         h2 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: #2c5f8d;
+            border-bottom: 2px solid #e8f0f7;
+            padding-bottom: 0.5rem;
         }
 
         h3 {
             font-size: 1.1rem;
-            margin-bottom: 0.25rem;
+            margin: 1rem 0 0.25rem 0;
             font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        h4 {
+            font-size: 1rem;
+            margin: 0.5rem 0 0.25rem 0;
+            font-weight: 600;
+            color: #444;
         }
 
         p {
             margin: 0.5rem 0;
         }
 
+        .subtitle {
+            color: #555;
+            font-size: 0.95rem;
+            margin: 0.25rem 0;
+        }
+
         ul {
-            padding-left: 1.2rem;
+            padding-left: 1.5rem;
+            margin: 0.5rem 0;
         }
 
         li {
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.5rem;
         }
 
         section {
             border-bottom: 1px solid #eee;
         }
 
+        section:last-of-type {
+            border-bottom: none;
+        }
+
         a {
-            color: #000;
+            color: #2c5f8d;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #1a3a52;
             text-decoration: underline;
         }
 
         footer {
             font-size: 0.9rem;
-            color: #444;
+            color: #666;
             text-align: center;
+            border-top: 1px solid #eee;
+            margin-top: 2rem;
+        }
+
+        .experience-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .date {
+            color: #666;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-category h4 {
+            color: #2c5f8d;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
         }
     </style>
 </head>
@@ -89,116 +179,391 @@
     <img src="Blessing Ngozi (3).JPG" alt="Blessing Ngozi Uzor" class="profile-photo"
          onerror="this.src='https://ui-avatars.com/api/?name=Blessing+Uzor&size=300';">
 
-    <div>
+    <div class="header-content">
         <h1>Blessing Ngozi Uzor</h1>
-        <p>Master’s Student, Mathematical Sciences (Data Science)</p>
-        <p>African Institute for Mathematical Sciences, Limbe Cameroon</p>
-        <p>Email: <a href="mailto:blessing.uzor@aims-cameroon.org"> Click Here</a></p>
+        <p class="subtitle">Master's Student, Mathematical Sciences (Data Science)</p>
+        <p class="subtitle">African Institute for Mathematical Sciences, Limbe, Cameroon</p>
+        <p>Email: <a href="mailto:blessing.uzor@aims-cameroon.org">blessing.uzor@aims-cameroon.org</a></p>
     </div>
 </header>
 
 <section>
     <h2>About</h2>
     <p>
-    I am a Mathematician, Educationist and a current Mastercard Foundation Scholar pursuing graduate studies in Data Science at the African Institute for Mathematical Sciences (AIMS), Cameroon. My work sits at the intersection of applied mathematics, Artificial Intelligence, and education systems. I am particularly interested in using data-driven methods, machine learning, and mathematical?Statistical modelling to address real-world challenges in Education, public health and climate resilience across Africa. My long-term goal is to contribute to data-driven solutions that strengthen learning systems and improve outcomes for underserved communities.
+        I am a Mathematician, Educationist and a current Mastercard Foundation Scholar pursuing graduate studies in Data Science at the African Institute for Mathematical Sciences (AIMS), Cameroon. My work sits at the intersection of applied mathematics, Artificial Intelligence, and education systems. I am particularly interested in using data-driven methods, machine learning, and mathematical/statistical modelling to address real-world challenges in education, public health and climate resilience across Africa. My long-term goal is to contribute to data-driven solutions that strengthen learning systems and improve outcomes for underserved communities.
     </p>
 </section>
 
 <section>
     <h2>Education</h2>
 
-    <h3>MSc Mathematical Sciences (Major Data Science)</h3>
-    <p>African Institute for Mathematical Sciences, Cameroon</p>
+    <div class="experience-item">
+        <h3>MSc Mathematical Sciences (Major: Data Science)</h3>
+        <p class="subtitle">African Institute for Mathematical Sciences, Cameroon</p>
+    </div>
 
-    <h3>Bachelor of Science Education in Mathematics</h3>
-    <p>Delta State University, Nigeria</p>
+    <div class="experience-item">
+        <div class="experience-header">
+            <h3>Bachelor of Science Education (B.Sc. Ed.) in Mathematics</h3>
+            <span class="date">Dec 2020 – July 2024</span>
+        </div>
+        <p class="subtitle">Delta State University, Abraka, Nigeria</p>
+        <p><strong>CGPA:</strong> 4.04/5.00 (2nd Class Upper Division)</p>
+        <p><strong>Ranking:</strong> 2nd in a class of 21</p>
+    </div>
 </section>
-
-    
 
 <section>
     <h2>Research Interests</h2>
     <ul>
         <li>Data Science</li>
-                <li>Artificial Intelligence</li>
+        <li>Artificial Intelligence</li>
         <li>Statistical Modeling</li>
-        <li>Machine Learning </li>
+        <li>Machine Learning</li>
         <li>Learning Outcomes and Educational Equity</li>
         <li>Social Impact Research</li>
     </ul>
 </section>
 
-
-    <section>
+<section>
     <h2>Research Experience</h2>
 
-    <h3>Undergraduate Research Project</h3>
-        <h3>Factors Influencing Academic Performance</h3>
-    <p>
-        Quantitative study examining socioeconomic and school-related factors affecting
-        mathematics performance among secondary school students in Ethiope East, Nigeria.
-    </p>
-    <p>
-        Designed and conducted a quantitative survey-based study examining
-        parental background, teacher experience, and mathematics performance.
-        Applied regression analysis and statistical testing using R.
-    </p>
+    <div class="experience-item">
+        <h3>Undergraduate Research Projects</h3>
+        
+        <h4>Factors Influencing Academic Performance</h4>
+        <p>
+            Quantitative study examining socioeconomic and school-related factors affecting
+            mathematics performance among secondary school students in Ethiope East, Nigeria.
+            Designed and conducted a quantitative survey-based study examining
+            parental background, teacher experience, and mathematics performance.
+            Applied regression analysis and statistical testing using R.
+        </p>
 
-        <h3>Mathematics Education in Nigerian Higher Institutions</h3>
-    <p>
-        Mixed-methods study exploring the relationship between teachers’ content knowledge
-        and student achievement at Delta State University.
-    </p>
+        <h4>Mathematics Education in Nigerian Higher Institutions</h4>
+        <p>
+            Mixed-methods study exploring the relationship between teachers' content knowledge
+            and student achievement at Delta State University.
+        </p>
+    </div>
 </section>
-
-    <section>
-    <h2>Honours and Awards</h2>
-
-    <h3>Mastercard Foundation Scholarship</h3>
-    <p>Fully funded merit-based scholarship, African Institute for Mathematical Sciences.</p>
-
-    <h3>Federal Scholarship Board Award</h3>
-    <p>Education Bursary Award | Federal Government of Nigeria undergraduate scholarship.</p>
-
-    <h3>Outstanding Student Award</h3>
-    <p>National Association of Science Education Students.</p>
-
-    <h3>Departmental Excellence List</h3>
-    <p>Appeared four times for obtaining a GPA above 4.0.</p>
-
-    <h3>Ndokwa Association in America Scholarship Award</h3>
-    <p>Awarded $500 USD for academic excellence until graduation.</p>
-
-    <h3>Monday Onyeme Foundation Scholarship Award</h3>
-    <p>Competitive merit scholarship awarded for outstanding performance in a comprehensive aptitude test.</p>
-
-    <h3>Delta State Scholarship Board Award</h3>
-    <p>Delta State Government scholarship recipient.</p>
-
-    <h3>DESOPADEC Bursary</h3>
-    <p>Educational bursary award.</p>
-</section>
-
-
 
 <section>
-    <h2>Technical Skills</h2>
-    <ul>
-        <li>Python, R</li>
-        <li>Statistical Analysis and Regression Models</li>
-        <li>Data Wrangling and Exploratory Analysis</li>
-                <li>Data Visualization</li>
+    <h2>Teaching Experience</h2>
 
-        <li>LaTeX and Academic Writing</li>
+    <div class="experience-item">
+        <div class="experience-header">
+            <h3>Science Instructor (Full Time)</h3>
+            <span class="date">Sept 2024 – Present</span>
+        </div>
+        <p class="subtitle">Happiness the Great Tutorial, Abraka, Delta State</p>
+        <ul>
+            <li>Tutoring Mathematics, Further Mathematics, Physics and Computer Science to 25+ students</li>
+            <li>Preparing 45+ students for external examinations (Basic Certificate Examinations, Junior Secondary School Leaving Examinations and West African Certificate Examination)</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <div class="experience-header">
+            <h3>Mathematics Student Teacher</h3>
+            <span class="date">Sept 2023 – Nov 2023</span>
+        </div>
+        <p class="subtitle">Boys Secondary School, Obiaruku, Delta State</p>
+        <ul>
+            <li>Tutored 50+ first year junior secondary school students</li>
+            <li>Supervised tests and examinations</li>
+            <li>Assisted the head teacher in managing and organizing weekly school activities</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <div class="experience-header">
+            <h3>Mathematics Student Teacher</h3>
+            <span class="date">Oct 2022 – Jan 2023</span>
+        </div>
+        <p class="subtitle">Amazing Grace International School, Abraka, Delta State</p>
+        <ul>
+            <li>Tutored 60+ first-year junior school students</li>
+            <li>Supervised examinations and pre-term tests</li>
+            <li>Prepared examination questions, assessed student performance, and recorded grades</li>
+            <li>Coordinated Friday JET (Junior Engineers, Technicians and Scientist) Club activities</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <h3>Peer Tutor</h3>
+        <p class="subtitle">Delta State University, Abraka, Delta State</p>
+        <p>
+            Provided academic support to fellow undergraduate students in Mathematics (Calculus, Trigonometry and Algebra) as well as Education courses. Conducted peer tutoring sessions, fostering collaborative learning among students.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>Leadership & Community Service</h2>
+
+    <div class="experience-item">
+        <h3>Founder, Educate Them All (ETA) Network</h3>
+        <span class="date">2023 – Present</span>
+        <ul>
+            <li>Mentored 6 students from secondary to university levels</li>
+            <li>Assisted with WAEC and JAMB registrations, supporting their educational journey</li>
+            <li>Launched "Keep Them in School" campaign, promoting education over child labor in local markets</li>
+            <li>Provided free academic support to Delta State University students, guiding course registration and promoting academic success</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <h3>Co-founder, Disaster Watch</h3>
+        <span class="date">2024</span>
+        <p>Non-profit organization aiding flood-affected communities</p>
+        <ul>
+            <li>Helped distribute food and supplies to affected families</li>
+            <li>Assisted in providing critical information to flood-affected communities</li>
+            <li>Participated in fundraising campaigns to support flood relief efforts</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <h3>Campaign Lead, Together Against Malaria and Typhoid</h3>
+        <span class="date">2024</span>
+        <ul>
+            <li>Led a community health campaign, collaborating with healthcare professionals to provide education, treatment, and support</li>
+            <li>Visited local markets in Delta State to reach market women, children, and bike riders</li>
+            <li>Contributed to improving health outcomes in the community through awareness and intervention</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <h3>President, ReformED Club</h3>
+        <span class="date">2023</span>
+        <ul>
+            <li>Improved educational outcomes for 10+ students through ReformED Club's initiatives at Boys Secondary School Obiaruku</li>
+            <li>Led ReformED Club, providing school supplies and English language support to 10+ students</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <h3>Treasurer, Mathematics Education Students</h3>
+        <span class="date">2023 – 2024</span>
+        <ul>
+            <li>Managed departmental funds, including budgeting for various activities and final-year projects</li>
+            <li>Maintained transparent financial records and provided periodic reports to the association</li>
+            <li>Solely in charge of funds for final year students (Class of 2024)</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <h3>Assistant Secretary, Goshen Youth Executives</h3>
+        <span class="date">2023 – Present</span>
+        <ul>
+            <li>Assisted in preparing meeting agendas, recording minutes, and managing official correspondence</li>
+            <li>Coordinated effective communication between the executive team and youth members</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <h3>Social Director, Goshen Youth Executives</h3>
+        <span class="date">2021 – 2023</span>
+        <ul>
+            <li>Planned and executed social events to foster youth engagement and participation</li>
+            <li>Collaborated with team members to implement outreach initiatives and community programs</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>Volunteer Experience & Extracurricular Activities</h2>
+
+    <div class="experience-item">
+        <h3>National Dropout Prevention Campaign</h3>
+        <span class="date">2024</span>
+        <p>Collaborated with the Education Students Association in Benin City, Nigeria, to raise awareness on the dangers of school dropouts and possible ways to reduce dropout rates.</p>
+    </div>
+
+    <div class="experience-item">
+        <h3>Project 50</h3>
+        <span class="date">2024</span>
+        <ul>
+            <li>Collaborated with volunteers to build a resilient community focused on SDGs</li>
+            <li>Contributed to achieving SDG 3, 4, 5, and 7</li>
+            <li>Visited local schools to inspire students on gender equality and career goals</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <h3>Teen Connect by Gideon Augustus – Mathematics Competition</h3>
+        <span class="date">2024</span>
+        <ul>
+            <li>Served as an organising committee member and fundraiser for the 2024 First Edition Mathematics Competition</li>
+            <li>Developed and provided mathematics questions and solutions for the competition</li>
+            <li>Contributed to presenting awards to students who placed 1st, 2nd, and 3rd</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <h3>WRAY Foundation – 90-Day Parental Education Awareness Volunteer</h3>
+        <span class="date">2023</span>
+        <ul>
+            <li>Educated parents on strategies to improve child development and academic success</li>
+            <li>Promoted parental involvement in education and community for 90 days through the "Who Really Are You" Foundation</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <h3>Flood Relief Efforts, Delta State Red Cross Society</h3>
+        <span class="date">2024</span>
+        <ul>
+            <li>Participated in fundraising campaigns to support flood relief efforts</li>
+            <li>Helped raise awareness and support for people living in Asaba Delta State affected by the flood</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <h3>Departmental Female Soccer Player</h3>
+        <span class="date">2021 – 2023</span>
+        <ul>
+            <li>Active member of the Science Education Department's female football team</li>
+            <li>Contributed to winning the Dean's Cup for three consecutive years since admission to the university</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <h3>Tutoring & Educational Outreach</h3>
+        <ul>
+            <li>Conducted classes for students struggling with mathematics, computer science, physics, and chemistry</li>
+            <li>Volunteered to teach undergraduate students in my department Algebra and Trigonometry, Calculus and Statistics</li>
+            <li>Created and managed an educational page (Ngozi Teaches Maths) to assist O-Level students</li>
+            <li>Provided tutorials, tips, and solutions to challenging mathematics problems for students, peers and juniors</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <h3>Laboratory Prefect, Abraka Grammar School</h3>
+        <span class="date">2019 – 2020</span>
+        <ul>
+            <li>Supervised operations across five laboratories: Biology, Chemistry, Agricultural Science, Physics, and Mathematics labs</li>
+            <li>Managed student assignments related to lab work and coordinated practical sessions</li>
+            <li>Reported lab conditions and maintenance needs to school management</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>Honours and Awards</h2>
+
+    <div class="experience-item">
+        <h3>Mastercard Foundation Scholarship</h3>
+        <p>Fully funded merit-based scholarship, African Institute for Mathematical Sciences</p>
+    </div>
+
+    <div class="experience-item">
+        <h3>Federal Scholarship Board Award</h3>
+        <p>Education Bursary Award | Federal Government of Nigeria undergraduate scholarship</p>
+    </div>
+
+    <div class="experience-item">
+        <h3>Outstanding Student Award</h3>
+        <p>National Association of Science Education Students</p>
+    </div>
+
+    <div class="experience-item">
+        <h3>Departmental Excellence List</h3>
+        <p>Appeared four times for obtaining a GPA above 4.0</p>
+    </div>
+
+    <div class="experience-item">
+        <h3>Ndokwa Association in America Scholarship Award</h3>
+        <p>Awarded $500 USD for academic excellence until graduation</p>
+    </div>
+
+    <div class="experience-item">
+        <h3>Monday Onyeme Foundation Scholarship Award</h3>
+        <p>Competitive merit scholarship awarded for outstanding performance in a comprehensive aptitude test</p>
+    </div>
+
+    <div class="experience-item">
+        <h3>Delta State Scholarship Board Award</h3>
+        <p>Delta State Government scholarship recipient</p>
+    </div>
+
+    <div class="experience-item">
+        <h3>DESOPADEC Bursary</h3>
+        <p>Educational bursary award</p>
+    </div>
+</section>
+
+<section>
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+        <div class="skill-category">
+            <h4>Technical Skills</h4>
+            <ul>
+                <li>Python, R</li>
+                <li>Statistical Analysis and Regression Models</li>
+                <li>Data Wrangling and Exploratory Analysis</li>
+                <li>Data Visualization</li>
+                <li>LaTeX and Academic Writing</li>
+            </ul>
+        </div>
+
+        <div class="skill-category">
+            <h4>ICT Skills</h4>
+            <ul>
+                <li>Microsoft Office Suite (Word, Excel, PowerPoint)</li>
+                <li>Data Analysis Tools (SPSS, SQL)</li>
+                <li>LaTeX</li>
+                <li>Python (Beginner)</li>
+            </ul>
+        </div>
+
+        <div class="skill-category">
+            <h4>Personal Skills</h4>
+            <ul>
+                <li>Excellent writing, speaking, and communication</li>
+                <li>Strong teamwork and collaboration</li>
+                <li>Leadership and management</li>
+                <li>Grit and determination</li>
+                <li>Problem-solving and critical thinking</li>
+                <li>Adaptability and resilience</li>
+                <li>Strong interpersonal skills</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Academic Membership and Affiliations</h2>
+    <ul>
+        <li>Teachers Registration Council of Nigeria (TRCN)</li>
+        <li>Education Students Association of Nigeria - Delta State University Chapter (ESAN)</li>
+        <li>National Association of Science Education Students - Delta State University Chapter (NASES)</li>
+        <li>Federated Union of Ndokwa Students (FUNS)</li>
     </ul>
 </section>
 
+<section>
+    <h2>Languages</h2>
+    <p><strong>English:</strong> Fluent (official language and medium of instruction in Nigeria)</p>
+    <p><strong>French:</strong> Beginner</p>
+</section>
+
+<section>
+    <h2>Hobbies & Interests</h2>
+    <p>Research and teaching, public speaking, advocating for SDGs, sports, listening to music, volunteering, and learning about new cultures and languages.</p>
+    <p>For fun, I write stories, facts and fictions on READAFRICA. Find some of my work:</p>
+    <ul>
+        <li><a href="https://ngozi-uzor.github.io/ANIOMA/" target="_blank">IGBO BU OFU</a></li>
+        <li><a href="https://ngozi-uzor.github.io/The-Only-Hope/" target="_blank">The Only Hope: Libya to Italy</a></li>
+    </ul>
+</section>
 
 <section>
     <h2>Links</h2>
     <ul>
-        <li><a href="https://www.linkedin.com/in/blessing-ngozi-uzor-2a97b01a7/">LinkedIn</a></li>
-        <li><a href="https://github.com/Ngozi-uzor">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/blessing-ngozi-uzor-2a97b01a7/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/Ngozi-uzor" target="_blank">GitHub</a></li>
         <li><a href="UZORBLESSINGNGOZICV.pdf">Curriculum Vitae (PDF)</a></li>
     </ul>
 </section>

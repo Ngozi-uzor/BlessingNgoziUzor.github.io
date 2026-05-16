@@ -3,1648 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blessing Ngozi Uzor | MSc Mathematical Sciences (Data Science)">
     <title>Blessing Ngozi Uzor</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <style>
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #1a1a1a;
-            --primary-color: #2c5f8d;
-            --secondary-bg: #f8f9fa;
-            --border-color: #e0e0e0;
-            --card-bg: #f8f9fa;
-            --link-hover: #1a3a52;
-            --subtitle-color: #555;
-            --date-color: #666;
-            --placeholder-color: #999;
-        }
-
-        [data-theme="dark"] {
-            --bg-color: #1a1a1a;
-            --text-color: #e0e0e0;
-            --primary-color: #5a9fd4;
-            --secondary-bg: #2d2d2d;
-            --border-color: #404040;
-            --card-bg: #252525;
-            --link-hover: #7ab8e8;
-            --subtitle-color: #aaa;
-            --date-color: #999;
-            --placeholder-color: #666;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            background: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
-
-        header, section, footer {
-            max-width: 900px;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.8;
+            padding: 3rem 2rem;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
-
-        header {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            border-bottom: 2px solid var(--primary-color);
-            flex-wrap: wrap;
-        }
-
-        .profile-photo {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--primary-color);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .header-content {
-            flex: 1;
-            min-width: 250px;
         }
 
         h1 {
-            margin: 0 0 0.5rem 0;
             font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary-color);
+            font-weight: normal;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
         }
 
         h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--border-color);
+            font-size: 1.2rem;
+            font-weight: normal;
+            margin: 3rem 0 1rem 0;
             padding-bottom: 0.5rem;
+            border-bottom: 1px solid #333;
         }
 
         h3 {
-            font-size: 1.1rem;
-            margin: 1rem 0 0.25rem 0;
-            font-weight: 600;
-            color: var(--text-color);
-        }
-
-        h4 {
             font-size: 1rem;
-            margin: 0.5rem 0 0.25rem 0;
-            font-weight: 600;
-            color: var(--subtitle-color);
+            font-weight: normal;
+            font-style: italic;
+            margin: 1.5rem 0 0.5rem 0;
         }
 
         p {
-            margin: 0.5rem 0;
+            margin-bottom: 1rem;
+            color: #ccc;
         }
 
-        .subtitle {
-            color: var(--subtitle-color);
-            font-size: 0.95rem;
-            margin: 0.25rem 0;
+        a {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid #666;
+        }
+
+        a:hover {
+            border-bottom-color: #fff;
         }
 
         ul {
+            margin: 1rem 0;
             padding-left: 1.5rem;
-            margin: 0.5rem 0;
         }
 
         li {
             margin-bottom: 0.5rem;
+            color: #ccc;
         }
 
-        section {
-            border-bottom: 1px solid var(--border-color);
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
+        .header {
+            margin-bottom: 3rem;
         }
 
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .subtitle {
+            font-size: 0.95rem;
+            color: #999;
+            margin-bottom: 2rem;
         }
 
-        section:nth-child(1) { animation-delay: 0.1s; }
-        section:nth-child(2) { animation-delay: 0.2s; }
-        section:nth-child(3) { animation-delay: 0.3s; }
-        section:nth-child(4) { animation-delay: 0.4s; }
-        section:nth-child(5) { animation-delay: 0.5s; }
-
-        section:last-of-type {
-            border-bottom: none;
+        .section {
+            margin-bottom: 3rem;
         }
 
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: color 0.2s;
+        .project {
+            margin-bottom: 2rem;
         }
 
-        a:hover {
-            color: var(--link-hover);
-            text-decoration: underline;
-        }
-
-        footer {
+        .meta {
             font-size: 0.9rem;
-            color: var(--date-color);
-            text-align: center;
-            border-top: 1px solid var(--border-color);
-            margin-top: 2rem;
-        }
-
-        .experience-item {
-            margin-bottom: 1.5rem;
-        }
-
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .date {
-            color: var(--date-color);
-            font-size: 0.9rem;
+            color: #666;
             font-style: italic;
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
+        .links {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
         }
 
-        .skill-category h4 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
+        .links a {
+            margin-right: 2rem;
+            font-size: 0.9rem;
         }
 
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                text-align: center;
+        @media (max-width: 600px) {
+            body {
+                padding: 2rem 1.5rem;
             }
-
+            
             h1 {
-                font-size: 1.75rem;
-            }
-
-            h2 {
-                font-size: 1.3rem;
-            }
-        }
-
-        /* Icon styles */
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .contact-item i {
-            color: var(--primary-color);
-            width: 20px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .social-links a {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: var(--secondary-bg);
-            border-radius: 5px;
-            transition: all 0.3s;
-        }
-
-        .social-links a:hover {
-            background: var(--primary-color);
-            color: white;
-            text-decoration: none;
-        }
-
-        .social-links a:hover i {
-            color: white;
-        }
-
-        /* Python Guide Box */
-        .python-guide-box a:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(44, 95, 141, 0.3);
-        }
-
-        .python-guide-box ul {
-            padding-left: 1.2rem;
-        }
-
-        .python-guide-box li {
-            margin-bottom: 0.4rem;
-        }
-
-        /* Bonus Cards */
-        .bonus-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(44, 95, 141, 0.3);
-        }
-
-        .content-modal {
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .social-links i {
-            font-size: 1.2rem;
-            color: var(--primary-color);
-        }
-
-        .skill-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .skill-item i {
-            color: var(--primary-color);
-            width: 20px;
-        }
-
-        .language-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .language-item i {
-            color: var(--primary-color);
-        }
-
-        /* Photo gallery styles */
-        .photo-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .photo-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            aspect-ratio: 4/3;
-            background: var(--card-bg);
-            border: 2px solid var(--border-color);
-        }
-
-        .photo-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-
-        .photo-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .photo-placeholder {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            color: var(--placeholder-color);
-            font-size: 3rem;
-        }
-
-        /* Project card styles */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .project-card {
-            background: var(--card-bg);
-            border: 2px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-
-        .project-card:hover {
-            border-color: var(--primary-color);
-            box-shadow: 0 4px 10px rgba(44, 95, 141, 0.2);
-            transform: translateY(-5px);
-        }
-
-        .project-card h3 {
-            color: var(--primary-color);
-            margin-top: 0;
-            font-size: 1rem;
-        }
-
-        .project-description {
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            transition: all 0.3s ease;
-        }
-
-        .project-card.expanded .project-description {
-            display: block;
-            -webkit-line-clamp: unset;
-        }
-
-        .project-expand-btn {
-            color: var(--primary-color);
-            font-size: 0.85rem;
-            margin-top: 0.5rem;
-            font-weight: 600;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 0.75rem;
-        }
-
-        .project-tag {
-            background: var(--primary-color);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.75rem;
-        }
-
-        .project-links {
-            margin-top: 1rem;
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .project-links a {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.4rem 0.8rem;
-            background: var(--bg-color);
-            border: 1px solid var(--primary-color);
-            border-radius: 5px;
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: all 0.3s;
-            font-size: 0.85rem;
-        }
-
-        [data-theme="dark"] .project-links a {
-            background: var(--card-bg);
-        }
-
-        .project-links a:hover {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            .photo-gallery {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Dark mode toggle */
-        .theme-toggle {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 1001;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 0.75rem;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.2rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            transition: background 0.3s, transform 0.3s;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .theme-toggle:hover {
-            background: var(--link-hover);
-            transform: rotate(180deg);
-        }
-
-        /* CTA Buttons */
-        .cta-container {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            background: var(--primary-color);
-            color: white !important;
-            border: none;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none !important;
-            transition: all 0.3s;
-            box-shadow: 0 2px 5px rgba(44, 95, 141, 0.3);
-        }
-
-        .cta-button:hover {
-            background: var(--link-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(44, 95, 141, 0.4);
-        }
-
-        .cta-button.secondary {
-            background: transparent;
-            border: 2px solid var(--primary-color);
-            color: var(--primary-color) !important;
-        }
-
-        .cta-button.secondary:hover {
-            background: var(--primary-color);
-            color: white !important;
-        }
-
-        /* Navigation menu styles */
-        .menu-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1001;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 0.75rem 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.2rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            transition: background 0.3s;
-        }
-
-        .menu-toggle:hover {
-            background: var(--link-hover);
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            right: -300px;
-            width: 280px;
-            height: 100vh;
-            background: var(--primary-color);
-            z-index: 1000;
-            transition: right 0.3s ease;
-            overflow-y: auto;
-            box-shadow: -2px 0 5px rgba(0,0,0,0.2);
-        }
-
-        nav.open {
-            right: 0;
-        }
-
-        nav ul {
-            padding: 4rem 0 2rem 0;
-            margin: 0;
-            list-style: none;
-        }
-
-        nav li {
-            margin: 0;
-        }
-
-        nav a {
-            display: block;
-            padding: 0.75rem 1.5rem;
-            color: white;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: background 0.3s;
-            border-left: 3px solid transparent;
-        }
-
-        nav a:hover {
-            background: var(--link-hover);
-            border-left-color: white;
-            text-decoration: none;
-        }
-
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.7);
-            z-index: 999;
-            display: none;
-        }
-
-        .overlay.active {
-            display: block;
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                width: 250px;
-                right: -250px;
-            }
-
-            .menu-toggle {
-                top: 15px;
-                right: 15px;
-                padding: 0.6rem 0.9rem;
-                font-size: 1.1rem;
+                font-size: 1.5rem;
             }
         }
     </style>
 </head>
-
 <body>
-
-<button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
-    <i class="fas fa-moon"></i>
-</button>
-
-<button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
-    <i class="fas fa-bars"></i>
-</button>
-
-<div class="overlay" onclick="toggleMenu()"></div>
-
-<nav id="sideNav">
-    <ul>
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#education" onclick="toggleMenu()">Education</a></li>
-        <li><a href="#research-interests" onclick="toggleMenu()">Research Interests</a></li>
-        <li><a href="#research-experience" onclick="toggleMenu()">Research Experience</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#teaching" onclick="toggleMenu()">Teaching Experience</a></li>
-        <li><a href="#leadership" onclick="toggleMenu()">Leadership & Community Service</a></li>
-        <li><a href="#volunteer" onclick="toggleMenu()">Volunteer Experience</a></li>
-        <li><a href="#ngo" onclick="toggleMenu()">Educate Them All (NGO)</a></li>
-        <li><a href="#memberships" onclick="toggleMenu()">Academic Memberships</a></li>
-        <li><a href="#awards" onclick="toggleMenu()">Honours & Awards</a></li>
-        <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-        <li><a href="#languages" onclick="toggleMenu()">Languages</a></li>
-        <li><a href="#hobbies" onclick="toggleMenu()">Hobbies & Interests</a></li>
-        <li><a href="#links" onclick="toggleMenu()">Links</a></li>
-    </ul>
-</nav>
-
-<header>
-    <img src="Blessing Ngozi (3).JPG" alt="Blessing Ngozi Uzor" class="profile-photo"
-         onerror="this.src='https://ui-avatars.com/api/?name=Blessing+Uzor&size=300';">
-
-    <div class="header-content">
+    <div class="header">
+        <img src="Blessing Ngozi (3).JPG" alt="Blessing Ngozi Uzor" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem;">
         <h1>Blessing Ngozi Uzor</h1>
-        <p class="subtitle">Master's Student, Mathematical Sciences (Data Science)</p>
-        <p class="subtitle"><i class="fas fa-map-marker-alt"></i> African Institute for Mathematical Sciences, Limbe, Cameroon</p>
-    </div>
-</header>
-
-<section id="about">
-    <h2>About</h2>
-    <p>
-        I am a Mathematician, Educationist and a current Mastercard Foundation Scholar pursuing graduate studies in Data Science at the African Institute for Mathematical Sciences (AIMS), Cameroon. My work sits at the intersection of applied mathematics, Artificial Intelligence, and education systems. I am particularly interested in using data-driven methods, machine learning, and mathematical/statistical modelling to address real-world challenges in education, public health and climate resilience across Africa. My long-term goal is to contribute to data-driven solutions that strengthen learning systems and improve outcomes for underserved communities.
-    </p>
-    
-    <div class="cta-container">
-        <a href="#links" class="cta-button">
-            <i class="fas fa-envelope"></i> Let's Collaborate
-        </a>
-    </div>
-</section>
-
-<section id="education">
-    <h2>Education</h2>
-
-    <div class="experience-item">
-        <div class="experience-header">
-            <h3>MSc Mathematical Sciences (Major: Data Science)</h3>
-            <span class="date">Aug 2025 – Present</span>
-        </div>
-        <p class="subtitle">African Institute for Mathematical Sciences, Limbe, Cameroon</p>
+        <p class="subtitle">NLP Researcher · AI Enthusiast · AIMS Cameroon</p>
     </div>
 
-    <div class="experience-item">
-        <div class="experience-header">
-            <h3>Bachelor of Science Education (B.Sc. Ed.) in Mathematics</h3>
-            <span class="date">Dec 2020 – July 2024</span>
-        </div>
-        <p class="subtitle">Delta State University, Abraka, Nigeria</p>
-    </div>
-</section>
-
-<section id="research-interests">
-    <h2>Research Interests</h2>
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0 2rem;">
-        <ul style="margin: 0;">
-            <li>Data Science</li>
-            <li>Artificial Intelligence</li>
-            <li>Student Achievement</li>
-            <li>Educational Technology</li>
-            <li>Mathematics Education</li>
-        </ul>
-        <ul style="margin: 0;">
-            <li>Statistical Modeling</li>
-            <li>Machine Learning</li>
-            <li>Learning Outcomes and Educational Equity</li>
-            <li>Social Impact Research</li>
-        </ul>
-    </div>
-</section>
-
-<section id="research-experience">
-    <h2>Research Experience</h2>
-
-    <div class="experience-item">
-        <h3>Undergraduate Research Projects</h3>
-        <p class="subtitle">Delta State University, Nigeria</p>
-        
-        <h4>Thesis: Perceived Factors Influencing Academic Performance of Mathematics Students in Ethiope East Local Government Area</h4>
-        <ul>
-            <li>Designed and executed a Descriptive Survey Study on 240 students across six senior secondary schools, employing a Random Sampling Technique and Validated Questionnaire for data collection</li>
-            <li>Conducted Hypothesis Testing to analyze the relationship between student performance and five key variables: Socio-economic Determinants (parental education/income), Teacher Quality Metrics (qualification/experience), and Cultural Background</li>
-            <li>Performed Statistical Correlation Analysis to evaluate the impact of Pedagogical Strategies and classroom factors on academic outcomes</li>
-        </ul>
-
-        <h4>Undergraduate Seminar: Enhancing Effective Mathematics Education in Nigerian Higher Institutions</h4>
-        <p><em>A case study of teachers' knowledge and student performance</em></p>
-        <ul>
-            <li>Conducted a Quantitative Study using Hypothesis Testing to evaluate the correlation between four variables (teacher experience, qualification, teaching practices, and class size) and student academic performance</li>
-            <li>Utilized Statistical Correlation Analysis to challenge traditional assumptions, finding no significant relationship between teacher experience/qualification and student outcomes, urging focus on pedagogical strategy</li>
-            <li>Performed Technology Integration Assessment by surveying educators' adoption of Advanced Applications (MATLAB/GeoGebra) and Hands-on Learning methods in teaching mathematics</li>
-        </ul>
-    </div>
-</section>
-
-<section id="projects">
-    <h2><i class="fas fa-code"></i> Projects</h2>
-    
-    <div class="projects-grid">
-        <!-- Project 1: Decoder-Only Transformer -->
-        <div class="project-card" onclick="this.classList.toggle('expanded')">
-            <h3><i class="fas fa-brain"></i> Decoder-Only Transformer Implementation | Deep Learning</h3>
-            <p class="project-description">Built a Transformer decoder from scratch, implementing self-attention, positional encoding, and masked multi-head attention, and created a custom dataset and training loop to demonstrate correct sequence mapping inference. Applied teacher forcing and cross-entropy loss with the Adam optimizer, visualizing attention patterns and training convergence to validate the model's learning process.</p><span class="project-expand-btn">Read</span>
-            <div class="project-tags">
-                <span class="project-tag">Python</span>
-                <span class="project-tag">PyTorch</span>
-                <span class="project-tag">Deep Learning</span>
-                <span class="project-tag">Group Project</span>
-            </div>
-            <div class="project-links">
-                <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> Report</a>
-            </div>
-        </div>
-
-        <!-- Project 2: Student Performance Prediction -->
-        <div class="project-card" onclick="this.classList.toggle('expanded')">
-            <h3><i class="fas fa-graduation-cap"></i> Student Performance Prediction Model | Supervised Machine Learning</h3>
-            <p class="project-description">Developed a regression model to predict student performance using academic and lifestyle factors (study hours, sleep, extracurriculars), performing data cleaning, visualization, and correlation analysis to identify Previous Scores and Hours Studied as the strongest predictors. Trained a Multiple Linear Regression model, achieving 98.9% explained variance (R² = 0.989) and an RMSE of 2.04 on the test set, and derived actionable insights from model coefficients.</p><span class="project-expand-btn">Read</span>
-            <div class="project-tags">
-                <span class="project-tag">Python</span>
-                <span class="project-tag">Scikit-learn</span>
-                <span class="project-tag">Pandas</span>
-                <span class="project-tag">Matplotlib</span>
-                <span class="project-tag">Group Project</span>
-            </div>
-            <div class="project-links">
-                <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="#" target="_blank"><i class="fas fa-chart-line"></i> Analysis</a>
-            </div>
-        </div>
-
-        <!-- Project 3: Statistical Inference on Birth Weight -->
-        <div class="project-card" onclick="this.classList.toggle('expanded')">
-            <h3><i class="fas fa-chart-bar"></i> Statistical Inference on Birth Weight Data: Hypothesis Testing & Confidence Intervals</h3>
-            <p class="project-description">Conducted a full statistical inference analysis on the birthwt dataset to investigate factors influencing low birth weight, applying hypothesis testing and confidence intervals. Empirically validated the Central Limit Theorem through simulation (1000 samples, n=30) and performed F-test and Chi-square test of independence, identifying a significant association between smoking and low birth weight (p=0.0396).</p><span class="project-expand-btn">Read</span>
-            <div class="project-tags">
-                <span class="project-tag">R</span>
-                <span class="project-tag">ggplot2</span>
-                <span class="project-tag">Statistical Inference</span>
-                <span class="project-tag">Individual Project</span>
-            </div>
-            <div class="project-links">
-                <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> Report</a>
-            </div>
-        </div>
-
-        <!-- Project 4: Chinese Remainder Theorem -->
-        <div class="project-card" onclick="this.classList.toggle('expanded')">
-            <h3><i class="fas fa-calculator"></i> Chinese Remainder Theorem Algorithm: Recursive Modular Solver</h3>
-            <p class="project-description">Designed and implemented a recursive algorithm in Python to solve systems of simultaneous linear congruences using the Chinese Remainder Theorem (CRT). Engineered core functions from scratch: a recursive GCD calculator, an Extended Euclidean Algorithm (Bézout coefficients), and a pairwise coprimality checker. Developed a robust solver that recursively reduces n congruences to a single solution modulo the product of all moduli, handling edge cases gracefully.</p><span class="project-expand-btn">Read</span>
-            <div class="project-tags">
-                <span class="project-tag">Python</span>
-                <span class="project-tag">Number Theory</span>
-                <span class="project-tag">Algorithms</span>
-                <span class="project-tag">Group Project</span>
-            </div>
-            <div class="project-links">
-                <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="#" target="_blank"><i class="fas fa-file-code"></i> Code</a>
-            </div>
-        </div>
-
-        <!-- Project 5: Heart Failure Mortality Risk -->
-        <div class="project-card" onclick="this.classList.toggle('expanded')">
-            <h3><i class="fas fa-heartbeat"></i> Predictive Modeling for Heart Failure Mortality Risk</h3>
-            <p class="project-description">Conducted an end-to-end data science project to predict mortality risk in heart failure patients using a clinical dataset of 299 patients and 13 variables. Performed exploratory data analysis (EDA) to identify key clinical risk factors and built classification models including Logistic Regression and Random Forest. Achieved an AUC of 0.895 with a Random Forest model, demonstrating strong performance (84.75% accuracy) on the test set. Delivered actionable clinical insights by interpreting feature importance.</p><span class="project-expand-btn">Read</span>
-            <div class="project-tags">
-                <span class="project-tag">Python</span>
-                <span class="project-tag">Scikit-learn</span>
-                <span class="project-tag">Data Mining</span>
-                <span class="project-tag">Healthcare</span>
-                <span class="project-tag">Group Project</span>
-            </div>
-            <div class="project-links">
-                <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="#" target="_blank"><i class="fas fa-chart-line"></i> Analysis</a>
-            </div>
-        </div>
-
-        <!-- Project 6: FINA Personal Finance Tracker -->
-        <div class="project-card" onclick="this.classList.toggle('expanded')">
-            <h3><i class="fas fa-wallet"></i> FINA – Full-Stack Personal Finance Tracker</h3>
-            <p class="project-description">Designed and deployed a secure, full-stack personal finance web application with Flask REST API backend and dynamic JavaScript/Tailwind CSS frontend. Engineered robust user authentication using Flask-JWT-Extended and implemented PostgreSQL database via SQLAlchemy ORM. Developed complete frontend logic with ES6+ JavaScript, handling form validation and JWT session management. Deployed full application stack on Render with production-grade integration.</p><span class="project-expand-btn">Read</span>
-            <div class="project-tags">
-                <span class="project-tag">Python</span>
-                <span class="project-tag">Flask</span>
-                <span class="project-tag">PostgreSQL</span>
-                <span class="project-tag">JavaScript</span>
-                <span class="project-tag">Tailwind CSS</span>
-                <span class="project-tag">Group Project</span>
-            </div>
-            <div class="project-links">
-                <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-            </div>
-        </div>
-
-        <!-- Project 7: Logistic Regression from Scratch -->
-        <div class="project-card" onclick="this.classList.toggle('expanded')">
-            <h3><i class="fas fa-atom"></i> Logistic Regression from Scratch for Particle Classification</h3>
-            <p class="project-description">Built a Logistic Regression classifier from the ground up (without scikit-learn) to distinguish between electron and hadron particles. Implemented the complete ML pipeline: data loading, binary label encoding, 80/20 train-test splitting, feature standardization, and matrix augmentation. Developed core algorithms including sigmoid activation, cross-entropy loss, and gradient computation using vectorized NumPy operations. Achieved ~88% accuracy and 90% recall on the test set.</p><span class="project-expand-btn">Read</span>
-            <div class="project-tags">
-                <span class="project-tag">Python</span>
-                <span class="project-tag">NumPy</span>
-                <span class="project-tag">Machine Learning</span>
-                <span class="project-tag">Individual Project</span>
-            </div>
-            <div class="project-links">
-                <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> Report</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="teaching">
-    <h2>Teaching Experience</h2>
-
-    <div class="experience-item">
-        <div class="experience-header">
-            <h3>Science Instructor (Full Time)</h3>
-            <span class="date">Sept 2024 – Present</span>
-        </div>
-        <p class="subtitle">Happiness the Great Tutorial, Abraka, Delta State</p>
-        <ul>
-            <li>Tutoring Mathematics, Further Mathematics, Physics and Computer Science to 25+ students</li>
-            <li>Preparing 45+ students for external examinations (Basic Certificate Examinations, Junior Secondary School Leaving Examinations and West African Certificate Examination)</li>
-        </ul>
-    </div>
-
-    <div class="experience-item">
-        <div class="experience-header">
-            <h3>Mathematics Student Teacher</h3>
-            <span class="date">Sept 2023 – Nov 2023</span>
-        </div>
-        <p class="subtitle">Boys Secondary School, Obiaruku, Delta State</p>
-        <ul>
-            <li>Tutored 50+ first year junior secondary school students</li>
-            <li>Supervised tests and examinations</li>
-            <li>Assisted the head teacher in managing and organizing weekly school activities</li>
-        </ul>
-    </div>
-
-    <div class="experience-item">
-        <div class="experience-header">
-            <h3>Mathematics Student Teacher</h3>
-            <span class="date">Oct 2022 – Jan 2023</span>
-        </div>
-        <p class="subtitle">Amazing Grace International School, Abraka, Delta State</p>
-        <ul>
-            <li>Tutored 60+ first-year junior school students</li>
-            <li>Supervised examinations and pre-term tests</li>
-            <li>Prepared examination questions, assessed student performance, and recorded grades</li>
-            <li>Coordinated Friday JET (Junior Engineers, Technicians and Scientist) Club activities</li>
-        </ul>
-    </div>
-
-    <div class="experience-item">
-        <h3>Peer Tutor</h3>
-        <p class="subtitle">Delta State University, Abraka, Delta State</p>
+    <div class="section">
         <p>
-            Provided academic support to fellow undergraduate students in Mathematics (Calculus, Trigonometry and Algebra) as well as Education courses. Conducted peer tutoring sessions, fostering collaborative learning among students.
-        </p>
-    </div>
-</section>
-
-<section id="leadership">
-    <h2>Leadership & Community Service</h2>
-
-    <div class="experience-item">
-        <h3>Founder, Educate Them All (ETA) Network</h3>
-        <span class="date">2023 – Present</span>
-        <ul>
-            <li>Mentored 6 students from secondary to university levels</li>
-            <li>Assisted with WAEC and JAMB registrations, supporting their educational journey</li>
-            <li>Launched "Keep Them in School" campaign, promoting education over child labor in local markets</li>
-            <li>Provided free academic support to Delta State University students, guiding course registration and promoting academic success</li>
-        </ul>
-    </div>
-
-    <div class="experience-item">
-        <h3>Co-founder, Disaster Watch</h3>
-        <span class="date">2024</span>
-        <p>Non-profit organization aiding flood-affected communities</p>
-        <ul>
-            <li>Helped distribute food and supplies to affected families</li>
-            <li>Assisted in providing critical information to flood-affected communities</li>
-            <li>Participated in fundraising campaigns to support flood relief efforts</li>
-        </ul>
-    </div>
-
-    <div class="experience-item">
-        <h3>Campaign Lead, Together Against Malaria and Typhoid</h3>
-        <span class="date">2024</span>
-        <ul>
-            <li>Led a community health campaign, collaborating with healthcare professionals to provide education, treatment, and support</li>
-            <li>Visited local markets in Delta State to reach market women, children, and bike riders</li>
-            <li>Contributed to improving health outcomes in the community through awareness and intervention</li>
-        </ul>
-    </div>
-
-    <div class="experience-item">
-        <h3>President, ReformED Club</h3>
-        <span class="date">2023</span>
-        <ul>
-            <li>Improved educational outcomes for 10+ students through ReformED Club's initiatives at Boys Secondary School Obiaruku</li>
-            <li>Led ReformED Club, providing school supplies and English language support to 10+ students</li>
-        </ul>
-    </div>
-
-    <div class="experience-item">
-        <h3>Treasurer, Mathematics Education Students</h3>
-        <span class="date">2023 – 2024</span>
-        <ul>
-            <li>Managed departmental funds, including budgeting for various activities and final-year projects</li>
-            <li>Maintained transparent financial records and provided periodic reports to the association</li>
-            <li>Solely in charge of funds for final year students (Class of 2024)</li>
-        </ul>
-    </div>
-
-    <div class="experience-item">
-        <h3>Assistant Secretary, Goshen Youth Executives</h3>
-        <span class="date">2023 – Present</span>
-        <ul>
-            <li>Assisted in preparing meeting agendas, recording minutes, and managing official correspondence</li>
-            <li>Coordinated effective communication between the executive team and youth members</li>
-        </ul>
-    </div>
-
-    <div class="experience-item">
-        <h3>Social Director, Goshen Youth Executives</h3>
-        <span class="date">2021 – 2023</span>
-        <ul>
-            <li>Planned and executed social events to foster youth engagement and participation</li>
-            <li>Collaborated with team members to implement outreach initiatives and community programs</li>
-        </ul>
-    </div>
-</section>
-
-<section id="volunteer">
-    <h2>Volunteer Experience & Extracurricular Activities</h2>
-
-    <div class="experience-item">
-        <h3>National Dropout Prevention Campaign</h3>
-        <span class="date">2024</span>
-        <p>Collaborated with the Education Students Association in Benin City, Nigeria, to raise awareness on the dangers of school dropouts and possible ways to reduce dropout rates.</p>
-    </div>
-
-    <div class="experience-item">
-        <h3>Project 50</h3>
-        <span class="date">2024</span>
-        <ul>
-            <li>Collaborated with volunteers to build a resilient community focused on SDGs</li>
-            <li>Contributed to achieving SDG 3, 4, 5, and 7</li>
-            <li>Visited local schools to inspire students on gender equality and career goals</li>
-        </ul>
-    </div>
-
-    <div class="experience-item">
-        <h3>Teen Connect by Gideon Augustus – Mathematics Competition</h3>
-        <span class="date">2024</span>
-        <ul>
-            <li>Served as an organising committee member and fundraiser for the 2024 First Edition Mathematics Competition</li>
-            <li>Developed and provided mathematics questions and solutions for the competition</li>
-            <li>Contributed to presenting awards to students who placed 1st, 2nd, and 3rd</li>
-        </ul>
-    </div>
-
-    <div class="experience-item">
-        <h3>WRAY Foundation – 90-Day Parental Education Awareness Volunteer</h3>
-        <span class="date">2023</span>
-        <ul>
-            <li>Educated parents on strategies to improve child development and academic success</li>
-            <li>Promoted parental involvement in education and community for 90 days through the "Who Really Are You" Foundation</li>
-        </ul>
-    </div>
-
-    <div class="experience-item">
-        <h3>Flood Relief Efforts, Delta State Red Cross Society</h3>
-        <span class="date">2024</span>
-        <ul>
-            <li>Participated in fundraising campaigns to support flood relief efforts</li>
-            <li>Helped raise awareness and support for people living in Asaba Delta State affected by the flood</li>
-        </ul>
-    </div>
-
-    <div class="experience-item">
-        <h3>Departmental Female Soccer Player</h3>
-        <span class="date">2021 – 2023</span>
-        <ul>
-            <li>Active member of the Science Education Department's female football team</li>
-            <li>Contributed to winning the Dean's Cup for three consecutive years since admission to the university</li>
-        </ul>
-    </div>
-
-    <div class="experience-item">
-        <h3>Tutoring & Educational Outreach</h3>
-        <ul>
-            <li>Conducted classes for students struggling with mathematics, computer science, physics, and chemistry</li>
-            <li>Volunteered to teach undergraduate students in my department Algebra and Trigonometry, Calculus and Statistics</li>
-            <li>Created and managed an educational page (Ngozi Teaches Maths) to assist O-Level students</li>
-            <li>Provided tutorials, tips, and solutions to challenging mathematics problems for students, peers and juniors</li>
-        </ul>
-    </div>
-
-    <div class="experience-item">
-        <h3>Laboratory Prefect, Abraka Grammar School</h3>
-        <span class="date">2019 – 2020</span>
-        <ul>
-            <li>Supervised operations across five laboratories: Biology, Chemistry, Agricultural Science, Physics, and Mathematics labs</li>
-            <li>Managed student assignments related to lab work and coordinated practical sessions</li>
-            <li>Reported lab conditions and maintenance needs to school management</li>
-        </ul>
-    </div>
-</section>
-
-<section id="awards">
-    <h2>Honours and Awards</h2>
-
-    <div class="experience-item">
-        <h3>Mastercard Foundation Scholarship</h3>
-        <p>Fully funded merit-based scholarship, African Institute for Mathematical Sciences</p>
-    </div>
-
-    <div class="experience-item">
-        <h3>Federal Scholarship Board Award</h3>
-        <p>Education Bursary Award | Federal Government of Nigeria undergraduate scholarship</p>
-    </div>
-
-    <div class="experience-item">
-        <h3>Outstanding Student Award</h3>
-        <p>National Association of Science Education Students</p>
-    </div>
-
-    <div class="experience-item">
-        <h3>Departmental Excellence List</h3>
-        <p>Appeared four times for obtaining a GPA above 4.0</p>
-    </div>
-
-    <div class="experience-item">
-        <h3>Ndokwa Association in America Scholarship Award</h3>
-        <p>Awarded $500 USD for academic excellence until graduation</p>
-    </div>
-
-    <div class="experience-item">
-        <h3>Monday Onyeme Foundation Scholarship Award</h3>
-        <p>Competitive merit scholarship awarded for outstanding performance in a comprehensive aptitude test</p>
-    </div>
-
-    <div class="experience-item">
-        <h3>Delta State Scholarship Board Award</h3>
-        <p>Delta State Government scholarship recipient</p>
-    </div>
-
-    <div class="experience-item">
-        <h3>DESOPADEC Bursary</h3>
-        <p>Educational bursary award</p>
-    </div>
-</section>
-
-<section id="skills">
-    <h2>Skills</h2>
-
-    <div class="skills-grid">
-        <div class="skill-category">
-            <h4><i class="fas fa-code"></i> Programming & Data Science</h4>
-            <div class="skill-item"><i class="fab fa-python"></i> Python</div>
-            <div class="skill-item"><i class="fab fa-r-project"></i> R</div>
-            <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
-            <div class="skill-item"><i class="fas fa-chart-line"></i> Statistical Analysis & Regression Models</div>
-            <div class="skill-item"><i class="fas fa-chart-bar"></i> Data Visualization</div>
-            <div class="skill-item"><i class="fas fa-brain"></i> Machine Learning</div>
-        </div>
-
-        <div class="skill-category">
-            <h4><i class="fas fa-laptop"></i> Tools & Technologies</h4>
-            <div class="skill-item"><i class="fab fa-microsoft"></i> Microsoft Office Suite</div>
-            <div class="skill-item"><i class="fas fa-chart-pie"></i> SPSS</div>
-            <div class="skill-item"><i class="fas fa-table"></i> Data Wrangling & Exploratory Analysis</div>
-            <div class="skill-item"><i class="fas fa-file-code"></i> LaTeX</div>
-            <div class="skill-item"><i class="fas fa-file-alt"></i> Academic Writing</div>
-        </div>
-
-        <div class="skill-category">
-            <h4><i class="fas fa-user-friends"></i> Personal Skills</h4>
-            <div class="skill-item"><i class="fas fa-comments"></i> Communication & Public Speaking</div>
-            <div class="skill-item"><i class="fas fa-users"></i> Teamwork & Collaboration</div>
-            <div class="skill-item"><i class="fas fa-crown"></i> Leadership & Management</div>
-            <div class="skill-item"><i class="fas fa-lightbulb"></i> Problem-Solving & Critical Thinking</div>
-            <div class="skill-item"><i class="fas fa-sync-alt"></i> Adaptability & Resilience</div>
-            <div class="skill-item"><i class="fas fa-fire"></i> Grit & Determination</div>
-        </div>
-    </div>
-</section>
-
-<section id="ngo">
-    <h2><i class="fas fa-graduation-cap"></i> Educate Them All (ETA) Network</h2>
-    <p>
-        Educate Them All (ETA) Network is my initiative dedicated to making education accessible to underprivileged students. 
-        Through mentorship, academic support, and community outreach, we work to keep students in school and help them achieve their educational goals.
-    </p>
-    
-    <h3>Our Impact</h3>
-    <ul>
-        <li>Mentored 6 students from secondary to university levels</li>
-        <li>Assisted with WAEC and JAMB registrations</li>
-        <li>"Keep Them in School" campaign promoting education over child labor</li>
-        <li>Free academic support for Delta State University students</li>
-    </ul>
-
-    <h3><i class="fab fa-python"></i> Python Mastery Guide — From Zero to Python Pro</h3>
-    <div class="python-guide-box" style="background: var(--card-bg); border: 2px solid var(--primary-color); border-radius: 8px; padding: 1.5rem; margin: 1rem 0;">
-        <h4 style="color: var(--primary-color); margin-top: 0;">Learn Python Without the Confusion</h4>
-        <p>
-            Remember feeling lost when everyone talked about Python? I've been there! When I started my Master's in Mathematical Sciences, programming felt impossible. I thought Python was literally just a snake, and coding seemed like something only "tech geniuses" could do.
+            I work on evaluation frameworks for large language models, with focus on cultural alignment 
+            in low-resource African languages.
         </p>
         <p>
-            <strong>But here's what I discovered:</strong> Python isn't just for computer science students. It became my secret weapon in Data Science — helping me analyze datasets, build predictive models, and excel in my studies. If a science student like me could master it, so can you!
+            I design benchmarks, analyze cross-lingual transfer, and combine human evaluation with LLM-as-a-judge. 
+            I'm interested in questions about what cultural knowledge means for language models, how they apply 
+            it to show cultural intelligence as well as how they attain cultural alignment, and how we measure it. 
+            How do we make LLMs multilingual while genuinely promoting multiculturalism?
         </p>
-        <p>
-            <strong>I built this free guide specifically to help:</strong>
-        </p>
-        <ul style="margin: 0.5rem 0;">
-            <li>O-Level students curious about programming</li>
-            <li>Fresh graduates preparing for the job market</li>
-            <li>First-year university students in ANY field (Arts, Sciences, Medicine, Engineering)</li>
-            <li>Anyone who thinks "Python is too hard for me"</li>
-        </ul>
-        <p>
-            <strong>What makes this different?</strong> I designed it based on the struggles I faced — with clear explanations, practical examples, and a step-by-step approach that anyone can follow. No jargon, no assumptions, just straightforward learning.
-        </p>
-        <p style="margin-top: 1rem; padding: 1rem; background: var(--secondary-bg); border-left: 4px solid var(--primary-color); border-radius: 4px;">
-            <strong><i class="fas fa-rocket"></i> Start your Python journey today!</strong> Track your progress as you go from complete beginner to building real projects. The guide is 100% free and built to help you succeed.
-        </p>
-        <a href="https://ngozi-uzor.github.io/Python-Mastery-Guide---From-Zero-to-Python-Pro/" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: var(--primary-color); color: white; text-decoration: none; border-radius: 5px; font-weight: 600; margin-top: 1rem; transition: transform 0.2s;">
-            <i class="fas fa-book-reader"></i> Begin Your Python Journey Now
-        </a>
     </div>
 
-    <h3>Gallery</h3>
-    <div class="photo-gallery">
-        <div class="photo-item">
-            <img src="enhanced_images/enhanced_uploaded_image_0_1767333530888.jpg" alt="ETA Network Activity" loading="lazy" width="400" height="300">
-        </div>
-        <div class="photo-item">
-            <img src="enhanced_images/enhanced_uploaded_image_1_1767333530888.jpg" alt="Student Mentorship" loading="lazy" width="400" height="300">
-        </div>
-        <div class="photo-item">
-            <img src="enhanced_images/enhanced_uploaded_image_2_1767333530888.jpg" alt="Educational Support" loading="lazy" width="400" height="300">
-        </div>
-        <div class="photo-item">
-            <img src="enhanced_images/enhanced_uploaded_image_4_1767333530888.jpg" alt="Community Outreach" loading="lazy" width="400" height="300">
-        </div>
-        <div class="photo-item">
-            <img src="enhanced_images/enhanced_uploaded_image_0_1767333546192.jpg" alt="Keep Them in School Campaign" loading="lazy" width="400" height="300">
-        </div>
-        <div class="photo-item">
-            <img src="enhanced_images/enhanced_uploaded_image_1_1767333546192.jpg" alt="Academic Guidance" loading="lazy" width="400" height="300">
-        </div>
-        <div class="photo-item">
-            <img src="enhanced_images/enhanced_uploaded_image_2_1767333546192.jpg" alt="Student Registration Support" loading="lazy" width="400" height="300">
-        </div>
-        <div class="photo-item">
-            <img src="enhanced_images/enhanced_uploaded_image_3_1767333546192.jpg" alt="Educational Advocacy" loading="lazy" width="400" height="300">
-        </div>
-        <div class="photo-item">
-            <img src="enhanced_images/enhanced_uploaded_image_4_1767333546192.jpg" alt="ETA Mentorship Session" loading="lazy" width="400" height="300">
-        </div>
-        <div class="photo-item">
-            <img src="enhanced_images/enhanced_uploaded_image_0_1767333576595.jpg" alt="Educate Them All Initiative" loading="lazy" width="400" height="300">
-        </div>
-    </div>
-</section>
+    <div class="section">
+        <h2>Research</h2>
 
-<section id="memberships">
-    <h2>Academic Membership and Affiliations</h2>
-    <ul>
-        <li>Teachers Registration Council of Nigeria (TRCN)</li>
-        <li>Education Students Association of Nigeria - Delta State University Chapter (ESAN)</li>
-        <li>National Association of Science Education Students - Delta State University Chapter (NASES)</li>
-        <li>Federated Union of Ndokwa Students (FUNS)</li>
-    </ul>
-</section>
-
-<section id="languages">
-    <h2><i class="fas fa-language"></i> Languages</h2>
-    <div class="language-item">
-        <i class="fas fa-globe"></i>
-        <span><strong>English:</strong> Fluent (official language and medium of instruction in Nigeria)</span>
-    </div>
-    <div class="language-item">
-        <i class="fas fa-globe"></i>
-        <span><strong>French:</strong> Beginner</span>
-    </div>
-</section>
-
-<section id="hobbies">
-    <h2><i class="fas fa-heart"></i> Hobbies & Interests</h2>
-    <p>Research and teaching, public speaking, advocating for SDGs, sports, listening to music, volunteering, and learning about new cultures and languages.</p>
-    <p><i class="fas fa-pen-fancy"></i> For fun, I write stories, facts and fictions on READAFRICA. Find some of my work:</p>
-    <ul>
-        <li><i class="fas fa-book"></i> <a href="https://ngozi-uzor.github.io/ANIOMA/" target="_blank">IGBO BU OFU</a></li>
-        <li><i class="fas fa-book-open"></i> <a href="https://ngozi-uzor.github.io/The-Only-Hope/" target="_blank">The Only Hope: Libya to Italy</a></li>
-    </ul>
-</section>
-
-<section id="links">
-    <h2><i class="fas fa-link"></i> Links</h2>
-    <div class="social-links">
-        <a href="mailto:blessing.uzor@aims-cameroon.org">
-            <i class="fas fa-envelope"></i> Email
-        </a>
-        <a href="https://www.linkedin.com/in/blessing-ngozi-uzor-2a97b01a7/" target="_blank">
-            <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://github.com/Ngozi-uzor" target="_blank">
-            <i class="fab fa-github"></i> GitHub
-        </a>
-    </div>
-</section>
-
-<section id="bonus-content" style="text-align: center; padding: 3rem 1.5rem;">
-    <p style="font-size: 1.1rem; color: var(--subtitle-color); margin-bottom: 2rem;">
-        <i class="fas fa-arrow-down"></i> Since you've made it to the bottom, here are some bonus treasures!
-    </p>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
-        <!-- Music Card -->
-        <div class="bonus-card" style="background: var(--card-bg); border: 2px solid var(--primary-color); border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.3s;" onclick="toggleContent('music')">
-            <i class="fas fa-music" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-            <h3 style="color: var(--primary-color); margin: 1rem 0;">🎵 My Favorite Songs</h3>
-            <p style="color: var(--text-color);">Music that moves my soul</p>
-            <span style="color: var(--primary-color); font-weight: 600; margin-top: 1rem; display: inline-block;">
-                Click to listen <i class="fas fa-arrow-right"></i>
-            </span>
+        <div class="project">
+            <h3>Cultural Alignment Evaluation of Large Language Models: An Igbo Cultural Benchmark</h3>
+            <p class="meta">Master's Thesis · AIMS Cameroon · In progress</p>
+            <p>
+                CAB-Igbo: 588-item benchmark across six cultural domains. Testing 12 models under two prompting 
+                conditions. Combining automated metrics, LLM-as-judge, and human evaluation to assess cultural 
+                appropriateness, factual accuracy, linguistic quality, epistemic fidelity, representation richness, 
+                and pragmatic proficiency.
+            </p>
+            <p class="meta">Supervised by Dr. Shamsuddeen H. Muhammad (Google DeepMind Academic Fellow, Imperial College London)</p>
         </div>
 
-        <!-- Quotes Card -->
-        <div class="bonus-card" style="background: var(--card-bg); border: 2px solid var(--primary-color); border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.3s;" onclick="toggleContent('quotes')">
-            <i class="fas fa-quote-right" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-            <h3 style="color: var(--primary-color); margin: 1rem 0;">💬 Quotes I Live By</h3>
-            <p style="color: var(--text-color);">Wisdom from Yoruba, Igbo, African proverbs & life</p>
-            <span style="color: var(--primary-color); font-weight: 600; margin-top: 1rem; display: inline-block;">
-                Click to discover <i class="fas fa-arrow-right"></i>
-            </span>
-        </div>
-    </div>
-</section>
-
-<!-- Music Modal/Page -->
-<div id="music" class="content-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 2000; overflow-y: auto;">
-    <div style="max-width: 900px; margin: 2rem auto; background: var(--bg-color); border-radius: 12px; padding: 2rem; position: relative;">
-        <button onclick="toggleContent('music')" style="position: absolute; top: 1rem; right: 1rem; background: var(--primary-color); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 1.5rem; cursor: pointer;">
-            <i class="fas fa-times"></i>
-        </button>
-        
-        <h2 style="color: var(--primary-color); margin-bottom: 2rem;"><i class="fas fa-music"></i> My Favorite Songs of All Time</h2>
-        
-        <p style="margin-bottom: 2rem; color: var(--text-color);">Music that moves my soul and keeps me inspired. These are the tracks I return to again and again! 🎶</p>
-        
-        <!-- Song 1: Wizkid - Ojuelegba -->
-        <div style="background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem;">
-            <h3 style="color: var(--primary-color); margin-top: 0;">
-                <i class="fas fa-headphones"></i> Wizkid - Ojuelegba
-            </h3>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin: 1rem 0;">
-                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-                    src="https://www.youtube.com/embed/Q7QiLceJSLQ" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-            <p style="color: var(--subtitle-color); font-style: italic;">A classic Afrobeats anthem that tells a powerful story</p>
-        </div>
-
-        <!-- Song 2: P-Square - No One Like You -->
-        <div style="background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem;">
-            <h3 style="color: var(--primary-color); margin-top: 0;">
-                <i class="fas fa-headphones"></i> P-Square - No One Like You
-            </h3>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin: 1rem 0;">
-                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-                    src="https://www.youtube.com/embed/ty2advRiWJM" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-            <p style="color: var(--subtitle-color); font-style: italic;">Timeless music from the legendary P-Square</p>
-        </div>
-
-        <!-- Song 3: P-Square - Beautiful Onyinye ft. Rick Ross -->
-        <div style="background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem;">
-            <h3 style="color: var(--primary-color); margin-top: 0;">
-                <i class="fas fa-headphones"></i> P-Square - Beautiful Onyinye ft. Rick Ross
-            </h3>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin: 1rem 0;">
-                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-                    src="https://www.youtube.com/embed/F6FEd2-6rt8" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-            <p style="color: var(--subtitle-color); font-style: italic;">African excellence meets international collaboration</p>
-        </div>
-
-        <!-- Song 4: Fela Kuti - Water No Get Enemy -->
-        <div style="background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem;">
-            <h3 style="color: var(--primary-color); margin-top: 0;">
-                <i class="fas fa-headphones"></i> Fela Kuti - Water No Get Enemy
-            </h3>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin: 1rem 0;">
-                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-                    src="https://www.youtube.com/embed/kisTH3SFegc" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-            <p style="color: var(--subtitle-color); font-style: italic;">The legendary Fela Kuti - Afrobeat pioneer with timeless wisdom</p>
-        </div>
-    </div>
-</div>
-
-<!-- Quotes Modal/Page -->
-<div id="quotes" class="content-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 2000; overflow-y: auto;">
-    <div style="max-width: 800px; margin: 2rem auto; background: var(--bg-color); border-radius: 12px; padding: 2rem; position: relative;">
-        <button onclick="toggleContent('quotes')" style="position: absolute; top: 1rem; right: 1rem; background: var(--primary-color); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 1.5rem; cursor: pointer;">
-            <i class="fas fa-times"></i>
-        </button>
-        
-        <h2 style="color: var(--primary-color); margin-bottom: 2rem;"><i class="fas fa-quote-right"></i> Quotes I Live By</h2>
-        
-        <!-- Fun Facts Section -->
-        <div class="quote-box" style="background: linear-gradient(135deg, var(--card-bg) 0%, var(--secondary-bg) 100%); border: 2px solid var(--primary-color); padding: 1.5rem; margin-bottom: 2rem; border-radius: 12px;">
-            <h3 style="color: var(--primary-color); margin-bottom: 1rem;"><i class="fas fa-heart"></i> Before the Quotes... A Little About Me!</h3>
-            
-            <div style="margin: 1rem 0;">
-                <p><strong><i class="fas fa-futbol"></i> Sports Enthusiast:</strong></p>
-                <p style="margin-left: 1.5rem;">I play football for fun and table tennis (not the best, but yes, I'm above average! 😄). Sports teach me teamwork, resilience, and the joy of friendly competition.</p>
-            </div>
-            
-            <div style="margin: 1rem 0;">
-                <p><strong><i class="fas fa-music"></i> Music Lover:</strong></p>
-                <p style="margin-left: 1.5rem;">I listen to good music from all genres, paying close attention to the melody, rhythm, and lyrics. I love Afrobeats a lot! My playlist includes legends like <strong>Fela Anikulapo Kuti</strong>, <strong>Wizkid</strong>, <strong>Asake</strong>, and many other great artists from Africa and beyond.</p>
-            </div>
-            
-            <div style="margin: 1rem 0;">
-                <p><strong><i class="fas fa-cross"></i> Faith:</strong></p>
-                <p style="margin-left: 1.5rem;">I am a Christian and believe in God and His son Jesus Christ. My faith grounds me, but I do not discriminate in any way. I respect all beliefs and embrace diversity.</p>
-            </div>
-            
-            <p style="margin-top: 1rem; font-style: italic; color: var(--subtitle-color);">
-                Now that you know a bit more about me, here are the words that guide my journey... 💫
+        <div class="project">
+            <h3>Cultural Alignment Evaluation in LLMs: A Survey</h3>
+            <p class="meta">Survey Paper · Under Review · 2026</p>
+            <p>
+                Systematic review of 28 studies on African LLM evaluation. Developed taxonomy of benchmarks, 
+                tasks, and evaluation methodologies. Identified gaps in cultural grounding and semantic metrics.
             </p>
         </div>
 
-        <!-- Life Wisdom -->
-        <div class="quote-box" style="background: var(--card-bg); border-left: 4px solid var(--primary-color); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: 8px;">
-            <h3 style="color: var(--primary-color);">💫 Life Wisdom</h3>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"This too shall pass."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">A reminder of the impermanence of all things. It offers solace in suffering and humility in triumph.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"Know thyself."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">Understand your own character, feelings, motives, and desires to live authentically.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"Be the change you wish to see in the world."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">Instead of complaining, embody the solution. If you want kindness, be kinder.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"The unexamined life is not worth living."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">A life without questioning, reflecting, and seeking truth is mere existence, not fulfillment.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"The obstacle is the way."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">What stands in your path isn't a barrier, but the path itself. Overcoming obstacles builds character.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"Wherever you go, there you are."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">You cannot escape yourself. Changing your location won't solve internal discontent.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"This is a wonderful day. I've never seen this one before."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">Approach each day with fresh eyes and wonder, free from the baggage of yesterday.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"He who has a why to live for can bear almost any how."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">A strong sense of purpose provides the strength to endure any hardship.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"Everything you've ever wanted is on the other side of fear."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">The greatest opportunities lie just beyond your fears. Fear is not a stop sign, but a compass.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"The journey of a thousand miles begins with a single step."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">Daunting tasks become achievable when you break them down and simply begin.</p>
-            </blockquote>
-        </div>
-
-        <!-- African Proverbs -->
-        <div class="quote-box" style="background: var(--card-bg); border-left: 4px solid var(--primary-color); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: 8px;">
-            <h3 style="color: var(--primary-color);">🌍 African & Nigerian Proverbs</h3>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"A lion will not give birth to a goat."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">You only produce your own kind; character and nature are inherited.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"The child who is not embraced by the village will burn it down just to feel its warmth."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">If you neglect or ostracize a person, especially a young one, they may retaliate in harmful ways just to get attention or feel valued.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"Until a lion learns to write, every story shall glorify the hunter."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">History is written by the powerful; the perspective of the oppressed is often unheard.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"The axe forgets, but the tree remembers."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">The one who causes harm may move on, but the victim never forgets the pain.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"When two elephants fight, it is the grass that gets trampled."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">When the powerful clash, it is always the innocent and weak who suffer.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"You cannot convince a monkey that honey is sweeter than a banana."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">People hold onto what they know and trust; you cannot force someone to change their mind or preferences.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"No matter how hot your anger is, it cannot cook yams."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">Anger alone achieves nothing; it cannot solve problems or provide for needs.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"Even if a goat frowns its face, someone will buy it at the market."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">Your current situation or appearance does not determine your value or success; everyone has their place.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"A one-eyed person is rarely grateful to God until they are blinded."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">People often fail to appreciate what they have until they lose it entirely.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"The same sun that hardens clay melts wax."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">The same circumstances can strengthen one person while destroying another; it is a matter of character and perception.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"Wisdom is like a baobab tree; no one individual can embrace it."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">No single person knows everything; wisdom is collective and we learn from each other.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"He who has an anus, do not laugh at your neighbour's farts."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">Do not mock others for flaws or mistakes that you yourself are capable of making.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"Eme ngwa ngwa emeghara ọdachi."</strong> (Igbo)</p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">"If things are done quickly, disaster is averted." - Procrastination leads to problems; timely action prevents unnecessary suffering.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"Ọ bụ mmụọ ndị na-efe na-egbu ha."</strong> (Igbo)</p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">"It is the deity that people worship that kills them." - What we devote ourselves to can ultimately be our downfall; choose your priorities and allegiances wisely.</p>
-            </blockquote>
-            
-            <blockquote style="margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--primary-color);">
-                <p style="font-style: italic;"><strong>"A man who counts his chickens before they hatch is unwise."</strong></p>
-                <p style="color: var(--subtitle-color); font-size: 0.9rem;">Do not assume success before it actually happens; patience and proper planning are essential.</p>
-            </blockquote>
+        <div class="project">
+            <h3>Machine Translation for Lingala and Tigrinya</h3>
+            <p class="meta">NLP Research · AIMS Cameroon</p>
+            <p>
+                Fine-tuned mBART-50 for Lingala–French and Tigrinya–English, establishing first baselines. 
+                BLEU 15.09 for Lingala–French leveraging Bantu morphology transfer. Analyzed cross-lingual 
+                transfer failure in Tigrinya–English (BLEU 3.52) due to script and morphological mismatch.
+            </p>
         </div>
     </div>
-</div>
 
-<footer>
-    <p>&copy; 2024 Blessing Ngozi Uzor</p>
-</footer>
+    <div class="section">
+        <h2>Education</h2>
+        <p>
+            <strong>MSc Mathematical Sciences (Data Science)</strong><br>
+            African Institute for Mathematical Sciences, Cameroon · 2024 - Present<br>
+            Mastercard Foundation Scholar
+        </p>
+        <p>
+            <strong>B.Sc. Education in Mathematics</strong><br>
+            Delta State University, Nigeria · 2020 - 2024
+        </p>
+    </div>
 
-<script>
-// Dark mode toggle
-function toggleTheme() {
-    const html = document.documentElement;
-    const themeToggle = document.querySelector('.theme-toggle i');
-    const currentTheme = html.getAttribute('data-theme');
-    
-    if (currentTheme === 'dark') {
-        html.removeAttribute('data-theme');
-        themeToggle.className = 'fas fa-moon';
-        localStorage.setItem('theme', 'light');
-    } else {
-        html.setAttribute('data-theme', 'dark');
-        themeToggle.className = 'fas fa-sun';
-        localStorage.setItem('theme', 'dark');
-    }
-}
+    <div class="section">
+        <h2>Technical</h2>
+        <p>Python, PyTorch, Hugging Face, Git, LaTeX</p>
+        <p>Languages: Igbo (native), English (professional), French (conversational)</p>
+    </div>
 
-// Load saved theme
-document.addEventListener('DOMContentLoaded', function() {
-    const savedTheme = localStorage.getItem('theme');
-    const themeToggle = document.querySelector('.theme-toggle i');
-    
-    if (savedTheme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        themeToggle.className = 'fas fa-sun';
-    }
-});
+    <div class="section">
+        <h2>Community</h2>
+        <p>
+            Founded <strong>Educate Them All (ETA) Network</strong> in 2023. Running "Keep Them in School" 
+            initiative promoting education over child labor. Mentored students from secondary to university.
+        </p>
+        <p>
+            I also write: <a href="https://ngozi-uzor.github.io/perspectives/index.html" target="_blank">visit my blog</a>
+        </p>
+    </div>
 
-// Menu toggle
-function toggleMenu() {
-    const nav = document.getElementById('sideNav');
-    const overlay = document.querySelector('.overlay');
-    const menuToggle = document.querySelector('.menu-toggle');
-    
-    nav.classList.toggle('open');
-    overlay.classList.toggle('active');
-    
-    // Change icon
-    const icon = menuToggle.querySelector('i');
-    if (nav.classList.contains('open')) {
-        icon.className = 'fas fa-times';
-    } else {
-        icon.className = 'fas fa-bars';
-    }
-}
+    <div class="section">
+        <ul style="list-style: none; padding-left: 0;">
+            <li>Open to NLP research internships</li>
+            <li>Interested in MSc/PhD opportunities starting Fall 2027</li>
+        </ul>
+    </div>
 
-// Toggle content modals
-function toggleContent(modalId) {
-    const modal = document.getElementById(modalId);
-    if (modal.style.display === 'none' || modal.style.display === '') {
-        modal.style.display = 'block';
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
-    } else {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
-}
+    <div class="links">
+        <a href="mailto:blessing.uzor@aims-cameroon.org">Email</a>
+        <a href="https://github.com/Ngozi-uzor" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/blessing-ngozi-uzor-2a97b01a7/" target="_blank">LinkedIn</a>
+    </div>
 
-// Close menu when clicking outside
-document.addEventListener('click', function(event) {
-    const nav = document.getElementById('sideNav');
-    const menuToggle = document.querySelector('.menu-toggle');
-    
-    if (!nav.contains(event.target) && !menuToggle.contains(event.target) && nav.classList.contains('open')) {
-        toggleMenu();
-    }
-});
-
-// Image loading optimization
-document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('.photo-item img');
-    
-    images.forEach(img => {
-        if (img.complete) {
-            img.style.opacity = '1';
-        } else {
-            img.addEventListener('load', function() {
-                this.style.opacity = '1';
-            });
-            
-            // Handle errors - show placeholder
-            img.addEventListener('error', function() {
-                this.style.display = 'none';
-                const placeholder = document.createElement('div');
-                placeholder.className = 'photo-placeholder';
-                placeholder.innerHTML = '<i class="fas fa-image"></i>';
-                this.parentElement.appendChild(placeholder);
-            });
-        }
-    });
-});
-</script>
-
+    <p style="margin-top: 3rem; text-align: center; color: #666; font-size: 0.85rem;">
+        © 2026 Blessing Ngozi Uzor
+    </p>
 </body>
 </html>

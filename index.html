@@ -33,12 +33,22 @@
             border-bottom-color: #999;
         }
 
+        body.light a[style*="color: #4a9eff"] {
+            color: #2563eb !important;
+            border-bottom-color: #2563eb !important;
+        }
+
         body.light a:hover {
             border-bottom-color: #000;
         }
 
         body.light h2 {
             border-bottom-color: #ddd;
+        }
+
+        body.light h2[style*="color: #4a9eff"] {
+            color: #2563eb !important;
+            border-bottom-color: #2563eb !important;
         }
 
         body.light .meta {
@@ -215,6 +225,89 @@
                 padding: 0.4rem 0.8rem;
             }
         }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 2rem;
+        }
+
+        body.light .modal {
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .modal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg-color);
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        body.light .modal-content {
+            background: #fff;
+            border: 1px solid #ddd;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: 1px solid #666;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 0.85rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        body.light .modal-close {
+            color: #000;
+            border-color: #999;
+        }
+
+        .modal-close:hover {
+            border-color: #fff;
+        }
+
+        body.light .modal-close:hover {
+            border-color: #000;
+        }
+
+        .quote-box {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            border-left: 4px solid #4a9eff;
+            background: rgba(74, 158, 255, 0.05);
+            font-style: italic;
+        }
+
+        body.light .quote-box {
+            background: rgba(37, 99, 235, 0.05);
+            border-left-color: #2563eb;
+        }
+
+        .quote-attribution {
+            text-align: right;
+            margin-top: 1rem;
+            font-style: normal;
+            color: #999;
+        }
+
+        body.light .quote-attribution {
+            color: #666;
+        }
     </style>
 </head>
 <body>
@@ -224,7 +317,7 @@
         <img src="Blessing Ngozi (3).JPG" alt="Blessing Ngozi Uzor">
         <div class="header-text">
             <h1>Blessing Ngozi Uzor</h1>
-            <p class="subtitle">NLP Researcher · AI Enthusiast · African Institute for Mathematical Sciences, Cameroon</p>
+            <p class="subtitle">NLP Researcher · AI Enthusiast · <a href="https://aims-cameroon.org/" target="_blank" style="color: #4a9eff; border-bottom-color: #4a9eff;">African Institute for Mathematical Sciences, Cameroon</a></p>
             <p style="margin-top: 1rem; color: #ccc; font-size: 0.95rem; line-height: 1.7;">
                 I work on evaluation frameworks for large language models, with focus on cultural alignment 
                 in low-resource African languages. I design benchmarks, analyze cross-lingual transfer, and 
@@ -233,11 +326,14 @@
                 how they attain cultural alignment, and how we measure it. How do we make LLMs multilingual 
                 while genuinely promoting multiculturalism?
             </p>
+            <p style="margin-top: 1rem;">
+                <a href="#why-modal" onclick="openWhy(event)" style="color: #4a9eff; border-bottom-color: #4a9eff; cursor: pointer;">Why I do this?</a>
+            </p>
         </div>
     </div>
 
     <div class="section">
-        <h2>Research Focus</h2>
+        <h2>Research Interest</h2>
         <p>Multicultural and multilingual LLMs, cultural alignment, LLM evaluation, and cross-lingual transfer in African languages</p>
     </div>
 
@@ -252,7 +348,7 @@
                 conditions. Combining automated metrics, LLM-as-judge, and human evaluation to assess 
                 epistemic fidelity, representation richness, and pragmatic proficiency.
             </p>
-            <p class="meta">Supervised by Dr. Shamsuddeen H. Muhammad (Google DeepMind Academic Fellow, Imperial College London)</p>
+            <p class="meta">Supervised by <a href="https://shmuhammadd.github.io/" target="_blank" style="border-bottom-color: #4a9eff;">Dr. Shamsuddeen H. Muhammad</a></p>
         </div>
 
         <div class="project">
@@ -280,7 +376,7 @@
         <h2>Education</h2>
         <p>
             <strong>MSc Data Science</strong><br>
-            African Institute for Mathematical Sciences, Cameroon · 2025 - Present<br>
+            <a href="https://aims-cameroon.org/" target="_blank" style="color: #4a9eff; border-bottom-color: #4a9eff;">African Institute for Mathematical Sciences, Cameroon</a> · 2025 - Present<br>
             Mastercard Foundation Scholar
         </p>
         <p>
@@ -296,6 +392,19 @@
     </div>
 
     <div class="section">
+        <h2>Awards</h2>
+        <p>
+            Mastercard Foundation Scholar (2025)<br>
+            Federal Scholarship Board Award (2024)<br>
+            Outstanding Student Award, NASES (2024)<br>
+            Departmental Excellence List, 4-time recipient<br>
+            Ndokwa Association in America Scholarship (2023)<br>
+            Monday Onyeme Foundation Scholarship (2023)<br>
+            Delta State Scholarship Board Award, 4-time recipient (2021-2024)
+        </p>
+    </div>
+
+    <div class="section">
         <h2>Community</h2>
         <p>
             Founded <strong>Educate Them All (ETA) Network</strong> in 2023. Running "Keep Them in School" 
@@ -307,9 +416,10 @@
     </div>
 
     <div class="section">
+        <h2 style="color: #4a9eff; border-bottom-color: #4a9eff;">Looking for:</h2>
         <ul style="list-style: none; padding-left: 0;">
-            <li>Open to NLP research internships</li>
-            <li>Interested in MSc/PhD opportunities starting Fall 2027</li>
+            <li>NLP research internships</li>
+            <li>MSc/PhD opportunities starting Fall 2027</li>
         </ul>
     </div>
 
@@ -323,6 +433,42 @@
         © 2026 Blessing Ngozi Uzor
     </p>
 
+    <!-- Why Modal -->
+    <div id="why-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeWhy()">Close</button>
+            
+            <h2 style="margin-top: 0;">Why</h2>
+            
+            <p><strong>Language is culture. Language is memory. Language is home.</strong></p>
+
+            <p>I was born in Nigeria, where more than 500 languages coexist within a single nation. We do not just speak languages; we move between them, think through them, dream inside them. Igbo proverbs at breakfast make us hear directly from our forefathers, ancient wisdom. Nigerian Pidgin in the market turns strangers into instant understanding. English in school opens institutional doors. Hausa on the radio binds regions together across distance and difference.</p>
+
+            <p><strong>Code-switching is not confusion. It is fluency in being Nigerian.</strong></p>
+
+            <p>Multilingualism, multiculturalism, code-switching—these are not features of life here. They are life itself. They shape how we love, argue, trade, pray, joke, and mourn. They are not background context. They are the structure of everyday thought.</p>
+
+            <p>Yet much of the technology built for the world was not built with this reality in mind. Language models trained on English monolingualism encounter Nigerian multilingualism and fail to see us clearly. They stumble over our names. They flatten our idioms. They miss the cultural knowledge carried in how we speak. In their logic, linguistic richness becomes noise.</p>
+
+            <p><strong>That failure is not neutral. It is a form of erasure.</strong></p>
+
+            <p>This is not only a technical problem. It is a question of what language systems choose to see and what they erase.</p>
+
+            <p>This is the gap that drives my work. I cannot accept a future where African languages are treated as edge cases in systems meant to represent the world. I want to build language technologies that recognize people as they are, not as simplified versions shaped for convenience. Systems that understand African languages not as anomalies, but as knowledge. As structure. As intelligence.</p>
+
+            <p>Because diversity and inclusion are not abstract ideals. They are the difference between being seen and being erased.</p>
+
+            <p>They are the hundreds of languages that carry people's histories, identities, and ways of seeing the world.</p>
+
+            <p><strong>And they are us.</strong></p>
+
+            <div class="quote-box">
+                <p>"Culture is not a dataset. It is a living inheritance, passed from voice to voice, and no model will ever be trained enough to replace what a people carry in their bones. The sacred culture of the Igbo people will endure in its full authenticity long after every model trained on its shadow has been forgotten. What a people know in their bones cannot be benchmarked. The attempt to measure that gap is where this work begins."</p>
+                <p class="quote-attribution">Blessing Ngozi Uzor</p>
+            </div>
+        </div>
+    </div>
+
     <script>
         function toggleTheme() {
             const body = document.body;
@@ -334,6 +480,25 @@
                 button.textContent = 'Dark';
             } else {
                 button.textContent = 'Light';
+            }
+        }
+
+        function openWhy(event) {
+            event.preventDefault();
+            document.getElementById('why-modal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeWhy() {
+            document.getElementById('why-modal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside content
+        window.onclick = function(event) {
+            const modal = document.getElementById('why-modal');
+            if (event.target == modal) {
+                closeWhy();
             }
         }
     </script>

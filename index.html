@@ -308,6 +308,116 @@
         body.light .quote-attribution {
             color: #666;
         }
+
+        /* What's New Styles */
+        .whats-new-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            display: flex;
+            align-items: flex-end;
+            gap: 0.75rem;
+            width: 100%;
+            text-align: left;
+        }
+
+        .whats-new-toggle h2 {
+            margin: 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #4a9eff;
+            flex: 1;
+            color: #4a9eff;
+            font-size: 1.2rem;
+            font-weight: normal;
+            transition: color 0.2s;
+        }
+
+        body.light .whats-new-toggle h2 {
+            color: #2563eb;
+            border-bottom-color: #2563eb;
+        }
+
+        .whats-new-toggle:hover h2 {
+            color: #4a9eff;
+        }
+
+        body.light .whats-new-toggle:hover h2 {
+            color: #2563eb;
+        }
+
+
+        .whats-new-arrow {
+            font-size: 0.75rem;
+            color: #666;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            padding-bottom: 0.6rem;
+        }
+
+        .whats-new-arrow.open {
+            transform: rotate(180deg);
+        }
+
+        .whats-new-items {
+            display: none;
+            margin-top: 0.5rem;
+        }
+
+        .whats-new-items.open {
+            display: block;
+        }
+
+        .whats-new-item {
+            padding: 0.9rem 0;
+            border-bottom: 1px solid #1a1a1a;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        body.light .whats-new-item {
+            border-bottom-color: #eee;
+        }
+
+        .whats-new-item:last-child {
+            border-bottom: none;
+        }
+
+        .whats-new-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #4a9eff;
+            flex-shrink: 0;
+            margin-top: 0.6rem;
+        }
+
+        body.light .whats-new-dot {
+            background: #2563eb;
+        }
+
+        .whats-new-item-text {
+            flex: 1;
+        }
+
+        .whats-new-item-text p {
+            margin: 0;
+            color: #ccc;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        body.light .whats-new-item-text p {
+            color: #333;
+        }
+
+        .whats-new-item-text .item-meta {
+            font-size: 0.85rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 0.25rem;
+        }
     </style>
 </head>
 <body>
@@ -328,6 +438,30 @@
             <p style="margin-top: 1rem;">
                 <a href="#why-modal" onclick="openWhy(event)" style="color: #4a9eff; border-bottom-color: #4a9eff; cursor: pointer;">Why?</a>
             </p>
+        </div>
+    </div>
+
+    <!-- What's New Section -->
+    <div class="section">
+        <button class="whats-new-toggle" onclick="toggleWhatsNew()" aria-expanded="false">
+            <h2>What's New</h2>
+            <span class="whats-new-arrow" id="whats-new-arrow">▼</span>
+        </button>
+        <div class="whats-new-items" id="whats-new-items">
+            <div class="whats-new-item">
+                <div class="whats-new-dot"></div>
+                <div class="whats-new-item-text">
+                    <p>Selected for <strong>MIORPA 2026</strong> — Mathematical Institute's Online Research Projects with Africa, <a href="https://www.maths.ox.ac.uk/outreach/miorpa" target="_blank" style="color: #4a9eff; border-bottom-color: #4a9eff;">University of Oxford</a>.<br>Project: <em>Towards new models aware of diverse cultures, values and beliefs in NLP.</em><br>Advisor: <a href="https://researchportal.hw.ac.uk/en/persons/simona-frenda/" target="_blank" style="color: #4a9eff; border-bottom-color: #4a9eff;">Simona Frenda</a></p>
+                    <p class="item-meta">July – September 2026</p>
+                </div>
+            </div>
+            <div class="whats-new-item">
+                <div class="whats-new-dot"></div>
+                <div class="whats-new-item-text">
+                    <p>Attending <strong>Deep Learning Indaba 2026</strong> at Pan-Atlantic University, Lagos, Nigeria (See you in Lagos!)</p>
+                    <p class="item-meta">2 – 7 August 2026</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -491,6 +625,17 @@
         function closeWhy() {
             document.getElementById('why-modal').style.display = 'none';
             document.body.style.overflow = 'auto';
+        }
+
+        function toggleWhatsNew() {
+            const items = document.getElementById('whats-new-items');
+            const arrow = document.getElementById('whats-new-arrow');
+            const btn = document.querySelector('.whats-new-toggle');
+            const isOpen = items.classList.contains('open');
+
+            items.classList.toggle('open');
+            arrow.classList.toggle('open');
+            btn.setAttribute('aria-expanded', String(!isOpen));
         }
 
         // Close modal when clicking outside content

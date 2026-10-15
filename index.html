@@ -1,595 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blessing Ngozi Uzor</title>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            background: #000;
-            color: #fff;
-            line-height: 1.8;
-            padding: 3rem 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        body.light {
-            background: #fff;
-            color: #000;
-        }
-
-        body.light a {
-            color: #000;
-            border-bottom-color: #999;
-        }
-
-        body.light a[style*="color: #4a9eff"] {
-            color: #2563eb !important;
-            border-bottom-color: #2563eb !important;
-        }
-
-        body.light a:hover {
-            border-bottom-color: #000;
-        }
-
-        body.light h2 {
-            border-bottom-color: #ddd;
-        }
-
-        body.light h2[style*="color: #4a9eff"] {
-            color: #2563eb !important;
-            border-bottom-color: #2563eb !important;
-        }
-
-        body.light .meta {
-            color: #666;
-        }
-
-        body.light .subtitle {
-            color: #666;
-        }
-
-        body.light p {
-            color: #333;
-        }
-
-        body.light .header-text p {
-            color: #555;
-        }
-
-        body.light li {
-            color: #333;
-        }
-
-        body.light .links {
-            border-top-color: #ddd;
-        }
-
-        .theme-toggle {
-            position: fixed;
-            top: 2rem;
-            right: 2rem;
-            background: none;
-            border: 1px solid #666;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            font-size: 0.85rem;
-            border-radius: 4px;
-            transition: all 0.3s;
-        }
-
-        body.light .theme-toggle {
-            color: #000;
-            border-color: #999;
-        }
-
-        .theme-toggle:hover {
-            border-color: #fff;
-        }
-
-        body.light .theme-toggle:hover {
-            border-color: #000;
-        }
-
-        h1 {
-            font-size: 2rem;
-            font-weight: normal;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        h2 {
-            font-size: 1.2rem;
-            font-weight: normal;
-            margin: 2rem 0 1rem 0;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid #333;
-        }
-
-        h3 {
-            font-size: 1rem;
-            font-weight: normal;
-            font-style: italic;
-            margin: 1.5rem 0 0.5rem 0;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            color: #ccc;
-        }
-
-        a {
-            color: #fff;
-            text-decoration: none;
-            border-bottom: 1px solid #666;
-        }
-
-        a:hover {
-            border-bottom-color: #fff;
-        }
-
-        ul {
-            margin: 1rem 0;
-            padding-left: 1.5rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-            color: #ccc;
-        }
-
-        .header {
-            margin-bottom: 3rem;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .header img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            flex-shrink: 0;
-        }
-
-        .header-text {
-            flex: 1;
-        }
-
-        .subtitle {
-            font-size: 0.95rem;
-            color: #999;
-            margin-bottom: 2rem;
-        }
-
-        .section {
-            margin-bottom: 2rem;
-        }
-
-        .project {
-            margin-bottom: 1.5rem;
-        }
-
-        .meta {
-            font-size: 0.9rem;
-            color: #666;
-            font-style: italic;
-        }
-
-        .links {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid #333;
-        }
-
-        .links a {
-            margin-right: 2rem;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 2rem 1.5rem;
-            }
-            
-            h1 {
-                font-size: 1.5rem;
-            }
-
-            .header {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .header img {
-                width: 140px;
-                height: 140px;
-            }
-
-            .theme-toggle {
-                top: 1rem;
-                right: 1rem;
-                font-size: 0.75rem;
-                padding: 0.4rem 0.8rem;
-            }
-        }
-
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 2000;
-            overflow-y: auto;
-            padding: 2rem;
-        }
-
-        body.light .modal {
-            background: rgba(255, 255, 255, 0.95);
-        }
-
-        .modal-content {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--bg-color);
-            padding: 3rem 2rem;
-            border-radius: 8px;
-            position: relative;
-        }
-
-        body.light .modal-content {
-            background: #fff;
-            border: 1px solid #ddd;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: none;
-            border: 1px solid #666;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            font-size: 0.85rem;
-            border-radius: 4px;
-            transition: all 0.3s;
-        }
-
-        body.light .modal-close {
-            color: #000;
-            border-color: #999;
-        }
-
-        .modal-close:hover {
-            border-color: #fff;
-        }
-
-        body.light .modal-close:hover {
-            border-color: #000;
-        }
-
-        .quote-box {
-            margin-top: 2rem;
-            padding: 1.5rem;
-            border-left: 4px solid #4a9eff;
-            background: rgba(74, 158, 255, 0.05);
-            font-style: italic;
-        }
-
-        body.light .quote-box {
-            background: rgba(37, 99, 235, 0.05);
-            border-left-color: #2563eb;
-        }
-
-        .quote-attribution {
-            text-align: right;
-            margin-top: 1rem;
-            font-style: normal;
-            color: #999;
-        }
-
-        body.light .quote-attribution {
-            color: #666;
-        }
-
-        /* What's New Styles */
-        .whats-new-toggle {
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            display: flex;
-            align-items: flex-end;
-            gap: 0.75rem;
-            width: 100%;
-            text-align: left;
-        }
-
-        .whats-new-toggle h2 {
-            margin: 0;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid #4a9eff;
-            flex: 1;
-            color: #4a9eff;
-            font-size: 1.2rem;
-            font-weight: normal;
-            transition: color 0.2s;
-        }
-
-        body.light .whats-new-toggle h2 {
-            color: #2563eb;
-            border-bottom-color: #2563eb;
-        }
-
-        .whats-new-toggle:hover h2 {
-            color: #4a9eff;
-        }
-
-        body.light .whats-new-toggle:hover h2 {
-            color: #2563eb;
-        }
-
-
-        .whats-new-arrow {
-            font-size: 0.75rem;
-            color: #666;
-            transition: transform 0.3s ease;
-            flex-shrink: 0;
-            padding-bottom: 0.6rem;
-        }
-
-        .whats-new-arrow.open {
-            transform: rotate(180deg);
-        }
-
-        .whats-new-items {
-            display: none;
-            margin-top: 0.5rem;
-        }
-
-        .whats-new-items.open {
-            display: block;
-        }
-
-        .whats-new-item {
-            padding: 0.9rem 0;
-            border-bottom: 1px solid #1a1a1a;
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-
-        body.light .whats-new-item {
-            border-bottom-color: #eee;
-        }
-
-        .whats-new-item:last-child {
-            border-bottom: none;
-        }
-
-        .whats-new-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #4a9eff;
-            flex-shrink: 0;
-            margin-top: 0.6rem;
-        }
-
-        body.light .whats-new-dot {
-            background: #2563eb;
-        }
-
-        .whats-new-item-text {
-            flex: 1;
-        }
-
-        .whats-new-item-text p {
-            margin: 0;
-            color: #ccc;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        body.light .whats-new-item-text p {
-            color: #333;
-        }
-
-        .whats-new-item-text .item-meta {
-            font-size: 0.85rem;
-            color: #666;
-            font-style: italic;
-            margin-top: 0.25rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blessing Ngozi Uzor</title>
+  <meta name="description" content="Blessing Ngozi Uzor, researcher in language model evaluation at the African Institute for Mathematical Sciences, Cameroon.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (!t) t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <style>
+    :root {
+      --bg: #f7f6f2; --surface: #ffffff; --text: #1d2129; --muted: #5d6573; --line: #e6e3dc;
+      --accent: #2952cc; --accent-soft: #e8eefc; --shadow: 0 1px 2px rgba(20,24,33,.05), 0 6px 20px rgba(20,24,33,.05);
+      --ok: #1f7a4d; --ok-bg: #e3f4ea; --warn: #9a5b00; --warn-bg: #fdf0d9; --info: #2952cc; --info-bg: #e8eefc; --grey: #5d6573; --grey-bg: #eceae4;
+    }
+    [data-theme="dark"] {
+      --bg: #0f1218; --surface: #171b24; --text: #e8eaf0; --muted: #9aa3b4; --line: #262c38;
+      --accent: #8aa8ff; --accent-soft: #1d2640; --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.25);
+      --ok: #6fd3a0; --ok-bg: #143224; --warn: #f2c06b; --warn-bg: #3a2a10; --info: #8aa8ff; --info-bg: #1d2640; --grey: #aab2c0; --grey-bg: #242a35;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: 'Outfit', system-ui, sans-serif;
+           font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased; transition: background .25s, color .25s; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+    /* Top bar */
+    .topbar { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 85%, transparent);
+              backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+    .topbar .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 16px; }
+    .brand { font-weight: 600; color: var(--text); white-space: nowrap; }
+    .nav { display: flex; gap: 22px; font-size: 15px; }
+    .nav a { color: var(--muted); }
+    .nav a:hover { color: var(--text); text-decoration: none; }
+    .theme-btn { border: 1px solid var(--line); background: var(--surface); color: var(--text); border-radius: 999px;
+                 padding: 6px 14px; font: inherit; font-size: 14px; cursor: pointer; }
+    .theme-btn:hover { border-color: var(--accent); }
+
+    /* Hero */
+    .hero { display: grid; grid-template-columns: 230px 1fr; gap: 40px; align-items: center; padding: 64px 0 48px; }
+    .hero img { width: 230px; height: 230px; border-radius: 50%; object-fit: cover; box-shadow: var(--shadow);
+                border: 4px solid var(--surface); }
+    .hero h1 { font-size: 44px; line-height: 1.1; margin: 0 0 8px; font-weight: 700; letter-spacing: -.5px; }
+    .role { color: var(--muted); margin: 0 0 18px; font-size: 18px; }
+    .intro { margin: 0 0 22px; }
+    .status { display: inline-flex; align-items: center; gap: 8px; background: var(--ok-bg); color: var(--ok);
+              border-radius: 999px; padding: 6px 14px; font-size: 14px; font-weight: 500; margin-bottom: 20px; }
+    .status::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--ok); }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn { display: inline-flex; align-items: center; padding: 9px 18px; border-radius: 10px; font-size: 15px; font-weight: 500;
+           border: 1px solid var(--line); background: var(--surface); color: var(--text); cursor: pointer; font-family: inherit; }
+    .btn:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    [data-theme="dark"] .btn.primary { color: #0f1218; }
+    .btn.primary:hover { filter: brightness(1.08); color: #fff; }
+    [data-theme="dark"] .btn.primary:hover { color: #0f1218; }
+
+    /* Sections */
+    section { padding: 36px 0; border-top: 1px solid var(--line); }
+    h2 { font-size: 26px; margin: 0 0 22px; font-weight: 600; letter-spacing: -.2px; }
+    h3 { font-size: 19px; margin: 10px 0 6px; font-weight: 600; line-height: 1.35; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 6px 14px; font-size: 15px; }
+
+    .why-teaser { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent);
+                  border-radius: 0 14px 14px 0; padding: 24px 26px; box-shadow: var(--shadow); }
+    .why-teaser .lead { font-size: 21px; font-weight: 600; margin: 0 0 10px; }
+    .why-teaser p { margin: 0 0 16px; }
+    /* News */
+    .news { list-style: none; margin: 0; padding: 0; }
+    .news-item { display: grid; grid-template-columns: 170px 1fr; gap: 20px; padding: 14px 0; border-bottom: 1px dashed var(--line); }
+    .news-item:last-child { border-bottom: 0; }
+    .news-item p { margin: 0; }
+    .news-date { color: var(--muted); font-size: 15px; padding-top: 1px; }
+    .news .is-extra { display: none; }
+    .news.show-all .is-extra { display: grid; }
+    .more { margin-top: 14px; }
+
+    /* Cards */
+    .cards { display: grid; gap: 16px; }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; box-shadow: var(--shadow); }
+    .card p { margin: 6px 0 0; }
+    .authors { color: var(--muted); font-size: 15px; }
+    .venue { color: var(--muted); font-size: 15px; font-style: italic; }
+    .badge { display: inline-block; font-size: 13px; font-weight: 600; border-radius: 6px; padding: 3px 10px; letter-spacing: .2px; }
+    .badge-accepted { color: var(--ok); background: var(--ok-bg); }
+    .badge-submission { color: var(--warn); background: var(--warn-bg); }
+    .badge-review { color: var(--info); background: var(--info-bg); }
+    .badge-prep { color: var(--grey); background: var(--grey-bg); }
+    .chips { display: flex; gap: 8px; margin-top: 14px; }
+    .chip-link { font-size: 14px; font-weight: 500; border: 1px solid var(--line); border-radius: 8px; padding: 4px 12px; color: var(--text); }
+    .chip-link:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+    /* Lists */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .awards { list-style: none; margin: 0; padding: 0; }
+    .awards li { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px dashed var(--line); }
+    .awards li:last-child { border-bottom: 0; }
+    .year { color: var(--muted); white-space: nowrap; font-size: 15px; }
+    .muted { color: var(--muted); }
+
+    footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--muted); font-size: 15px;
+             display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    footer .links { display: flex; gap: 18px; }
+
+    /* Why modal */
+    .modal { display: none; position: fixed; inset: 0; background: rgba(10,12,18,.6); z-index: 50; padding: 40px 20px; overflow-y: auto; }
+    .modal.open { display: block; }
+    .modal-box { max-width: 720px; margin: 0 auto; background: var(--surface); border-radius: 16px; padding: 36px 40px; box-shadow: var(--shadow); }
+    .modal-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .modal-head h2 { margin: 0; }
+    .quote-box { border-left: 4px solid var(--accent); background: var(--accent-soft); border-radius: 0 12px 12px 0; padding: 18px 22px; margin-top: 28px; }
+    .quote-box p { margin: 0; font-style: italic; }
+    .quote-box .quote-attribution { margin-top: 10px; font-style: normal; font-weight: 600; }
+
+    @media (max-width: 760px) {
+      .nav { display: none; }
+      .hero { grid-template-columns: 1fr; text-align: left; padding-top: 40px; gap: 24px; }
+      .hero img { width: 160px; height: 160px; }
+      .hero h1 { font-size: 34px; }
+      .news-item { grid-template-columns: 1fr; gap: 2px; }
+      .two-col { grid-template-columns: 1fr; }
+      .modal-box { padding: 26px 22px; }
+    }
+    @media print {
+      .topbar, .theme-btn, .more { display: none; }
+      .news .is-extra { display: grid; }
+    }
+  </style>
 </head>
 <body>
-    <button class="theme-toggle" onclick="toggleTheme()">Light</button>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="#top">Blessing Ngozi Uzor</a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#news">News</a><a href="#publications">Publications</a><a href="#awards">Awards</a><a href="#community">Community</a>
+      </nav>
+      <button class="theme-btn" id="theme-btn" type="button" aria-label="Switch colour theme">Dark</button>
+    </div>
+  </header>
 
-    <div class="header">
-        <img src="Blessing Ngozi (3).JPG" alt="Blessing Ngozi Uzor">
-        <div class="header-text">
-            <h1>Blessing Ngozi Uzor</h1>
-            <p class="subtitle">NLP Researcher · AI Enthusiast · <a href="https://aims-cameroon.org/" target="_blank" style="color: #4a9eff; border-bottom-color: #4a9eff;">African Institute for Mathematical Sciences, Cameroon</a></p>
-            <p style="margin-top: 1rem; color: #ccc; font-size: 0.95rem; line-height: 1.7;">
-                I work on evaluation frameworks for large language models, with focus on African languages. I design benchmarks, analyze cross-lingual transfer, and 
-                combine human evaluation with LLM-as-a-judge. I'm also interested in questions about what cultural 
-                knowledge means for language models, how they apply it to show cultural intelligence as well as 
-                how they attain cultural alignment, and how we measure it. How do we make LLMs multilingual 
-                while genuinely promoting multiculturalism and how do we measure that?
-            </p>
-            <p style="margin-top: 1rem;">
-                <a href="#why-modal" onclick="openWhy(event)" style="color: #4a9eff; border-bottom-color: #4a9eff; cursor: pointer;">Why?</a>
-            </p>
+  <main class="wrap" id="top">
+    <div class="hero">
+      <img src="Blessing Ngozi (3).JPG" alt="Portrait of Blessing Ngozi Uzor">
+      <div>
+        <h1>Blessing Ngozi Uzor</h1>
+        <p class="role">Researcher in language model evaluation · <a href="https://aims-cameroon.org/" target="_blank" rel="noopener">African Institute for Mathematical Sciences, Cameroon</a></p>
+        <p class="intro">I study how language models behave for the people they serve, with a focus on African languages and cultures. I design benchmarks, combine human evaluation with LLM-as-a-judge, and look for the failures that standard tests miss. I have also worked on changing how small models answer without retraining them. How do we make LLMs multilingual while genuinely promoting multiculturalism, and how do we measure that? I also work on AI safety across countries and cultures, and I am interested in what these questions mean for robots that use language models to decide what to say and do.</p>
+        <div class="status">Open to MSc/PhD opportunities starting Fall 2027</div>
+        <div class="actions">
+          <a class="btn primary" href="mailto:blessing.uzor@aims-cameroon.org">Email</a>
+          <a href="https://github.com/Ngozi-uzor" target="_blank" rel="noopener" class="btn">GitHub</a>
+          <a href="https://www.linkedin.com/in/blessing-ngozi-uzor-2a97b01a7/" target="_blank" rel="noopener" class="btn">LinkedIn</a>
+          <a href="https://ngozi-uzor.github.io/perspectives/index.html" target="_blank" rel="noopener" class="btn">Blog</a>
+          <button class="btn" type="button" id="why-open">Why I do this</button>
         </div>
+      </div>
     </div>
 
-    <!-- What's New Section -->
-    <div class="section">
-        <button class="whats-new-toggle" onclick="toggleWhatsNew()" aria-expanded="false">
-            <h2>What's New</h2>
-            <span class="whats-new-arrow" id="whats-new-arrow">▼</span>
-        </button>
-        <div class="whats-new-items" id="whats-new-items">
-            <div class="whats-new-item">
-                <div class="whats-new-dot"></div>
-                <div class="whats-new-item-text">
-                    <p>Started my internship at <strong>African Languages Lab</strong> as an AI Engineer Intern</p>
-                    <p class="item-meta">August 2026</p>
-                </div>
-            </div>
-            <div class="whats-new-item">
-                <div class="whats-new-dot"></div>
-                <div class="whats-new-item-text">
-                    <p>Selected for <strong>MIORPA 2026</strong> — Mathematical Institute's Online Research Projects with Africa, <a href="https://www.maths.ox.ac.uk/outreach/miorpa" target="_blank" style="color: #4a9eff; border-bottom-color: #4a9eff;">University of Oxford</a>.<br>Project: <em>Towards new models aware of diverse cultures, values and beliefs in NLP.</em><br>Advisor: <a href="https://researchportal.hw.ac.uk/en/persons/simona-frenda/" target="_blank" style="color: #4a9eff; border-bottom-color: #4a9eff;">Simona Frenda</a></p>
-                    <p class="item-meta">July – September 2026</p>
-                </div>
-            </div>
-            <div class="whats-new-item">
-                <div class="whats-new-dot"></div>
-                <div class="whats-new-item-text">
-                    <p>Attending <strong>Deep Learning Indaba 2026</strong> at Pan-Atlantic University, Lagos, Nigeria (See you in Lagos!)</p>
-                    <p class="item-meta">2 – 7 August 2026</p>
-                </div>
-            </div>
-            <div class="whats-new-item">
-                <div class="whats-new-dot"></div>
-                <div class="whats-new-item-text">
-                    <p>Defended my Thesis at AIMS Cameroon</p>
-                    <p class="item-meta"><time datetime="2026-06-11">11 June 2026</time></p>
-                </div>
-            </div>
-            <div class="whats-new-item">
-                <div class="whats-new-dot"></div>
-                <div class="whats-new-item-text">
-                    <p>Started a remote collaboration with <strong>Dr. Yuxia Wang</strong> at <strong>INSAIT</strong></p>
-                    <p class="item-meta">May 2026</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <section>
+      <h2>Research interests</h2>
+      <div class="tags"><span class="tag">Multicultural and multilingual LLMs</span><span class="tag">LLM evaluation</span><span class="tag">Human evaluation and LLM-as-a-judge</span><span class="tag">AI safety and alignment across cultures</span><span class="tag">AI agents</span><span class="tag">Human-robot interaction</span></div>
+    </section>
 
-    <div class="section">
-        <h2>Research Interest</h2>
-        <p>Multicultural and multilingual LLMs, LLM evaluation, and cross-lingual transfer in African languages</p>
-    </div>
+    <section id="why">
+      <h2>Why I do this</h2>
+      <div class="why-teaser">
+        <p class="lead">Language is culture. Language is memory. Language is home.</p>
+        <p>I was born in Nigeria, where more than 500 languages coexist within a single nation. Yet much of the technology built for the world was not built with this reality in mind. That failure is not neutral. It is a form of erasure.</p>
+        <button class="btn" type="button" id="why-open-2">Read the full essay</button>
+      </div>
+    </section>
 
-    <div class="section">
-        <h2>Research</h2>
+    <section id="news">
+      <h2>News</h2>
+      <ul class="news" id="news-list">
+        <li class="news-item"><span class="news-date">July – September 2026</span><p>Completed <strong>MIORPA 2026</strong>, the Mathematical Institute Online Research Projects with Africa at the <a href="https://www.maths.ox.ac.uk/outreach/miorpa" target="_blank" rel="noopener">University of Oxford</a>. I led the project <em>Towards new models aware of diverse cultures, values and beliefs in NLP</em>, advised by <a href="https://researchportal.hw.ac.uk/en/persons/simona-frenda/" target="_blank" rel="noopener">Dr. Simona Frenda</a>.</p></li>
+        <li class="news-item"><span class="news-date">August 2026</span><p>Our paper <strong>LLM Safety Alignment in Low-Resource Languages: A Systematic Literature Review</strong> was accepted at the IJCAI 2026 Workshop on Language Models for Underserved Communities (LM4UC), Bremen, Germany.</p></li>
+        <li class="news-item"><span class="news-date">August 2026</span><p>Started my internship at the <strong>African Languages Lab</strong> as an AI Engineer.</p></li>
+        <li class="news-item is-extra"><span class="news-date">2 – 7 August 2026</span><p>Attended <strong>Deep Learning Indaba 2026</strong> in Lagos, Nigeria, with an Indaba travel grant, and served as a poster judge.</p></li>
+        <li class="news-item is-extra"><span class="news-date">11 June 2026</span><p>Defended my master's thesis at AIMS Cameroon, graded <strong>Distinction (A+)</strong>.</p></li>
+        <li class="news-item is-extra"><span class="news-date">May 2026</span><p>Helped organise <strong>IndabaX Nigeria</strong> as a member of the organising committee.</p></li>
+        <li class="news-item is-extra"><span class="news-date">May 2026</span><p>Started a remote collaboration on AI safety with <a href="https://insait.ai/dr-yuxia-wang/" target="_blank" rel="noopener">Dr. Yuxia Wang</a> at <strong>INSAIT</strong>.</p></li>
+      </ul>
+      <button class="btn more" type="button" id="news-more" aria-expanded="false">Show all 7 updates</button>
+    </section>
 
-        <div class="project">
-            <h3>Cultural Alignment Evaluation of Large Language Models: An Igbo Cultural Benchmark</h3>
-            <p class="meta">Master's Thesis · AIMS Cameroon · In progress</p>
-            <p class="meta">Supervised by <a href="https://shmuhammadd.github.io/" target="_blank" style="border-bottom-color: #4a9eff;">Dr. Shamsuddeen H. Muhammad</a></p>
-        </div>
+    <section id="publications">
+      <h2>Publications</h2>
+      <div class="cards">
+      <article class="card">
+        <span class="badge badge-accepted">Accepted</span>
+        <h3>LLM Safety Alignment in Low-Resource Languages: A Systematic Literature Review</h3>
+        <p class="authors">Valdini D. Lemofouet, <strong>Blessing Ngozi Uzor</strong>, Paula C. Anyanwu, Danielle B. Kapsa, Sukairaj H. Imam, P Sam Sahil, Abigail Oppong, Tassallah Abdullahi, Clemencia Siro, Idris Abdulmumin, Seid M. Yimam, Shamsuddeen H. Muhammad</p>
+        <p class="venue">IJCAI 2026 Workshop on Language Models for Underserved Communities (LM4UC), Bremen, Germany</p>
+        <div class="chips"><a href="https://arxiv.org/abs/2608.14626" target="_blank" rel="noopener" class="chip-link">arXiv</a></div>
+      </article>
+      <article class="card">
+        <span class="badge badge-submission">In submission</span>
+        <h3>A Systematic Review of How Large Language Models Are Evaluated for African Languages</h3>
+      </article>
+      <article class="card">
+        <span class="badge badge-review">Under review</span>
+        <h3>Machine Translation for Lingala and Tigrinya</h3>
+        <p>Fine-tuned mBART-50 for Lingala–French and Tigrinya–English, setting the first baselines for both. Lingala–French reached BLEU 15.09, helped by transfer across Bantu languages. Tigrinya–English reached only BLEU 3.52, which I traced to differences in script and word structure.</p>
+        <div class="chips"><a href="https://drive.google.com/file/d/17w4GL1GSD81h8r1JgxLK7rQLDVDj17Lb/view?usp=sharing" target="_blank" rel="noopener" class="chip-link">Read</a></div>
+      </article>
+      </div>
+    </section>
 
-        <div class="project">
-            <h3>A Survey of LLM Evaluation for Low-Resource African Languages</h3>
-            <p class="meta">Survey Paper · Under Review · 2026</p>
-            <p>
-                Conducted a systematic literature review of 28 studies on African LLM evaluation. Developed a 
-                structured taxonomy of benchmarks, tasks, metrics, and evaluation methodologies. Identified key 
-                gaps in cultural grounding, safety evaluation, and semantic-based metrics.
-            </p>
-        </div>
+    <section id="education">
+      <h2>Education</h2>
+      <div class="two-col">
+        <article class="card">
+          <h3>Cooperative Master's Degree in Mathematical Sciences (Data Science)</h3>
+          <p class="venue">African Institute for Mathematical Sciences, Cameroon · 2025 – present</p>
+          <p>Thesis graded Distinction (A+). Mastercard Foundation Scholar.</p>
+        </article>
+        <article class="card">
+          <h3>Bachelor of Science Education in Mathematics</h3>
+          <p class="venue">Delta State University, Nigeria · 2020 – 2024</p>
+          <p>Second Class Upper Division.</p>
+        </article>
+      </div>
+    </section>
 
-        <div class="project">
-            <h3>Machine Translation for Lingala and Tigrinya</h3>
-            <p class="meta">NLP Research · AIMS Cameroon</p>
-            <p>
-                Fine-tuned mBART-50 for Lingala–French and Tigrinya–English, establishing first baselines. 
-                BLEU 15.09 for Lingala–French leveraging Bantu morphology transfer. Analyzed cross-lingual 
-                transfer failure in Tigrinya–English (BLEU 3.52) due to script and morphological mismatch.
-            </p>
-        </div>
-    </div>
+    <section id="awards">
+      <h2>Awards</h2>
+      <ul class="awards">
+        <li><span>Selected for the University of Oxford MIORPA pre-PhD research program, with research stipend</span><span class="year">2026</span></li>
+        <li><span>Deep Learning Indaba Grant, travel and accommodation</span><span class="year">2026</span></li>
+        <li><span>Mastercard Foundation Scholar, fully funded master’s scholarship</span><span class="year">2025</span></li>
+        <li><span>Federal Scholarship Board Award, Federal Government of Nigeria</span><span class="year">2024</span></li>
+        <li><span>Outstanding Student Award, National Association of Science Education Students</span><span class="year">2024</span></li>
+        <li><span>Departmental Excellence List, 4-time recipient for GPA above 4.0</span><span class="year"></span></li>
+        <li><span>Ndokwa Association in America Scholarship</span><span class="year">2023, 2024</span></li>
+        <li><span>Monday Onyeme Foundation Scholarship</span><span class="year">2023</span></li>
+        <li><span>DESOPADEC Bursary</span><span class="year">2021, 2022</span></li>
+        <li><span>Delta State Scholarship Board Award</span><span class="year">2021 – 2024</span></li>
+      </ul>
+    </section>
 
-    <div class="section">
-        <h2>Education</h2>
-        <p>
-            <strong>MSc Data Science</strong><br>
-            <a href="https://aims-cameroon.org/" target="_blank" style="color: #4a9eff; border-bottom-color: #4a9eff;">African Institute for Mathematical Sciences, Cameroon</a> · 2025 - Present<br>
-            Mastercard Foundation Scholar
-        </p>
-        <p>
-            <strong>Bachelor of Science Education in Mathematics</strong><br>
-            Delta State University, Nigeria · 2020 - 2024
-        </p>
-    </div>
+    <section id="community">
+      <h2>Community and service</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Educate Them All (ETA) Network</h3>
+          <p class="venue">Founder · 2023 – present</p>
+          <p>I founded ETA to keep children in school. Through the "Keep Them in School" campaign we promote education over child labour, and I mentor students from secondary school to university.</p>
+        </article>
+        <article class="card">
+          <h3>AI community</h3>
+          <p>Organising committee, IndabaX Nigeria 2026 · Poster judge, Deep Learning Indaba 2026 · Member of Masakhane · Elected president of the AIMS Cameroon Sports Club.</p>
+        </article>
+      </div>
+    </section>
 
-    <div class="section">
-        <h2>Technical</h2>
-        <p>Python, PyTorch, Hugging Face, Git, LaTeX</p>
-        <p>Languages: Igbo (native), English (professional), French (conversational)</p>
-    </div>
+    <section>
+      <h2>Skills</h2>
+      <p class="muted" style="margin:0">Python, PyTorch, Hugging Face Transformers and Datasets, scikit-learn, Pandas, NumPy, Git, LaTeX</p>
+      <p class="muted" style="margin:6px 0 0">Languages: Igbo (native), Nigerian Pidgin, English, French (beginner)</p>
+    </section>
 
-    <div class="section">
-        <h2>Awards</h2>
-        <p>
-            Mastercard Foundation Scholar (2025)<br>
-            Federal Scholarship Board Award (2024)<br>
-            Outstanding Student Award, NASES (2024)<br>
-            Departmental Excellence List, 4-time recipient<br>
-            Ndokwa Association in America Scholarship (2023)<br>
-            Monday Onyeme Foundation Scholarship (2023)<br>
-            Delta State Scholarship Board Award, 4-time recipient (2021-2024)
-        </p>
-    </div>
+    <footer>
+      <span>© 2026 Blessing Ngozi Uzor</span>
+      <span class="links"><a href="mailto:blessing.uzor@aims-cameroon.org">Email</a><a href="https://github.com/Ngozi-uzor" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/blessing-ngozi-uzor-2a97b01a7/" target="_blank" rel="noopener">LinkedIn</a><a href="https://ngozi-uzor.github.io/perspectives/index.html" target="_blank" rel="noopener">Blog</a></span>
+    </footer>
+  </main>
 
-    <div class="section">
-        <h2>Community</h2>
-        <p>
-            Founded <strong>Educate Them All (ETA) Network</strong> in 2023. Running "Keep Them in School" 
-            initiative promoting education over child labor. Mentored students from secondary to university.
-        </p>
-        <p>
-            I also write: <a href="https://ngozi-uzor.github.io/perspectives/index.html" target="_blank">visit my blog</a>
-        </p>
-    </div>
-
-    <div class="section">
-        <h2 style="color: #4a9eff; border-bottom-color: #4a9eff;">Looking for:</h2>
-        <ul style="list-style: none; padding-left: 0;">
-            <li>NLP research internships</li>
-            <li>MSc/PhD opportunities starting Fall 2027</li>
-        </ul>
-    </div>
-
-    <div class="links">
-        <a href="mailto:blessing.uzor@aims-cameroon.org">Email</a>
-        <a href="https://github.com/Ngozi-uzor" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/blessing-ngozi-uzor-2a97b01a7/" target="_blank">LinkedIn</a>
-    </div>
-
-    <p style="margin-top: 3rem; text-align: center; color: #666; font-size: 0.85rem;">
-        © 2026 Blessing Ngozi Uzor
-    </p>
-
-    <!-- Why Modal -->
-    <div id="why-modal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeWhy()">Close</button>
-            
-            <h2 style="margin-top: 0;">Why</h2>
-            
-            <p><strong>Language is culture. Language is memory. Language is home.</strong></p>
+  <div class="modal" id="why-modal" role="dialog" aria-modal="true" aria-labelledby="why-title">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h2 id="why-title">Why</h2>
+        <button class="btn" type="button" id="why-close">Close</button>
+      </div>
+      <p><strong>Language is culture. Language is memory. Language is home.</strong></p>
 
             <p>I was born in Nigeria, where more than 500 languages coexist within a single nation. We do not just speak languages; we move between them, think through them, dream inside them. Igbo proverbs at breakfast make us hear directly from our forefathers, ancient wisdom. Nigerian Pidgin in the market turns strangers into instant understanding. English in school opens institutional doors. Hausa on the radio binds regions together across distance and difference.</p>
 
@@ -610,57 +305,41 @@
             <p>They are the hundreds of languages that carry people's histories, identities, and ways of seeing the world.</p>
 
             <p><strong>And they are us.</strong></p>
-
-            <div class="quote-box">
-                <p>"Culture is not a dataset. It is a living inheritance, passed from voice to voice, and no model will ever be trained enough to replace what a people carry in their bones. The sacred culture of the Igbo people will endure in its full authenticity long after every model trained on its shadow has been forgotten. What a people know in their bones cannot be benchmarked. The attempt to measure that gap is where this work begins."</p>
+      <div class="quote-box">
+        <p>"Culture is not a dataset. It is a living inheritance, passed from voice to voice, and no model will ever be trained enough to replace what a people carry in their bones. The sacred culture of the Igbo people will endure in its full authenticity long after every model trained on its shadow has been forgotten. What a people know in their bones cannot be benchmarked. The attempt to measure that gap is where this work begins."</p>
                 <p class="quote-attribution">Blessing Ngozi Uzor</p>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 
-    <script>
-        function toggleTheme() {
-            const body = document.body;
-            const button = document.querySelector('.theme-toggle');
-            
-            body.classList.toggle('light');
-            
-            if (body.classList.contains('light')) {
-                button.textContent = 'Dark';
-            } else {
-                button.textContent = 'Light';
-            }
-        }
+  <script>
+    (function () {
+      var root = document.documentElement, btn = document.getElementById('theme-btn');
+      function label() { btn.textContent = root.getAttribute('data-theme') === 'dark' ? 'Light' : 'Dark'; }
+      label();
+      btn.addEventListener('click', function () {
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        label();
+      });
 
-        function openWhy(event) {
-            event.preventDefault();
-            document.getElementById('why-modal').style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
+      var list = document.getElementById('news-list'), more = document.getElementById('news-more');
+      more.addEventListener('click', function () {
+        var open = list.classList.toggle('show-all');
+        more.textContent = open ? 'Show fewer' : 'Show all 7 updates';
+        more.setAttribute('aria-expanded', String(open));
+      });
 
-        function closeWhy() {
-            document.getElementById('why-modal').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        function toggleWhatsNew() {
-            const items = document.getElementById('whats-new-items');
-            const arrow = document.getElementById('whats-new-arrow');
-            const btn = document.querySelector('.whats-new-toggle');
-            const isOpen = items.classList.contains('open');
-
-            items.classList.toggle('open');
-            arrow.classList.toggle('open');
-            btn.setAttribute('aria-expanded', String(!isOpen));
-        }
-
-        // Close modal when clicking outside content
-        window.onclick = function(event) {
-            const modal = document.getElementById('why-modal');
-            if (event.target == modal) {
-                closeWhy();
-            }
-        }
-    </script>
+      var modal = document.getElementById('why-modal');
+      function openWhy() { modal.classList.add('open'); document.body.style.overflow = 'hidden'; }
+      function closeWhy() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+      document.getElementById('why-open').addEventListener('click', openWhy);
+      document.getElementById('why-open-2').addEventListener('click', openWhy);
+      document.getElementById('why-close').addEventListener('click', closeWhy);
+      modal.addEventListener('click', function (e) { if (e.target === modal) closeWhy(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeWhy(); });
+    })();
+  </script>
 </body>
 </html>
